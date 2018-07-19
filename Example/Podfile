@@ -1,0 +1,12 @@
+use_frameworks!
+
+target 'SignalKClient_Example' do
+  pod 'SignalKClient', :path => '../'
+
+  target 'SignalKClient_Tests' do
+    inherit! :search_paths
+
+    pod 'Specta'
+    pod 'Expecta'
+  end
+end
