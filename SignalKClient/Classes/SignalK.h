@@ -16,12 +16,14 @@
 
 extern NSString *kSignalkErrorDomain;
 
+@class SignalK;
+
 @protocol SignalKDelegate <NSObject>
 @optional
-- (void)signalKReceivedDelta:(NSDictionary *)delta;
-- (void)untrustedServer:(NSString *)host withCompletionHandler:(nullable void (^)(BOOL trust))completionHandler;
-- (void)webSocketDidOpen;
-- (void)webSocketFailed:(NSString *)reason;
+- (void)signalK:(SignalK *)signalk didReceivedDelta:(NSDictionary *)delta;
+- (void)signalK:(SignalK *)signalk untrustedServer:(NSString *)host withCompletionHandler:(nullable void (^)(BOOL trust))completionHandler;
+- (void)signalKWebSocketDidOpen:(SignalK *)signalk;
+- (void)signalK:(SignalK *)signalk webSocketFailed:(NSString *)reason;
 @end
 
 @interface SignalK : NSObject

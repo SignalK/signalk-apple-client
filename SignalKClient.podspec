@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SignalKClient'
-  s.version          = '0.1.1'
+  s.version          = '0.2.0'
   s.summary          = 'Client Library For Accessing Signal K Servers From an iOS Application.'
 
 # This description is used to generate tags and improve search results.
@@ -38,5 +38,5 @@ Client Library For Accessing Signal K Servers From an iOS Application
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'SocketRocket'
+  s.dependency 'SocketRocket', '~> 0.5.1' 
 end

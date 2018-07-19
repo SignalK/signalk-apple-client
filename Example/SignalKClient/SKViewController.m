@@ -9,7 +9,7 @@
 #import "SKViewController.h"
 #import <SignalKClient/SignalK.h>
 
-@interface SKViewController ()
+@interface SKViewController () <SignalKDelegate>
 
 @property (strong,atomic) SignalK *signalK;
 @property (weak, nonatomic) IBOutlet UITextField *host;
@@ -90,7 +90,12 @@
   }];
 }
 
-- (void)webSocketDidOpen
+- (void)signalK:(SignalK *)signalk webSocketFailed:(NSString *)reason
+{
+  [self showMessage:reason withTitle:@"Streaming Error"];
+}
+
+- (void)signalKWebSocketDidOpen:(SignalK *)signalk
 {
   NSDictionary *subscription =
   @{
@@ -100,10 +105,10 @@
 					  @"period": @1000,
 					  }]
 	};
-  [self.signalK sendSubscription:subscription];
+  [signalk sendSubscription:subscription];
 }
 
-- (void)signalKReceivedDelta:(NSDictionary *)delta
+- (void)signalK:(SignalK *)signalk didReceivedDelta:(NSDictionary *)delta
 {
   NSArray<NSDictionary *> *updates = delta[@"updates"];
   
@@ -129,7 +134,7 @@
   }
 }
 
-- (void)untrustedServer:(NSString *)host withCompletionHandler:(nullable void (^)(BOOL trust))completionHandler
+- (void)signalK:(SignalK *)signalk untrustedServer:(NSString *)host withCompletionHandler:(void (^)(BOOL))completionHandler
 {
   completionHandler(YES);
 }

@@ -414,9 +414,9 @@ NSString *kSignalkErrorDomain = @"org.signalk";
 	}
 	else
 	{
-	  if ( [self.delegate respondsToSelector:@selector(untrustedServer:withCompletionHandler:)] )
+	  if ( [self.delegate respondsToSelector:@selector(signalK:untrustedServer:withCompletionHandler:)] )
 	  {
-		[self.delegate untrustedServer:challenge.protectionSpace.host withCompletionHandler:^(BOOL trust)
+		[self.delegate signalK:self untrustedServer:challenge.protectionSpace.host withCompletionHandler:^(BOOL trust)
 		 {
 		   if ( trust )
 		   {
@@ -463,9 +463,9 @@ NSString *kSignalkErrorDomain = @"org.signalk";
 - (void)webSocketDidOpen:(SRWebSocket *)webSocket
 {
   self.isConnecting = NO;
-  if ( [self.delegate respondsToSelector:@selector(webSocketDidOpen)] )
+  if ( [self.delegate respondsToSelector:@selector(signalKWebSocketDidOpen:)] )
   {
-	[self.delegate webSocketDidOpen];
+	[self.delegate signalKWebSocketDidOpen:self];
   }
 }
 
@@ -480,7 +480,7 @@ NSString *kSignalkErrorDomain = @"org.signalk";
   
   if ( jsonObject[@"updates"] != nil )
   {
-	[self.delegate signalKReceivedDelta:jsonObject];
+	[self.delegate signalK:self didReceivedDelta:jsonObject];
   }
   else if ( jsonObject[@"self"] != nil )
   {
@@ -512,9 +512,9 @@ NSString *kSignalkErrorDomain = @"org.signalk";
   }
   self.webSocket = nil;
   self.isStreaming = NO;
-  if ( [self.delegate respondsToSelector:@selector(webSocketFailed:)] )
+  if ( [self.delegate respondsToSelector:@selector(signalK:webSocketFailed:)] )
   {
-	[self.delegate webSocketFailed:msg];
+	[self.delegate signalK:self webSocketFailed:msg];
   }
 }
 
@@ -525,9 +525,9 @@ NSString *kSignalkErrorDomain = @"org.signalk";
 	self.isStreaming = NO;
 	if ( reason == nil )
 	  reason = @"Unknown";
-	if ( [self.delegate respondsToSelector:@selector(webSocketFailed:)] )
+	if ( [self.delegate respondsToSelector:@selector(signalK:webSocketFailed:)] )
 	{
-	  [self.delegate webSocketFailed:reason];
+	  [self.delegate signalK:self webSocketFailed:reason];
 	}
 	self.webSocket = nil;
   }
