@@ -1,6 +1,6 @@
 # SignalKClient
 
-[![CI Status](https://img.shields.io/travis/scott@scottbender.net/SignalKClient.svg?style=flat)](https://travis-ci.org/scott@scottbender.net/SignalKClient)
+#[![CI Status](https://img.shields.io/travis/scott@scottbender.net/SignalKClient.svg?style=flat)](https://travis-ci.org/scott@scottbender.net/SignalKClient)
 [![Version](https://img.shields.io/cocoapods/v/SignalKClient.svg?style=flat)](https://cocoapods.org/pods/SignalKClient)
 [![License](https://img.shields.io/cocoapods/l/SignalKClient.svg?style=flat)](https://cocoapods.org/pods/SignalKClient)
 [![Platform](https://img.shields.io/cocoapods/p/SignalKClient.svg?style=flat)](https://cocoapods.org/pods/SignalKClient)
@@ -20,10 +20,6 @@ it, simply add the following line to your Podfile:
 pod 'SignalKClient'
 ```
 
-## Author
-
-scott@scottbender.net, scott@scottbender.net
-
 ## License
 
-SignalKClient is available under the MIT license. See the LICENSE file for more info.
+SignalKClient is available under the Apache 2.0 license. See the LICENSE file for more info.
