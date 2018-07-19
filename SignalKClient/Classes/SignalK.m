@@ -45,13 +45,6 @@ NSString *kSignalkErrorDomain = @"org.signalk";
 	_host = host;
 	_restPort = port;
 	
-	self.restProtocol = !self.ssl ? @"http" : @"https";
-	self.restEndpoint = [NSString stringWithFormat:@"%@://%@:%ld/signalk/v1/api/", self.restProtocol, self.host, (long)self.restPort];
-	
-	NSString *wsProtocol = !self.ssl ? @"ws" : @"wss";
-	
-	self.wsEndpoint = [NSString stringWithFormat:@"%@://%@:%ld/signalk/v1/stream", wsProtocol, self.host, (long)self.wsPort];
-
 	self.pathValueDelegates = [NSMutableArray new];
   }
   return self;
@@ -61,6 +54,13 @@ NSString *kSignalkErrorDomain = @"org.signalk";
 {
   self.isConnecting = YES;
   self.jwtToken = nil;
+  
+  self.restProtocol = !self.ssl ? @"http" : @"https";
+  self.restEndpoint = [NSString stringWithFormat:@"%@://%@:%ld/signalk/v1/api/", self.restProtocol, self.host, (long)self.restPort];
+  
+  NSString *wsProtocol = !self.ssl ? @"ws" : @"wss";
+  
+  self.wsEndpoint = [NSString stringWithFormat:@"%@://%@:%ld/signalk/v1/stream", wsProtocol, self.host, (long)self.wsPort];
   
   [self getServerInfo:^(NSError *error)
    {

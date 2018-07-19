@@ -25,6 +25,7 @@
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		D8E022C12101260C00569E24 /* SKAngleView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E022C02101260C00569E24 /* SKAngleView.m */; };
+		D8E022CC2101343200569E24 /* SKBrowseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E022CB2101343200569E24 /* SKBrowseTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,8 @@
 		CBF4370B645EC189CBA1825A /* Pods_SignalKClient_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SignalKClient_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8E022BF2101260C00569E24 /* SKAngleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKAngleView.h; sourceTree = "<group>"; };
 		D8E022C02101260C00569E24 /* SKAngleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKAngleView.m; sourceTree = "<group>"; };
+		D8E022CA2101343200569E24 /* SKBrowseTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKBrowseTableViewController.h; sourceTree = "<group>"; };
+		D8E022CB2101343200569E24 /* SKBrowseTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKBrowseTableViewController.m; sourceTree = "<group>"; };
 		FC2EE96C81E666B018582E2A /* Pods-SignalKClient_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignalKClient_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SignalKClient_Tests/Pods-SignalKClient_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,6 +148,8 @@
 				6003F5A5195388D20070C39A /* SKViewController.h */,
 				6003F5A6195388D20070C39A /* SKViewController.m */,
 				6003F594195388D20070C39A /* Supporting Files */,
+				D8E022CA2101343200569E24 /* SKBrowseTableViewController.h */,
+				D8E022CB2101343200569E24 /* SKBrowseTableViewController.m */,
 			);
 			name = "Example for SignalKClient";
 			path = SignalKClient;
@@ -389,6 +394,7 @@
 			files = (
 				D8E022C12101260C00569E24 /* SKAngleView.m in Sources */,
 				6003F59E195388D20070C39A /* SKAppDelegate.m in Sources */,
+				D8E022CC2101343200569E24 /* SKBrowseTableViewController.m in Sources */,
 				6003F5A7195388D20070C39A /* SKViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);

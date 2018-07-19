@@ -9,14 +9,16 @@
 #import "SKViewController.h"
 #import <SignalKClient/SignalK.h>
 #import "SKAngleView.h"
+#import "SKBrowseTableViewController.h"
 
-@interface SKViewController () <SignalKDelegate>
+@interface SKViewController () <SignalKDelegate, SKBrowseTableViewControllerDelegate>
 
 @property (strong,atomic) SignalK *signalK;
 @property (weak, nonatomic) IBOutlet UITextField *host;
 @property (weak, nonatomic) IBOutlet UITextField *port;
 @property (weak, nonatomic) IBOutlet UILabel *windSpeed;
 @property (weak, nonatomic) IBOutlet SKAngleView *windAngle;
+@property (weak, nonatomic) IBOutlet UISwitch *isSSL;
 
 @end
 
@@ -30,6 +32,7 @@
   
   NSString *lastHost = [ud objectForKey:@"host"];
   NSNumber *lastPort = [ud objectForKey:@"port"];
+  NSNumber *lastSSL = [ud objectForKey:@"ssl"];
   
   if ( lastHost )
   {
@@ -38,6 +41,10 @@
   if ( lastPort )
   {
 	self.port.text = lastPort.stringValue;
+  }
+  if ( lastSSL )
+  {
+	self.isSSL.on = lastSSL.boolValue;
   }
   
   self.windSpeed.text = @"...";
@@ -59,6 +66,14 @@
   });
 }
 
+- (void)browseTableViewControllerDidSelectHost:(NSString *)host port:(NSInteger)port isSecure:(BOOL)isSecure
+{
+  self.host.text = host;
+  self.port.text = @(port).stringValue;
+  self.isSSL.on = isSecure;
+  [self.navigationController popViewControllerAnimated:YES];
+}
+
 - (IBAction)connect:(id)sender
 {
   if ( self.signalK )
@@ -70,8 +85,10 @@
   
   [ud setObject:self.host.text forKey:@"host"];
   [ud setObject:@(self.port.text.integerValue) forKey:@"port"];
+  [ud setBool:self.isSSL.on forKey:@"ssl"];
   
   self.signalK = [[SignalK alloc] initWithHost:self.host.text port:self.port.text.integerValue];
+  self.signalK.ssl = self.isSSL.on;
   self.signalK.delegate = self;
   self.signalK.subscription = @"none"; //see webSocketDidOpen below
   
@@ -180,5 +197,13 @@
 {
   [super didReceiveMemoryWarning];
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+  SKBrowseTableViewController *tc = (SKBrowseTableViewController *)[segue destinationViewController];
+  tc.delegate = self;
+
+}
+
 
 @end
