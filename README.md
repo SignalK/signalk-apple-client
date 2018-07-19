@@ -1,6 +1,5 @@
 # SignalKClient
 
-#[![CI Status](https://img.shields.io/travis/scott@scottbender.net/SignalKClient.svg?style=flat)](https://travis-ci.org/scott@scottbender.net/SignalKClient)
 [![Version](https://img.shields.io/cocoapods/v/SignalKClient.svg?style=flat)](https://cocoapods.org/pods/SignalKClient)
 [![License](https://img.shields.io/cocoapods/l/SignalKClient.svg?style=flat)](https://cocoapods.org/pods/SignalKClient)
 [![Platform](https://img.shields.io/cocoapods/p/SignalKClient.svg?style=flat)](https://cocoapods.org/pods/SignalKClient)
