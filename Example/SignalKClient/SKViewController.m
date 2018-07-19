@@ -8,6 +8,7 @@
 
 #import "SKViewController.h"
 #import <SignalKClient/SignalK.h>
+#import "SKAngleView.h"
 
 @interface SKViewController () <SignalKDelegate>
 
@@ -15,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *host;
 @property (weak, nonatomic) IBOutlet UITextField *port;
 @property (weak, nonatomic) IBOutlet UILabel *windSpeed;
+@property (weak, nonatomic) IBOutlet SKAngleView *windAngle;
 
 @end
 
@@ -73,7 +75,7 @@
   self.signalK.delegate = self;
   self.signalK.subscription = @"none"; //see webSocketDidOpen below
   
-  //self.signalK.subscription = @"self"; // if you want all data for self
+  //self.signalK.subscription = @"self"; // if you want all data for self (default)
   //self.signalK.subscription = @"all"; // if you want data for other vessels, atons, etc.
   
   //self.signalK.userName = @"username";
@@ -81,7 +83,9 @@
   
   //self.signalK.disableStreaming = YES;  //set if you just want to make REST calls
   
-  [self .signalK connectWithCompletionHandler:^(NSError *error) {
+  [self.signalK registerSKDelegate:self.windAngle forPath:@"environment.wind.angleApparent"];
+  
+  [self.signalK connectWithCompletionHandler:^(NSError *error) {
 	if ( error )
 	{
 	  [self showMessage:error.localizedDescription withTitle:@"Error connecting"];
@@ -100,14 +104,30 @@
   NSDictionary *subscription =
   @{
 	@"context": @"vessels.self",
-	@"subscribe": @[@{
-					  @"path": @"environment.wind.speedApparent",
-					  @"period": @1000,
-					  }]
+	@"subscribe": @[
+		@{
+		  @"path": @"environment.wind.speedApparent",
+		  @"period": @1000,
+		  },
+		@{
+		  @"path": @"environment.wind.angleApparent",
+		  @"period": @1000,
+		  }
+		]
 	};
   [signalk sendSubscription:subscription];
 }
 
+- (void)signalK:(NSString *)signalK didReceivePath:(NSString *)path andValue:(id)value forContext:(NSString *)context
+{
+  if ( [path isEqualToString:@"environment.wind.speedApparent"] )
+  {
+	NSNumber *speed = (NSNumber *)value;
+	self.windSpeed.text = [NSString stringWithFormat:@"%0.2f m/s", speed.floatValue];
+  }
+}
+
+/* This shows how to get called for ever delta received
 - (void)signalK:(SignalK *)signalk didReceivedDelta:(NSDictionary *)delta
 {
   NSArray<NSDictionary *> *updates = delta[@"updates"];
@@ -133,6 +153,7 @@
 	}
   }
 }
+ */
 
 - (void)signalK:(SignalK *)signalk untrustedServer:(NSString *)host withCompletionHandler:(void (^)(BOOL))completionHandler
 {

@@ -31,8 +31,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wind Speed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XwG-tn-w3x">
-                                <rect key="frame" x="141" y="178" width="93" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apparent Wind Speed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XwG-tn-w3x">
+                                <rect key="frame" x="103.5" y="178" width="168" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -71,12 +71,27 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apparent Wind Angle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jMU-tD-Cgo">
+                                <rect key="frame" x="106" y="397" width="163" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfx-qD-oWE" customClass="SKAngleView">
+                                <rect key="frame" x="0.0" y="485" width="375" height="100"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="83"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Ydk-fE-aeE" firstAttribute="leading" secondItem="HHp-b0-tsd" secondAttribute="trailing" constant="8" id="6Pn-Z3-u7R"/>
+                            <constraint firstItem="vfx-qD-oWE" firstAttribute="top" secondItem="jMU-tD-Cgo" secondAttribute="bottom" constant="67" id="6nI-eY-Lua"/>
                             <constraint firstItem="F7r-X1-PhQ" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leadingMargin" constant="25" id="FFT-LP-LCQ"/>
                             <constraint firstItem="JEN-9S-gwM" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="8" id="IVm-B9-22K"/>
+                            <constraint firstAttribute="trailing" secondItem="vfx-qD-oWE" secondAttribute="trailing" id="JsQ-BR-hwa"/>
+                            <constraint firstItem="vfx-qD-oWE" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" id="LcC-f1-yhy"/>
                             <constraint firstItem="a6Z-ot-BRX" firstAttribute="top" secondItem="Ydk-fE-aeE" secondAttribute="bottom" constant="8" id="U1H-tF-Guf"/>
                             <constraint firstItem="JEN-9S-gwM" firstAttribute="leading" secondItem="F7r-X1-PhQ" secondAttribute="trailing" constant="8" id="UDl-Jo-fjb"/>
                             <constraint firstItem="ydV-39-nb5" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" id="UcS-8b-21b"/>
@@ -88,18 +103,21 @@
                             <constraint firstAttribute="trailing" secondItem="ydV-39-nb5" secondAttribute="trailing" id="hvh-BF-2gx"/>
                             <constraint firstItem="F7r-X1-PhQ" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="13" id="lmQ-oY-vK2"/>
                             <constraint firstItem="XwG-tn-w3x" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="oq5-m7-F7f"/>
+                            <constraint firstItem="jMU-tD-Cgo" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="q8B-oX-nVt"/>
+                            <constraint firstItem="jMU-tD-Cgo" firstAttribute="top" secondItem="ydV-39-nb5" secondAttribute="bottom" constant="58" id="wEl-xM-oJZ"/>
                             <constraint firstItem="HHp-b0-tsd" firstAttribute="top" secondItem="F7r-X1-PhQ" secondAttribute="bottom" constant="24" id="xLK-ad-8sL"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="host" destination="JEN-9S-gwM" id="ZkY-Kt-HQc"/>
                         <outlet property="port" destination="Ydk-fE-aeE" id="XlM-oT-ZmN"/>
+                        <outlet property="windAngle" destination="vfx-qD-oWE" id="leb-rY-x8D"/>
                         <outlet property="windSpeed" destination="ydV-39-nb5" id="9K5-US-Bf3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="433"/>
+            <point key="canvasLocation" x="304.80000000000001" y="432.23388305847078"/>
         </scene>
     </scenes>
 </document>

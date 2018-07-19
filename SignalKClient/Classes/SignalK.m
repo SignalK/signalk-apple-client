@@ -11,6 +11,13 @@
 
 NSString *kSignalkErrorDomain = @"org.signalk";
 
+
+@interface SKDelegateInfo : NSObject
+@property (strong) NSString *path;
+@property (strong) NSString *context;
+@property (weak) id <SignalKPathValueDelegate> delegate;
+@end
+
 @interface SignalK () <NSURLSessionDelegate, SRWebSocketDelegate>
 
 @property (strong, atomic, nullable) NSURLSession *session;
@@ -23,6 +30,8 @@ NSString *kSignalkErrorDomain = @"org.signalk";
 @property BOOL trusted;
 
 @property (strong) SRWebSocket *webSocket;
+
+@property (strong, atomic) NSMutableArray<SKDelegateInfo *> *pathValueDelegates;
 
 @end
 
@@ -43,6 +52,7 @@ NSString *kSignalkErrorDomain = @"org.signalk";
 	
 	self.wsEndpoint = [NSString stringWithFormat:@"%@://%@:%ld/signalk/v1/stream", wsProtocol, self.host, (long)self.wsPort];
 
+	self.pathValueDelegates = [NSMutableArray new];
   }
   return self;
 }
@@ -234,6 +244,10 @@ NSString *kSignalkErrorDomain = @"org.signalk";
 			  self.uuid = uuid;
 			else if ( mmsi && [mmsi hasPrefix:@"urn:"] )
 			  self.uuid = mmsi;
+			if ( self.uuid )
+			{
+			  self.selfContext = [@"vessels." stringByAppendingString:self.uuid];
+			}
 		  }
 		  if ( self.uuid == nil )
 		  {
@@ -250,6 +264,7 @@ NSString *kSignalkErrorDomain = @"org.signalk";
 	 else
 	 {
 	   self.uuid = jsonObject;
+	   self.selfContext = jsonObject;
 	   if ( [self.uuid hasPrefix:@"vessels."] )
 	   {
 		 self.uuid = [self.uuid substringFromIndex:8];
@@ -480,11 +495,19 @@ NSString *kSignalkErrorDomain = @"org.signalk";
   
   if ( jsonObject[@"updates"] != nil )
   {
-	[self.delegate signalK:self didReceivedDelta:jsonObject];
+	if ( [self.delegate respondsToSelector:@selector(signalK:didReceivedDelta:)] )
+	{
+	  [self.delegate signalK:self didReceivedDelta:jsonObject];
+	}
+	if ( self.pathValueDelegates.count > 0 || [self.delegate respondsToSelector:@selector(signalK:didReceivePath:andValue:forContext:)])
+	{
+	  [self callDelegates:jsonObject];
+	}
   }
   else if ( jsonObject[@"self"] != nil )
   {
 	self.uuid = jsonObject[@"self"];
+	self.selfContext = self.uuid;
 	if ( [self.uuid hasPrefix:@"vessels."] )
 	{
 	  self.uuid = [self.uuid substringFromIndex:8];
@@ -572,4 +595,74 @@ NSString *kSignalkErrorDomain = @"org.signalk";
   return [[@"vessels." stringByAppendingString:self.uuid] isEqualToString:context];
 }
 
+- (void)registerSKDelegate:(id <SignalKPathValueDelegate>)delegate
+{
+  [self registerSKDelegate:delegate forPath:nil andContext:nil];
+}
+
+- (void)registerSKDelegate:(id <SignalKPathValueDelegate>)delegate forPath:(NSString *)path
+{
+  [self registerSKDelegate:delegate forPath:path andContext:nil];
+}
+
+- (void)registerSKDelegate:(id <SignalKPathValueDelegate>)delegate forPath:(NSString *)path andContext:(NSString *)context
+{
+  SKDelegateInfo *info = [[SKDelegateInfo alloc] init];
+  info.delegate = delegate;
+  info.path = path;
+  info.context = context;
+  [self.pathValueDelegates addObject:info];
+}
+
+- (void)removeSKDelegate:(id <SignalKPathValueDelegate>)delegate
+{
+  for ( SKDelegateInfo *info in self.pathValueDelegates )
+  {
+	if ( info.delegate == delegate )
+	{
+	  [self.pathValueDelegates removeObject:info];
+	}
+  }
+}
+
+- (void)callDelegates:(NSDictionary *)delta
+{
+  NSArray<NSDictionary *> *updates = delta[@"updates"];
+  
+  if ( updates )
+  {
+	NSString *context = delta[@"context"];
+	for ( NSDictionary *update in updates )
+	{
+	  NSArray *values = update[@"values"];
+	  if ( values )
+	  {
+		for ( NSDictionary *pathValue in values )
+		{
+		  NSString *path = pathValue[@"path"];
+		  id value = pathValue[@"value"];
+		  
+		  if ( [self.delegate respondsToSelector:@selector(signalK:didReceivePath:andValue:forContext:)] )
+		  {
+			[self.delegate signalK:self didReceivePath:path andValue:value forContext:context];
+		  }
+		  
+		  for ( SKDelegateInfo *info in self.pathValueDelegates )
+		  {
+			if ( (info.path == nil || [path isEqualToString:info.path])
+				&& ( info.context == nil || [context isEqualToString:info.context]) )
+			{
+			  [info.delegate signalK:self didReceivePath:path andValue:value forContext:context];
+			}
+		  }
+		}
+	  }
+	}
+  }
+
+}
+
+@end
+
+@implementation SKDelegateInfo
 @end

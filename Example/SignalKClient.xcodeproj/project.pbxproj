@@ -24,6 +24,7 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		D8E022C12101260C00569E24 /* SKAngleView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E022C02101260C00569E24 /* SKAngleView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 		AE3444F3786E0D9A7AF9B81F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		CB89D05CB93053E92ADB2C85 /* Pods-SignalKClient_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignalKClient_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SignalKClient_Example/Pods-SignalKClient_Example.release.xcconfig"; sourceTree = "<group>"; };
 		CBF4370B645EC189CBA1825A /* Pods_SignalKClient_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SignalKClient_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8E022BF2101260C00569E24 /* SKAngleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKAngleView.h; sourceTree = "<group>"; };
+		D8E022C02101260C00569E24 /* SKAngleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKAngleView.m; sourceTree = "<group>"; };
 		FC2EE96C81E666B018582E2A /* Pods-SignalKClient_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignalKClient_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SignalKClient_Tests/Pods-SignalKClient_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,13 +135,15 @@
 		6003F593195388D20070C39A /* Example for SignalKClient */ = {
 			isa = PBXGroup;
 			children = (
+				6003F5A8195388D20070C39A /* Images.xcassets */,
+				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
+				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
+				D8E022BF2101260C00569E24 /* SKAngleView.h */,
+				D8E022C02101260C00569E24 /* SKAngleView.m */,
 				6003F59C195388D20070C39A /* SKAppDelegate.h */,
 				6003F59D195388D20070C39A /* SKAppDelegate.m */,
-				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* SKViewController.h */,
 				6003F5A6195388D20070C39A /* SKViewController.m */,
-				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
-				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
 			name = "Example for SignalKClient";
@@ -382,6 +387,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8E022C12101260C00569E24 /* SKAngleView.m in Sources */,
 				6003F59E195388D20070C39A /* SKAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* SKViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,

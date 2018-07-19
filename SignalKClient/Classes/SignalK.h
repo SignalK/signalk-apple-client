@@ -21,9 +21,14 @@ extern NSString *kSignalkErrorDomain;
 @protocol SignalKDelegate <NSObject>
 @optional
 - (void)signalK:(SignalK *)signalk didReceivedDelta:(NSDictionary *)delta;
+- (void)signalK:(SignalK *)signalK didReceivePath:(NSString *)path andValue:value forContext:(NSString *)context;
 - (void)signalK:(SignalK *)signalk untrustedServer:(NSString *)host withCompletionHandler:(nullable void (^)(BOOL trust))completionHandler;
 - (void)signalKWebSocketDidOpen:(SignalK *)signalk;
 - (void)signalK:(SignalK *)signalk webSocketFailed:(NSString *)reason;
+@end
+
+@protocol SignalKPathValueDelegate <NSObject>
+- (void)signalK:(SignalK *)signalK didReceivePath:(NSString *)path andValue:value forContext:(NSString *)context;
 @end
 
 @interface SignalK : NSObject
@@ -42,6 +47,7 @@ extern NSString *kSignalkErrorDomain;
 @property (strong) NSString *password;
 @property BOOL disableStreaming;
 @property (nullable,strong,atomic) NSString *uuid;
+@property (nullable,strong,atomic) NSString *selfContext;
 
 @property (strong) id <SignalKDelegate> delegate;
 
@@ -57,5 +63,10 @@ extern NSString *kSignalkErrorDomain;
 - (void)sendAPI:(NSString *)path withCompletionHandler:(void (^)(NSError *error, id jsonObject))completionHandler;
 - (void)sendSubscription:(NSDictionary *)subscription;
 - (BOOL)isSelfContext:(NSString *)context;
+
+- (void)registerSKDelegate:(id <SignalKPathValueDelegate>)delegate;
+- (void)registerSKDelegate:(id <SignalKPathValueDelegate>)delegate forPath:(NSString *)path;
+- (void)registerSKDelegate:(id <SignalKPathValueDelegate>)delegate forPath:(NSString *)path andContext:(NSString *)context;
+- (void)removeSKDelegate:(id <SignalKPathValueDelegate>)delegate;
 
 @end
