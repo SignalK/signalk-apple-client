@@ -6,9 +6,9 @@
 
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+For example usage, see Example/SignalKClient/SKViewController.m
 
-## Requirements
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Installation
 
