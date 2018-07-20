@@ -19,6 +19,12 @@ it, simply add the following line to your Podfile:
 pod 'SignalKClient'
 ```
 
+SignalKClient is also available through [Carthage](https://github.com/carthage/carthage). To install it, simply add the following line to your Cartfile
+
+```
+github "SignalK/signalk-ios-client"
+```
+
 ## License
 
 SignalKClient is available under the Apache 2.0 license. See the LICENSE file for more info.
