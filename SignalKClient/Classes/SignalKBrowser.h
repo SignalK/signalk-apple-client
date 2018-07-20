@@ -21,7 +21,7 @@
 - (void)notifyDelegates:(SEL)selector;
 
 - (NSDictionary<NSString *,NSArray<VesselService *> *> *)getServicesByName;
-- (VesselService *)getBestService:(NSArray<VesselService *> *)services;
+- (nullable VesselService *)getBestService:(NSArray<VesselService *> *)services;
 
 @end
 

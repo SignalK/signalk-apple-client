@@ -49,24 +49,24 @@ extern NSString *kSignalkErrorDomain;
 @property (nullable,strong,atomic) NSString *uuid;
 @property (nullable,strong,atomic) NSString *selfContext;
 
-@property (strong) id <SignalKDelegate> delegate;
+@property (weak) id <SignalKDelegate> delegate;
 
 - (instancetype)initWithHost:(NSString *)host port:(NSInteger)port;
 
-- (void)connectWithCompletionHandler:(void (^)(NSError *error))complertionHandler;
+- (void)connectWithCompletionHandler:(void (^)(NSError * _Nullable error))complertionHandler;
 - (void)close;
 
 - (void)startStreaming;
 - (void)stopStreaming;
 
-- (void)sendGET:(NSString *)path withCompletionHandler:(void (^)(NSError *error, id jsonObject))completionHandler;
-- (void)sendAPI:(NSString *)path withCompletionHandler:(void (^)(NSError *error, id jsonObject))completionHandler;
+- (void)sendGET:(NSString *)path withCompletionHandler:(void (^)(NSError * _Nullable error, id _Nullable jsonObject))completionHandler;
+- (void)sendAPI:(NSString *)path withCompletionHandler:(void (^)(NSError * _Nullable error, id _Nullable jsonObject))completionHandler;
 - (void)sendSubscription:(NSDictionary *)subscription;
 - (BOOL)isSelfContext:(NSString *)context;
 
 - (void)registerSKDelegate:(id <SignalKPathValueDelegate>)delegate;
 - (void)registerSKDelegate:(id <SignalKPathValueDelegate>)delegate forPath:(NSString *)path;
-- (void)registerSKDelegate:(id <SignalKPathValueDelegate>)delegate forPath:(NSString *)path andContext:(NSString *)context;
+- (void)registerSKDelegate:(id <SignalKPathValueDelegate>)delegate forPath:(nullable NSString *)path andContext:(NSString *)context;
 - (void)removeSKDelegate:(id <SignalKPathValueDelegate>)delegate;
 
 @end
