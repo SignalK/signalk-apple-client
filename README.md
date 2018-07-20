@@ -1,8 +1,10 @@
 # SignalKClient
 
-[![Version](https://img.shields.io/cocoapods/v/SignalKClient.svg?style=flat)](https://cocoapods.org/pods/SignalKClient)
-[![License](https://img.shields.io/cocoapods/l/SignalKClient.svg?style=flat)](https://cocoapods.org/pods/SignalKClient)
 [![Platform](https://img.shields.io/cocoapods/p/SignalKClient.svg?style=flat)](https://cocoapods.org/pods/SignalKClient)
+[![License](https://img.shields.io/cocoapods/l/SignalKClient.svg?style=flat)](https://cocoapods.org/pods/SignalKClient)
+
+[![Version](https://img.shields.io/cocoapods/v/SignalKClient.svg?style=flat)](https://cocoapods.org/pods/SignalKClient)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 ## Example
 
