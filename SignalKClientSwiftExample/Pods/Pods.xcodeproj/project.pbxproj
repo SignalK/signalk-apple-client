@@ -1,0 +1,812 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		039D97BC66612137876E50748ABED03E /* SignalKBrowser.h in Headers */ = {isa = PBXBuildFile; fileRef = 7797AC2185A6EA0E8B7182A8D358789D /* SignalKBrowser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0C4703F0B36858880D67A129E6B7786E /* SocketRocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FA45DB3EC5BD8343FDFBC53831394EE /* SocketRocket.framework */; };
+		21277E46B633EEE4D9D59F5BAFBB0716 /* SocketRocket-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9508CE1EB95497C10A588AC658230E20 /* SocketRocket-dummy.m */; };
+		2E525BE8FFD63E88725BAE68A7AF360B /* VesselService.h in Headers */ = {isa = PBXBuildFile; fileRef = CB2370E57CB04B3457FF17E4D6617786 /* VesselService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3562806EF45611A28C68780F22B03324 /* SignalKBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 82246D9C36FCBCB5FA8ECB61FED28C2D /* SignalKBrowser.m */; };
+		3A3DE3811E3BB6DACF4ECCF15A3B122C /* SignalKClient-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBA923E79A349E2D824F3BF2EFB6BB4 /* SignalKClient-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		45FF6C36A39CA465C083B5D17CFE2BB4 /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C29FA9ACFD3959B1A89A23670B77C01 /* SRWebSocket.m */; };
+		55A02C2CE0D6D4F15B50A25BC70448E4 /* VesselService.m in Sources */ = {isa = PBXBuildFile; fileRef = F2F3D903CD2F5B9F3EB464FB1728F167 /* VesselService.m */; };
+		5DAC3E96ECF52AFFA6D2A38DFE262A33 /* Pods-SignalKClientSwiftExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5854F21AAEE1C88952B08893AA216264 /* Pods-SignalKClientSwiftExample-dummy.m */; };
+		5DDE4B643D8B7F71416D9D742BF393D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B024FA58B4DDB38F77E9B81AA872FE32 /* Foundation.framework */; };
+		60D2C2ACE46F42927618756E99E18D40 /* SocketRocket-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 296B3945D868A7787008F4E4F5D0CDBB /* SocketRocket-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6917EC32DF2EB523060E2B60B7E1D9DB /* SRWebSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F555C396EBCD5031A8C6558A0327628 /* SRWebSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7B4DFADF53C92FAFE3FE45A62B39FB19 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B024FA58B4DDB38F77E9B81AA872FE32 /* Foundation.framework */; };
+		86C0F54639CD5A73567ADDC2BF6FF618 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B024FA58B4DDB38F77E9B81AA872FE32 /* Foundation.framework */; };
+		A1293EC5316B174BCAD8603814C45D2F /* SocketRocket.h in Headers */ = {isa = PBXBuildFile; fileRef = B1479E1A6056EF78968AF66F6F32909B /* SocketRocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A702B2C04CFFA6F1F6B5FFB39E1BFE78 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AC8A7A1790D294908A67C7A2CE2368C /* Security.framework */; };
+		BC7BF0A6BB0848C0EE19F5E61C1723C1 /* SignalKClient-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE876E6D5C3C50700E240EAF4179FDA /* SignalKClient-dummy.m */; };
+		C726F83A874E9899E0E10843FA67D0D7 /* SignalK.h in Headers */ = {isa = PBXBuildFile; fileRef = 7ABFF5E7C7AF4A8781C2F02F2AD657A5 /* SignalK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D256C5DF950BF22B0475F8743151A0D5 /* SignalK.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDEBA0D85E4C575F78E73EC1CEF34DC /* SignalK.m */; };
+		FA972D47B13C9B2081C95B33EE0483C5 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0042D3022E724C3BDF6127F588866D84 /* CFNetwork.framework */; };
+		FCEC715F74F7C57B4CEAC75E4CD9A804 /* Pods-SignalKClientSwiftExample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DF8018F0473B1751139287CB1503ADE1 /* Pods-SignalKClientSwiftExample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6794BFAF6E92FC181C1E2228229D7767 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E15F94366E0BD351539E56641E9C16C6;
+			remoteInfo = SignalKClient;
+		};
+		8EFD7CCCFB034AAC7B937203B51703F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D97BECE01DCB72B3D4F15DD94669C4F6;
+			remoteInfo = SocketRocket;
+		};
+		A851F91748D6E8F933D7EF05D8E8EE71 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D97BECE01DCB72B3D4F15DD94669C4F6;
+			remoteInfo = SocketRocket;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0042D3022E724C3BDF6127F588866D84 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		0B4679072C991878A69675EA9FC6925F /* SocketRocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SocketRocket.framework; path = SocketRocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F072090D4AD0722EBB790041A675292 /* Pods-SignalKClientSwiftExample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SignalKClientSwiftExample.modulemap"; sourceTree = "<group>"; };
+		19BD53AB35A83C4597884664828F0304 /* Pods-SignalKClientSwiftExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SignalKClientSwiftExample.release.xcconfig"; sourceTree = "<group>"; };
+		296B3945D868A7787008F4E4F5D0CDBB /* SocketRocket-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SocketRocket-umbrella.h"; sourceTree = "<group>"; };
+		2AC8A7A1790D294908A67C7A2CE2368C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		2EA40AE619A0D4CE4B670E7D93F5889C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B010F3317C405096FA71FE2EE226FD9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DBA923E79A349E2D824F3BF2EFB6BB4 /* SignalKClient-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SignalKClient-umbrella.h"; sourceTree = "<group>"; };
+		55239A8133A5EF2331E66D8530C1993C /* SignalKClient-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SignalKClient-prefix.pch"; sourceTree = "<group>"; };
+		5854F21AAEE1C88952B08893AA216264 /* Pods-SignalKClientSwiftExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SignalKClientSwiftExample-dummy.m"; sourceTree = "<group>"; };
+		5FA45DB3EC5BD8343FDFBC53831394EE /* SocketRocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SocketRocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		607BAF119E4AABB431E1BECB9EDCB842 /* SignalKClient.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SignalKClient.modulemap; sourceTree = "<group>"; };
+		678E02A839259488384EEAE27B0E4EC1 /* SocketRocket.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SocketRocket.modulemap; sourceTree = "<group>"; };
+		772BED17DDC988ECDB25E5BE7BA0B174 /* Pods-SignalKClientSwiftExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SignalKClientSwiftExample-frameworks.sh"; sourceTree = "<group>"; };
+		7797AC2185A6EA0E8B7182A8D358789D /* SignalKBrowser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SignalKBrowser.h; path = SignalKClient/Classes/SignalKBrowser.h; sourceTree = "<group>"; };
+		7ABFF5E7C7AF4A8781C2F02F2AD657A5 /* SignalK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SignalK.h; path = SignalKClient/Classes/SignalK.h; sourceTree = "<group>"; };
+		82246D9C36FCBCB5FA8ECB61FED28C2D /* SignalKBrowser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SignalKBrowser.m; path = SignalKClient/Classes/SignalKBrowser.m; sourceTree = "<group>"; };
+		8AE876E6D5C3C50700E240EAF4179FDA /* SignalKClient-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SignalKClient-dummy.m"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9451ED984D08923C66EB74F00FCB2E72 /* Pods-SignalKClientSwiftExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SignalKClientSwiftExample-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9508CE1EB95497C10A588AC658230E20 /* SocketRocket-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SocketRocket-dummy.m"; sourceTree = "<group>"; };
+		9C29FA9ACFD3959B1A89A23670B77C01 /* SRWebSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRWebSocket.m; path = SocketRocket/SRWebSocket.m; sourceTree = "<group>"; };
+		9F555C396EBCD5031A8C6558A0327628 /* SRWebSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRWebSocket.h; path = SocketRocket/SRWebSocket.h; sourceTree = "<group>"; };
+		AD6AA2F928B53DF570836B622E0E9897 /* Pods-SignalKClientSwiftExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SignalKClientSwiftExample-acknowledgements.plist"; sourceTree = "<group>"; };
+		B024FA58B4DDB38F77E9B81AA872FE32 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		B1479E1A6056EF78968AF66F6F32909B /* SocketRocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SocketRocket.h; path = SocketRocket/SocketRocket.h; sourceTree = "<group>"; };
+		BCD6453F064594608990A977A8054353 /* Pods_SignalKClientSwiftExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SignalKClientSwiftExample.framework; path = "Pods-SignalKClientSwiftExample.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAAFDC9B178C24D8A84591EDB6B65FDD /* SignalKClient.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SignalKClient.xcconfig; sourceTree = "<group>"; };
+		CB2370E57CB04B3457FF17E4D6617786 /* VesselService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VesselService.h; path = SignalKClient/Classes/VesselService.h; sourceTree = "<group>"; };
+		CC5AF7C1946756868069E6C8E9DBD8F1 /* SocketRocket-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SocketRocket-prefix.pch"; sourceTree = "<group>"; };
+		CFBAD993F11B93EBFD44052E6562B5E5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0876AE274A1C3E8E66680A0E6F841EC /* SignalKClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SignalKClient.framework; path = SignalKClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D373F9983125D6740A5A3063CB36CD4D /* Pods-SignalKClientSwiftExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SignalKClientSwiftExample.debug.xcconfig"; sourceTree = "<group>"; };
+		D55A3EBE61B158189C27A3EAAC199C83 /* SocketRocket.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SocketRocket.xcconfig; sourceTree = "<group>"; };
+		DB5C7005E905215D46B4CAFD31C638CE /* Pods-SignalKClientSwiftExample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SignalKClientSwiftExample-resources.sh"; sourceTree = "<group>"; };
+		DF8018F0473B1751139287CB1503ADE1 /* Pods-SignalKClientSwiftExample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SignalKClientSwiftExample-umbrella.h"; sourceTree = "<group>"; };
+		F2F3D903CD2F5B9F3EB464FB1728F167 /* VesselService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VesselService.m; path = SignalKClient/Classes/VesselService.m; sourceTree = "<group>"; };
+		FFDEBA0D85E4C575F78E73EC1CEF34DC /* SignalK.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SignalK.m; path = SignalKClient/Classes/SignalK.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		11776862C7AC711881D835DA43C455A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B4DFADF53C92FAFE3FE45A62B39FB19 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		228865EDF24263C4470FCBD1B83006D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86C0F54639CD5A73567ADDC2BF6FF618 /* Foundation.framework in Frameworks */,
+				0C4703F0B36858880D67A129E6B7786E /* SocketRocket.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25789773A93255B306A20B60FF5774FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA972D47B13C9B2081C95B33EE0483C5 /* CFNetwork.framework in Frameworks */,
+				5DDE4B643D8B7F71416D9D742BF393D9 /* Foundation.framework in Frameworks */,
+				A702B2C04CFFA6F1F6B5FFB39E1BFE78 /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0BCEBE9D38D6453FC1223B72B412E5B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5FA45DB3EC5BD8343FDFBC53831394EE /* SocketRocket.framework */,
+				99B52676655FC7CDC3D2B00CA1887AD5 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0BD11672DC2214E00D0A4D213E47C322 /* SocketRocket */ = {
+			isa = PBXGroup;
+			children = (
+				B1479E1A6056EF78968AF66F6F32909B /* SocketRocket.h */,
+				9F555C396EBCD5031A8C6558A0327628 /* SRWebSocket.h */,
+				9C29FA9ACFD3959B1A89A23670B77C01 /* SRWebSocket.m */,
+				23DBBE30A62FD5D267BF2FCCF6D832D4 /* Support Files */,
+			);
+			name = SocketRocket;
+			path = SocketRocket;
+			sourceTree = "<group>";
+		};
+		23DBBE30A62FD5D267BF2FCCF6D832D4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				CFBAD993F11B93EBFD44052E6562B5E5 /* Info.plist */,
+				678E02A839259488384EEAE27B0E4EC1 /* SocketRocket.modulemap */,
+				D55A3EBE61B158189C27A3EAAC199C83 /* SocketRocket.xcconfig */,
+				9508CE1EB95497C10A588AC658230E20 /* SocketRocket-dummy.m */,
+				CC5AF7C1946756868069E6C8E9DBD8F1 /* SocketRocket-prefix.pch */,
+				296B3945D868A7787008F4E4F5D0CDBB /* SocketRocket-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SocketRocket";
+			sourceTree = "<group>";
+		};
+		3258CFEB7030FCF04644DC31C45FDCF0 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				59DBA5E3B9C024D56D1812BCD31C4074 /* Pods-SignalKClientSwiftExample */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		42A709BA9294AF2069A6731B9F4C67CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BCD6453F064594608990A977A8054353 /* Pods_SignalKClientSwiftExample.framework */,
+				D0876AE274A1C3E8E66680A0E6F841EC /* SignalKClient.framework */,
+				0B4679072C991878A69675EA9FC6925F /* SocketRocket.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		59DBA5E3B9C024D56D1812BCD31C4074 /* Pods-SignalKClientSwiftExample */ = {
+			isa = PBXGroup;
+			children = (
+				2EA40AE619A0D4CE4B670E7D93F5889C /* Info.plist */,
+				0F072090D4AD0722EBB790041A675292 /* Pods-SignalKClientSwiftExample.modulemap */,
+				9451ED984D08923C66EB74F00FCB2E72 /* Pods-SignalKClientSwiftExample-acknowledgements.markdown */,
+				AD6AA2F928B53DF570836B622E0E9897 /* Pods-SignalKClientSwiftExample-acknowledgements.plist */,
+				5854F21AAEE1C88952B08893AA216264 /* Pods-SignalKClientSwiftExample-dummy.m */,
+				772BED17DDC988ECDB25E5BE7BA0B174 /* Pods-SignalKClientSwiftExample-frameworks.sh */,
+				DB5C7005E905215D46B4CAFD31C638CE /* Pods-SignalKClientSwiftExample-resources.sh */,
+				DF8018F0473B1751139287CB1503ADE1 /* Pods-SignalKClientSwiftExample-umbrella.h */,
+				D373F9983125D6740A5A3063CB36CD4D /* Pods-SignalKClientSwiftExample.debug.xcconfig */,
+				19BD53AB35A83C4597884664828F0304 /* Pods-SignalKClientSwiftExample.release.xcconfig */,
+			);
+			name = "Pods-SignalKClientSwiftExample";
+			path = "Target Support Files/Pods-SignalKClientSwiftExample";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				0BCEBE9D38D6453FC1223B72B412E5B2 /* Frameworks */,
+				B5EECF30750CF46306F47773DB823558 /* Pods */,
+				42A709BA9294AF2069A6731B9F4C67CE /* Products */,
+				3258CFEB7030FCF04644DC31C45FDCF0 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		96ECE5B15AC6722951C0F1009B3385E0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3B010F3317C405096FA71FE2EE226FD9 /* Info.plist */,
+				607BAF119E4AABB431E1BECB9EDCB842 /* SignalKClient.modulemap */,
+				CAAFDC9B178C24D8A84591EDB6B65FDD /* SignalKClient.xcconfig */,
+				8AE876E6D5C3C50700E240EAF4179FDA /* SignalKClient-dummy.m */,
+				55239A8133A5EF2331E66D8530C1993C /* SignalKClient-prefix.pch */,
+				4DBA923E79A349E2D824F3BF2EFB6BB4 /* SignalKClient-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SignalKClient";
+			sourceTree = "<group>";
+		};
+		99B52676655FC7CDC3D2B00CA1887AD5 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				0042D3022E724C3BDF6127F588866D84 /* CFNetwork.framework */,
+				B024FA58B4DDB38F77E9B81AA872FE32 /* Foundation.framework */,
+				2AC8A7A1790D294908A67C7A2CE2368C /* Security.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		B5EECF30750CF46306F47773DB823558 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C573216C12B62F3B6B6ED70ABA3B492D /* SignalKClient */,
+				0BD11672DC2214E00D0A4D213E47C322 /* SocketRocket */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C573216C12B62F3B6B6ED70ABA3B492D /* SignalKClient */ = {
+			isa = PBXGroup;
+			children = (
+				7ABFF5E7C7AF4A8781C2F02F2AD657A5 /* SignalK.h */,
+				FFDEBA0D85E4C575F78E73EC1CEF34DC /* SignalK.m */,
+				7797AC2185A6EA0E8B7182A8D358789D /* SignalKBrowser.h */,
+				82246D9C36FCBCB5FA8ECB61FED28C2D /* SignalKBrowser.m */,
+				CB2370E57CB04B3457FF17E4D6617786 /* VesselService.h */,
+				F2F3D903CD2F5B9F3EB464FB1728F167 /* VesselService.m */,
+				96ECE5B15AC6722951C0F1009B3385E0 /* Support Files */,
+			);
+			name = SignalKClient;
+			path = SignalKClient;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0BFFDB01FAC30537471B7209E044E86A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C726F83A874E9899E0E10843FA67D0D7 /* SignalK.h in Headers */,
+				039D97BC66612137876E50748ABED03E /* SignalKBrowser.h in Headers */,
+				3A3DE3811E3BB6DACF4ECCF15A3B122C /* SignalKClient-umbrella.h in Headers */,
+				2E525BE8FFD63E88725BAE68A7AF360B /* VesselService.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48081E33EC6AF3FE307AD87A562352D8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60D2C2ACE46F42927618756E99E18D40 /* SocketRocket-umbrella.h in Headers */,
+				A1293EC5316B174BCAD8603814C45D2F /* SocketRocket.h in Headers */,
+				6917EC32DF2EB523060E2B60B7E1D9DB /* SRWebSocket.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		974E0EB5D0FD3BB16E97AF7A79A19723 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCEC715F74F7C57B4CEAC75E4CD9A804 /* Pods-SignalKClientSwiftExample-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D97BECE01DCB72B3D4F15DD94669C4F6 /* SocketRocket */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D096035E44A98E36A812E2CEA60D7BC /* Build configuration list for PBXNativeTarget "SocketRocket" */;
+			buildPhases = (
+				1AE03CEF2892F04208DA513EDC549049 /* Sources */,
+				25789773A93255B306A20B60FF5774FE /* Frameworks */,
+				48081E33EC6AF3FE307AD87A562352D8 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SocketRocket;
+			productName = SocketRocket;
+			productReference = 0B4679072C991878A69675EA9FC6925F /* SocketRocket.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E15F94366E0BD351539E56641E9C16C6 /* SignalKClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8F44B7D205BE3C2BBC38AE2EAC0211E /* Build configuration list for PBXNativeTarget "SignalKClient" */;
+			buildPhases = (
+				B7D528DA2A6747737B8A14004FF89E59 /* Sources */,
+				228865EDF24263C4470FCBD1B83006D7 /* Frameworks */,
+				0BFFDB01FAC30537471B7209E044E86A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A0D968C5EFFA6F22877B70622385BCF4 /* PBXTargetDependency */,
+			);
+			name = SignalKClient;
+			productName = SignalKClient;
+			productReference = D0876AE274A1C3E8E66680A0E6F841EC /* SignalKClient.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E632D01E59CF24C4A0BEBF9080E3CB2C /* Pods-SignalKClientSwiftExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44C62EFD0418140DF9C610E6F44849E2 /* Build configuration list for PBXNativeTarget "Pods-SignalKClientSwiftExample" */;
+			buildPhases = (
+				CD215E798CFFE8594B4D2B25863BD4B2 /* Sources */,
+				11776862C7AC711881D835DA43C455A6 /* Frameworks */,
+				974E0EB5D0FD3BB16E97AF7A79A19723 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E2734E89713B519005D96F14641CA45E /* PBXTargetDependency */,
+				3AF511E7B92DBA32BDA216A231D0B050 /* PBXTargetDependency */,
+			);
+			name = "Pods-SignalKClientSwiftExample";
+			productName = "Pods-SignalKClientSwiftExample";
+			productReference = BCD6453F064594608990A977A8054353 /* Pods_SignalKClientSwiftExample.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 42A709BA9294AF2069A6731B9F4C67CE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E632D01E59CF24C4A0BEBF9080E3CB2C /* Pods-SignalKClientSwiftExample */,
+				E15F94366E0BD351539E56641E9C16C6 /* SignalKClient */,
+				D97BECE01DCB72B3D4F15DD94669C4F6 /* SocketRocket */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1AE03CEF2892F04208DA513EDC549049 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21277E46B633EEE4D9D59F5BAFBB0716 /* SocketRocket-dummy.m in Sources */,
+				45FF6C36A39CA465C083B5D17CFE2BB4 /* SRWebSocket.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7D528DA2A6747737B8A14004FF89E59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D256C5DF950BF22B0475F8743151A0D5 /* SignalK.m in Sources */,
+				3562806EF45611A28C68780F22B03324 /* SignalKBrowser.m in Sources */,
+				BC7BF0A6BB0848C0EE19F5E61C1723C1 /* SignalKClient-dummy.m in Sources */,
+				55A02C2CE0D6D4F15B50A25BC70448E4 /* VesselService.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD215E798CFFE8594B4D2B25863BD4B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DAC3E96ECF52AFFA6D2A38DFE262A33 /* Pods-SignalKClientSwiftExample-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3AF511E7B92DBA32BDA216A231D0B050 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SocketRocket;
+			target = D97BECE01DCB72B3D4F15DD94669C4F6 /* SocketRocket */;
+			targetProxy = 8EFD7CCCFB034AAC7B937203B51703F3 /* PBXContainerItemProxy */;
+		};
+		A0D968C5EFFA6F22877B70622385BCF4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SocketRocket;
+			target = D97BECE01DCB72B3D4F15DD94669C4F6 /* SocketRocket */;
+			targetProxy = A851F91748D6E8F933D7EF05D8E8EE71 /* PBXContainerItemProxy */;
+		};
+		E2734E89713B519005D96F14641CA45E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SignalKClient;
+			target = E15F94366E0BD351539E56641E9C16C6 /* SignalKClient */;
+			targetProxy = 6794BFAF6E92FC181C1E2228229D7767 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2FC795A96E5D398C302E2816C149D693 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19BD53AB35A83C4597884664828F0304 /* Pods-SignalKClientSwiftExample.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SignalKClientSwiftExample/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SignalKClientSwiftExample/Pods-SignalKClientSwiftExample.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		38CA7D60685EA5C3B72B02057FD6B210 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CAAFDC9B178C24D8A84591EDB6B65FDD /* SignalKClient.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SignalKClient/SignalKClient-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SignalKClient/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SignalKClient/SignalKClient.modulemap";
+				PRODUCT_MODULE_NAME = SignalKClient;
+				PRODUCT_NAME = SignalKClient;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5DC0083F57E9AB706B46C5B5D73B38D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		8B2DEE91798CAF79DB4817A1CADE176A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D55A3EBE61B158189C27A3EAAC199C83 /* SocketRocket.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SocketRocket/SocketRocket-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SocketRocket/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SocketRocket/SocketRocket.modulemap";
+				PRODUCT_MODULE_NAME = SocketRocket;
+				PRODUCT_NAME = SocketRocket;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9170FC7537E71331942F76FB4978B304 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D55A3EBE61B158189C27A3EAAC199C83 /* SocketRocket.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SocketRocket/SocketRocket-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SocketRocket/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SocketRocket/SocketRocket.modulemap";
+				PRODUCT_MODULE_NAME = SocketRocket;
+				PRODUCT_NAME = SocketRocket;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AEEA80476F98EB645C4DD53EB2BB6D88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		B074293B8C12C30AECC71831782F88C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CAAFDC9B178C24D8A84591EDB6B65FDD /* SignalKClient.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SignalKClient/SignalKClient-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SignalKClient/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SignalKClient/SignalKClient.modulemap";
+				PRODUCT_MODULE_NAME = SignalKClient;
+				PRODUCT_NAME = SignalKClient;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E9D510AE88310E6B27B88B6D25DE6712 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D373F9983125D6740A5A3063CB36CD4D /* Pods-SignalKClientSwiftExample.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SignalKClientSwiftExample/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SignalKClientSwiftExample/Pods-SignalKClientSwiftExample.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DC0083F57E9AB706B46C5B5D73B38D8 /* Debug */,
+				AEEA80476F98EB645C4DD53EB2BB6D88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D096035E44A98E36A812E2CEA60D7BC /* Build configuration list for PBXNativeTarget "SocketRocket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9170FC7537E71331942F76FB4978B304 /* Debug */,
+				8B2DEE91798CAF79DB4817A1CADE176A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		44C62EFD0418140DF9C610E6F44849E2 /* Build configuration list for PBXNativeTarget "Pods-SignalKClientSwiftExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9D510AE88310E6B27B88B6D25DE6712 /* Debug */,
+				2FC795A96E5D398C302E2816C149D693 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8F44B7D205BE3C2BBC38AE2EAC0211E /* Build configuration list for PBXNativeTarget "SignalKClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38CA7D60685EA5C3B72B02057FD6B210 /* Debug */,
+				B074293B8C12C30AECC71831782F88C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

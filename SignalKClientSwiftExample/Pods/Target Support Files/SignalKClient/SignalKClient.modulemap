@@ -1,0 +1,6 @@
+framework module SignalKClient {
+  umbrella header "SignalKClient-umbrella.h"
+
+  export *
+  module * { export * }
+}

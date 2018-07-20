@@ -1,0 +1,414 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4193F32A7EB98098F62754C1 /* Pods_SignalKClientSwiftExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C0AAA997B879FAB80F6FC66 /* Pods_SignalKClientSwiftExample.framework */; };
+		D8336BDE2102335B0082975B /* BrowseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8336BDD2102335B0082975B /* BrowseTableViewController.swift */; };
+		D8E023212102208F00569E24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E023202102208F00569E24 /* AppDelegate.swift */; };
+		D8E023232102208F00569E24 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E023222102208F00569E24 /* ViewController.swift */; };
+		D8E023262102208F00569E24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8E023242102208F00569E24 /* Main.storyboard */; };
+		D8E023282102209900569E24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8E023272102209900569E24 /* Assets.xcassets */; };
+		D8E0232B2102209900569E24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8E023292102209900569E24 /* LaunchScreen.storyboard */; };
+		D8E0233321022E3900569E24 /* AngleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E0233221022E3900569E24 /* AngleView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4C0AAA997B879FAB80F6FC66 /* Pods_SignalKClientSwiftExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SignalKClientSwiftExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE869A1E4F74BB97D6E15BF5 /* Pods-SignalKClientSwiftExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignalKClientSwiftExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SignalKClientSwiftExample/Pods-SignalKClientSwiftExample.debug.xcconfig"; sourceTree = "<group>"; };
+		B6D1690E538FA3EB8B7CD3A2 /* Pods-SignalKClientSwiftExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignalKClientSwiftExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SignalKClientSwiftExample/Pods-SignalKClientSwiftExample.release.xcconfig"; sourceTree = "<group>"; };
+		D8336BDD2102335B0082975B /* BrowseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseTableViewController.swift; sourceTree = "<group>"; };
+		D8E0231D2102208F00569E24 /* SignalKClientSwiftExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignalKClientSwiftExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8E023202102208F00569E24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D8E023222102208F00569E24 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D8E023252102208F00569E24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D8E023272102209900569E24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D8E0232A2102209900569E24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D8E0232C2102209900569E24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8E0233221022E3900569E24 /* AngleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngleView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D8E0231A2102208F00569E24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4193F32A7EB98098F62754C1 /* Pods_SignalKClientSwiftExample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		661395688760A26E2D12A065 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4C0AAA997B879FAB80F6FC66 /* Pods_SignalKClientSwiftExample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D8E023142102208F00569E24 = {
+			isa = PBXGroup;
+			children = (
+				D8E0231F2102208F00569E24 /* SignalKClientSwiftExample */,
+				D8E0231E2102208F00569E24 /* Products */,
+				E5AFA4ECB51DCAD146A4D257 /* Pods */,
+				661395688760A26E2D12A065 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D8E0231E2102208F00569E24 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D8E0231D2102208F00569E24 /* SignalKClientSwiftExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D8E0231F2102208F00569E24 /* SignalKClientSwiftExample */ = {
+			isa = PBXGroup;
+			children = (
+				D8E023202102208F00569E24 /* AppDelegate.swift */,
+				D8E023222102208F00569E24 /* ViewController.swift */,
+				D8E023242102208F00569E24 /* Main.storyboard */,
+				D8E023272102209900569E24 /* Assets.xcassets */,
+				D8E023292102209900569E24 /* LaunchScreen.storyboard */,
+				D8E0232C2102209900569E24 /* Info.plist */,
+				D8E0233221022E3900569E24 /* AngleView.swift */,
+				D8336BDD2102335B0082975B /* BrowseTableViewController.swift */,
+			);
+			path = SignalKClientSwiftExample;
+			sourceTree = "<group>";
+		};
+		E5AFA4ECB51DCAD146A4D257 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AE869A1E4F74BB97D6E15BF5 /* Pods-SignalKClientSwiftExample.debug.xcconfig */,
+				B6D1690E538FA3EB8B7CD3A2 /* Pods-SignalKClientSwiftExample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D8E0231C2102208F00569E24 /* SignalKClientSwiftExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8E0232F2102209900569E24 /* Build configuration list for PBXNativeTarget "SignalKClientSwiftExample" */;
+			buildPhases = (
+				C9FD1BC74E55271AE23363D7 /* [CP] Check Pods Manifest.lock */,
+				D8E023192102208F00569E24 /* Sources */,
+				D8E0231A2102208F00569E24 /* Frameworks */,
+				D8E0231B2102208F00569E24 /* Resources */,
+				CD462CEA4C84C9C7A41941C4 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SignalKClientSwiftExample;
+			productName = SignalKClientSwiftExample;
+			productReference = D8E0231D2102208F00569E24 /* SignalKClientSwiftExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D8E023152102208F00569E24 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Scott Bender";
+				TargetAttributes = {
+					D8E0231C2102208F00569E24 = {
+						CreatedOnToolsVersion = 9.4;
+					};
+				};
+			};
+			buildConfigurationList = D8E023182102208F00569E24 /* Build configuration list for PBXProject "SignalKClientSwiftExample" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D8E023142102208F00569E24;
+			productRefGroup = D8E0231E2102208F00569E24 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D8E0231C2102208F00569E24 /* SignalKClientSwiftExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D8E0231B2102208F00569E24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8E0232B2102209900569E24 /* LaunchScreen.storyboard in Resources */,
+				D8E023282102209900569E24 /* Assets.xcassets in Resources */,
+				D8E023262102208F00569E24 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C9FD1BC74E55271AE23363D7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SignalKClientSwiftExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD462CEA4C84C9C7A41941C4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SignalKClientSwiftExample/Pods-SignalKClientSwiftExample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SignalKClient/SignalKClient.framework",
+				"${BUILT_PRODUCTS_DIR}/SocketRocket/SocketRocket.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SignalKClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketRocket.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SignalKClientSwiftExample/Pods-SignalKClientSwiftExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D8E023192102208F00569E24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8E023232102208F00569E24 /* ViewController.swift in Sources */,
+				D8E023212102208F00569E24 /* AppDelegate.swift in Sources */,
+				D8E0233321022E3900569E24 /* AngleView.swift in Sources */,
+				D8336BDE2102335B0082975B /* BrowseTableViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D8E023242102208F00569E24 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8E023252102208F00569E24 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D8E023292102209900569E24 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8E0232A2102209900569E24 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D8E0232D2102209900569E24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D8E0232E2102209900569E24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D8E023302102209900569E24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE869A1E4F74BB97D6E15BF5 /* Pods-SignalKClientSwiftExample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SignalKClientSwiftExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.scottbender.SignalKClientSwiftExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D8E023312102209900569E24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6D1690E538FA3EB8B7CD3A2 /* Pods-SignalKClientSwiftExample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SignalKClientSwiftExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.scottbender.SignalKClientSwiftExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D8E023182102208F00569E24 /* Build configuration list for PBXProject "SignalKClientSwiftExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8E0232D2102209900569E24 /* Debug */,
+				D8E0232E2102209900569E24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8E0232F2102209900569E24 /* Build configuration list for PBXNativeTarget "SignalKClientSwiftExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8E023302102209900569E24 /* Debug */,
+				D8E023312102209900569E24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D8E023152102208F00569E24 /* Project object */;
+}
