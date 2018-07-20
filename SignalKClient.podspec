@@ -30,7 +30,7 @@ Client Library For Accessing Signal K Servers From an iOS Application
 
   s.ios.deployment_target = '9.3'
   s.osx.deployment_target = '10.10'
-  s.osx.deployment_target = '10.2'
+  s.tvos.deployment_target = '10.2'
 
   s.source_files = 'SignalKClient/Classes/**/*'
   
