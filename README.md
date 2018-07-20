@@ -10,7 +10,7 @@
 
 For example usage, see Example/SignalKClient/SKViewController.m
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+To run the example project, open Example/SignalKClient.xcworkspace in Xcode.
 
 ## Installation
 
