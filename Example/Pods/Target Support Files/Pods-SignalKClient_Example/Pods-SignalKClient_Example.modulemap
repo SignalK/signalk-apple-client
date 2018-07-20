@@ -1,0 +1,6 @@
+framework module Pods_SignalKClient_Example {
+  umbrella header "Pods-SignalKClient_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

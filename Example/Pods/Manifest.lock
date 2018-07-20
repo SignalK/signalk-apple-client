@@ -1,0 +1,31 @@
+PODS:
+  - Expecta (1.0.6)
+  - SignalKClient (0.3.0):
+    - SocketRocket (~> 0.5.1)
+  - SocketRocket (0.5.1)
+  - Specta (1.0.7)
+
+DEPENDENCIES:
+  - Expecta
+  - SignalKClient (from `../`)
+  - Specta
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Expecta
+    - SocketRocket
+    - Specta
+
+EXTERNAL SOURCES:
+  SignalKClient:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
+  SignalKClient: 024ee6a0ae769da4c0c8c1ac0450e6421b7cde28
+  SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
+  Specta: 3e1bd89c3517421982dc4d1c992503e48bd5fe66
+
+PODFILE CHECKSUM: f3336d9bdc26237b60fd30566ac90d227268bcac
+
+COCOAPODS: 1.5.3
