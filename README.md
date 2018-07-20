@@ -1,4 +1,4 @@
-# SignalKClient
+# signalk-apple-client
 
 [![Platform](https://img.shields.io/cocoapods/p/SignalKClient.svg?style=flat)](https://cocoapods.org/pods/SignalKClient)
 [![License](https://img.shields.io/cocoapods/l/SignalKClient.svg?style=flat)](https://cocoapods.org/pods/SignalKClient)
