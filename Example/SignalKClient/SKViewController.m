@@ -139,8 +139,10 @@
 {
   if ( [path isEqualToString:@"environment.wind.speedApparent"] )
   {
-	NSNumber *speed = (NSNumber *)value;
-	self.windSpeed.text = [NSString stringWithFormat:@"%0.2f m/s", speed.floatValue];
+	dispatch_async(dispatch_get_main_queue(),^{
+	  NSNumber *speed = (NSNumber *)value;
+	  self.windSpeed.text = [NSString stringWithFormat:@"%0.2f m/s", speed.floatValue];
+	});
   }
 }
 
