@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SignalKClient'
-  s.version          = '0.4.2'
+  s.version          = '0.4.3'
   s.summary          = 'Client Library For Accessing Signal K Servers From an iOS Application.'
 
 # This description is used to generate tags and improve search results.
@@ -30,6 +30,7 @@ Client Library For Accessing Signal K Servers From an iOS Application
 
   s.ios.deployment_target = '9.3'
   s.osx.deployment_target = '10.10'
+  s.osx.deployment_target = '10.2'
 
   s.source_files = 'SignalKClient/Classes/**/*'
   
