@@ -8,7 +8,9 @@
 
 ## Example
 
-For example usage, see Example/SignalKClient/SKViewController.m
+For ObjC example usage, see Example/SignalKClient/SKViewController.m
+
+For Swift example usage, see SwiftExample/SignalKClientSwiftExample/ViewController.swift
 
 To run the example project, open Example/SignalKClient.xcworkspace in Xcode.
 
