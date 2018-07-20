@@ -70,11 +70,9 @@ class BrowseTableViewController: UITableViewController, SignalKBrowserDelegate
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
   {
     let services = self.vesselServices?[(self.vesselNames?[indexPath.row])!]
-    let best = self.browser.getBestService(services)
-    
-    if ( best != nil )
+    if let best = self.browser.getBestService(services)
     {
-      self.delegate?.browseTableViewControllerDidSelectHost(host: (best?.service.hostName)!, port: (best?.service.port)!, isSecure: (best?.isSecure)!)
+      self.delegate?.browseTableViewControllerDidSelectHost(host: (best.service.hostName)!, port: best.service.port, isSecure: (best.isSecure))
     }
   }
 

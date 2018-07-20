@@ -1,4 +1,4 @@
-# SignalKClient
+# signalk-apple-client
 
 [![Platform](https://img.shields.io/cocoapods/p/SignalKClient.svg?style=flat)](https://cocoapods.org/pods/SignalKClient)
 [![License](https://img.shields.io/cocoapods/l/SignalKClient.svg?style=flat)](https://cocoapods.org/pods/SignalKClient)
@@ -8,9 +8,11 @@
 
 ## Example
 
-For example usage, see Example/SignalKClient/SKViewController.m
+For ObjC example usage, see Example/SignalKClient/SKViewController.m
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+For Swift example usage, see SwiftExample/SignalKClientSwiftExample/ViewController.swift
+
+To run the example project, open Example/SignalKClient.xcworkspace in Xcode.
 
 ## Installation
 
@@ -24,7 +26,7 @@ pod 'SignalKClient'
 SignalKClient is also available through [Carthage](https://github.com/carthage/carthage). To install it, simply add the following line to your Cartfile
 
 ```
-github "SignalK/signalk-ios-client"
+github "SignalK/signalk-apple-client"
 ```
 
 ## License
