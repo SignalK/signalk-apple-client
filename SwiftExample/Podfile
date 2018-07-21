@@ -9,5 +9,4 @@ target 'SignalKClientSwiftExample' do
 
   #pod 'SignalKClient', '~> 0.4.5'
   pod 'SignalKClient', :path => '../'
-  pod 'SocketRocket'
 end
