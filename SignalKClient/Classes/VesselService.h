@@ -12,6 +12,8 @@
 
 @interface VesselService : NSObject
 
+#ifndef TARGET_OS_WATCH
+
 @property (strong,atomic) NSNetService *service;
 
 @property (strong,atomic) NSString *vesselSelf;
@@ -29,5 +31,7 @@
 - (instancetype)initWithService:(NSNetService *)service andBrowser:(SignalKBrowser *)brower;
 
 - (NSComparisonResult)caseInsensitiveCompare:(VesselService *)other;
+
+#endif
 
 @end

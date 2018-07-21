@@ -15,6 +15,7 @@ static NSString *WS_SERVICE_NAME = @"_signalk-ws._tcp";
 static NSString *WSS_SERVICE_NAME = @"_signalk-wss._tcp";
 static NSString *SERVICE_DOMAIN = @""; //@"local.";
 
+#ifndef TARGET_OS_WATCH
 
 @interface SignalKBrowser () <NSNetServiceBrowserDelegate>
 
@@ -24,10 +25,13 @@ static NSString *SERVICE_DOMAIN = @""; //@"local.";
 @property (nullable,strong,atomic) NSNetServiceBrowser *wssServiceBrowser;
 @property (strong,atomic) NSMutableArray<id <SignalKBrowserDelegate>> *delegates;
 
-
 @end
 
+#endif
+
 @implementation SignalKBrowser
+
+#ifndef TARGET_OS_WATCH
 
 - (instancetype)init
 {
@@ -171,5 +175,31 @@ static NSString *SERVICE_DOMAIN = @""; //@"local.";
   [self.delegates removeObject:delegate];
 }
 
+#else
+
+- (void)addDelegate:(id <SignalKBrowserDelegate>)delegate
+{
+}
+
+- (void)removeDelegate:(id <SignalKBrowserDelegate>)delegate
+{
+}
+
+- (void)notifyDelegates:(SEL)selector
+{
+}
+
+- (NSDictionary<NSString *,NSArray<VesselService *> *> *)getServicesByName
+{
+  return [NSDictionary new];
+}
+
+- (nullable VesselService *)getBestService:(NSArray<VesselService *> *)services;
+{
+  return nil;
+}
+
+
+#endif
 
 @end

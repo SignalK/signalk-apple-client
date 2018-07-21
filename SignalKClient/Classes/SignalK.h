@@ -56,8 +56,10 @@ extern NSString *kSignalkErrorDomain;
 - (void)connectWithCompletionHandler:(void (^)(NSError * _Nullable error))complertionHandler;
 - (void)close;
 
+#ifndef TARGET_OS_WATCH
 - (void)startStreaming;
 - (void)stopStreaming;
+#endif
 
 - (void)sendGET:(NSString *)path withCompletionHandler:(void (^)(NSError * _Nullable error, id _Nullable jsonObject))completionHandler;
 - (void)sendAPI:(NSString *)path withCompletionHandler:(void (^)(NSError * _Nullable error, id _Nullable jsonObject))completionHandler;

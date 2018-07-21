@@ -15,13 +15,19 @@
 #import <ifaddrs.h>
 #import <unistd.h>
 
+#ifndef TARGET_OS_WATCH
+
 @interface VesselService () <NSNetServiceDelegate>
 
 @property (nonnull,strong,atomic) SignalKBrowser *browser;
 
 @end
 
+#endif
+
 @implementation VesselService
+
+#ifndef TARGET_OS_WATCH
 
 - (instancetype)initWithService:(NSNetService *)service andBrowser:(SignalKBrowser *)brower;
 {
@@ -157,5 +163,7 @@
   }
   return NO;
 }
+
+#endif
 
 @end

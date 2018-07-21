@@ -71,11 +71,13 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+#ifndef TARGET_OS_WATCH
   NSArray *services = self.vesselServices[self.vesselNames[indexPath.row]];
   
   VesselService *best = [self.browser getBestService:services];
   if ( best )
 	[self.delegate browseTableViewControllerDidSelectHost:best.service.hostName port:best.service.port isSecure:best.isSecure];
+#endif
 }
 
 

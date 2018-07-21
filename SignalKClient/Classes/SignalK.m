@@ -7,7 +7,9 @@
 //
 
 #import "SignalK.h"
+#ifndef TARGET_OS_WATCH
 #import "SocketRocket.h"
+#endif
 
 NSString *kSignalkErrorDomain = @"org.signalk";
 
@@ -18,7 +20,11 @@ NSString *kSignalkErrorDomain = @"org.signalk";
 @property (weak) id <SignalKPathValueDelegate> delegate;
 @end
 
-@interface SignalK () <NSURLSessionDelegate, SRWebSocketDelegate>
+@interface SignalK () <NSURLSessionDelegate
+#ifndef TARGET_OS_WATCH
+,SRWebSocketDelegate
+#endif
+>
 
 @property (strong, atomic, nullable) NSURLSession *session;
 @property (nullable,strong,atomic) NSString *restProtocol;
@@ -29,7 +35,9 @@ NSString *kSignalkErrorDomain = @"org.signalk";
 @property (nullable, strong, atomic) NSDictionary *serverInfo;
 @property BOOL trusted;
 
+#ifndef TARGET_OS_WATCH
 @property (strong) SRWebSocket *webSocket;
+#endif
 
 @property (strong, atomic) NSMutableArray<SKDelegateInfo *> *pathValueDelegates;
 
@@ -138,10 +146,12 @@ NSString *kSignalkErrorDomain = @"org.signalk";
 
 - (void)didConnect
 {
+#ifndef TARGET_OS_WATCH
   if ( self.disableStreaming == NO )
   {
 	[self startStreaming];
   }
+#endif
 }
 
 - (void)getServerInfo:(void (^)(NSError *error))complertionHandler
@@ -461,6 +471,7 @@ NSString *kSignalkErrorDomain = @"org.signalk";
   }
 }
 
+#ifndef TARGET_OS_WATCH
 - (void)sendSubscription:(NSDictionary *)subscription
 {
   id jsonData = [NSJSONSerialization dataWithJSONObject:subscription options:0 error:nil];
@@ -583,10 +594,13 @@ NSString *kSignalkErrorDomain = @"org.signalk";
   [self.webSocket close];
   self.webSocket = nil;
 }
+#endif
 
 - (void)close
 {
+#ifndef TARGET_OS_WATCH
   [self stopStreaming];
+#endif
   [self.session invalidateAndCancel];
 }
 

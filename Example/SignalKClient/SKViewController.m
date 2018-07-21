@@ -181,18 +181,22 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+#ifndef TARGET_OS_WATCH
   if ( self.signalK )
   {
 	[self.signalK startStreaming];
   }
+#endif
 }
 
 - (void)viewDidDisappear:(BOOL)animated
 {
+#ifndef TARGET_OS_WATCH
   if ( self.signalK )
   {
 	[self.signalK stopStreaming];
   }
+#endif
 }
 
 - (void)didReceiveMemoryWarning
