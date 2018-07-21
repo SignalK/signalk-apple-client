@@ -56,7 +56,7 @@ extern NSString *kSignalkErrorDomain;
 - (void)connectWithCompletionHandler:(void (^)(NSError * _Nullable error))complertionHandler;
 - (void)close;
 
-#ifndef TARGET_OS_WATCH
+#if !TARGET_OS_WATCH
 - (void)startStreaming;
 - (void)stopStreaming;
 #endif
@@ -70,5 +70,9 @@ extern NSString *kSignalkErrorDomain;
 - (void)registerSKDelegate:(id <SignalKPathValueDelegate>)delegate forPath:(NSString *)path;
 - (void)registerSKDelegate:(id <SignalKPathValueDelegate>)delegate forPath:(nullable NSString *)path andContext:(NSString *)context;
 - (void)removeSKDelegate:(id <SignalKPathValueDelegate>)delegate;
+
+//For use by subclasses
+- (void)setAuthorization:(NSMutableURLRequest *)request;
+- (NSURLSession *)getSession;
 
 @end

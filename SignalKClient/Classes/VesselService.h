@@ -12,7 +12,7 @@
 
 @interface VesselService : NSObject
 
-#ifndef TARGET_OS_WATCH
+#if !TARGET_OS_WATCH
 
 @property (strong,atomic) NSNetService *service;
 

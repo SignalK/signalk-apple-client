@@ -15,7 +15,7 @@ static NSString *WS_SERVICE_NAME = @"_signalk-ws._tcp";
 static NSString *WSS_SERVICE_NAME = @"_signalk-wss._tcp";
 static NSString *SERVICE_DOMAIN = @""; //@"local.";
 
-#ifndef TARGET_OS_WATCH
+#if !TARGET_OS_WATCH
 
 @interface SignalKBrowser () <NSNetServiceBrowserDelegate>
 
@@ -31,7 +31,7 @@ static NSString *SERVICE_DOMAIN = @""; //@"local.";
 
 @implementation SignalKBrowser
 
-#ifndef TARGET_OS_WATCH
+#if !TARGET_OS_WATCH
 
 - (instancetype)init
 {

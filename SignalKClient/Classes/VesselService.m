@@ -15,7 +15,7 @@
 #import <ifaddrs.h>
 #import <unistd.h>
 
-#ifndef TARGET_OS_WATCH
+#if !TARGET_OS_WATCH
 
 @interface VesselService () <NSNetServiceDelegate>
 
@@ -27,7 +27,7 @@
 
 @implementation VesselService
 
-#ifndef TARGET_OS_WATCH
+#if !TARGET_OS_WATCH
 
 - (instancetype)initWithService:(NSNetService *)service andBrowser:(SignalKBrowser *)brower;
 {
