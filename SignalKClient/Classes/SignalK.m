@@ -27,7 +27,6 @@ NSString *kSignalkErrorDomain = @"org.signalk";
 >
 
 @property (strong, atomic, nullable) NSURLSession *session;
-@property (nullable,strong,atomic) NSString *jwtToken;
 @property BOOL autoRefresh;
 @property (nullable, strong, atomic) NSDictionary *serverInfo;
 @property BOOL trusted;
@@ -486,6 +485,8 @@ NSString *kSignalkErrorDomain = @"org.signalk";
 - (void)webSocketDidOpen:(SRWebSocket *)webSocket
 {
   self.isConnecting = NO;
+  //[self.delegate signalKconnectionSucceded:self];
+
   if ( [self.delegate respondsToSelector:@selector(signalKWebSocketDidOpen:)] )
   {
 	[self.delegate signalKWebSocketDidOpen:self];

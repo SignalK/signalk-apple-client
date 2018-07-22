@@ -25,6 +25,7 @@ extern NSString *kSignalkErrorDomain;
 - (void)signalK:(SignalK *)signalk untrustedServer:(NSString *)host withCompletionHandler:(nullable void (^)(BOOL trust))completionHandler;
 - (void)signalKWebSocketDidOpen:(SignalK *)signalk;
 - (void)signalK:(SignalK *)signalk webSocketFailed:(NSString *)reason;
+//- (void)signalKconnectionSucceded:(SignalK *)signalk;
 @end
 
 @protocol SignalKPathValueDelegate <NSObject>
@@ -51,6 +52,7 @@ extern NSString *kSignalkErrorDomain;
 @property BOOL disableStreaming;
 @property (nullable,strong,atomic) NSString *uuid;
 @property (nullable,strong,atomic) NSString *selfContext;
+@property (nullable,strong,atomic) NSString *jwtToken;
 
 @property (weak) id <SignalKDelegate> delegate;
 
@@ -62,11 +64,11 @@ extern NSString *kSignalkErrorDomain;
 #if !TARGET_OS_WATCH
 - (void)startStreaming;
 - (void)stopStreaming;
+- (void)sendSubscription:(NSDictionary *)subscription;
 #endif
 
 - (void)sendGET:(NSString *)path withCompletionHandler:(void (^)(NSError * _Nullable error, id _Nullable jsonObject))completionHandler;
 - (void)sendAPI:(NSString *)path withCompletionHandler:(void (^)(NSError * _Nullable error, id _Nullable jsonObject))completionHandler;
-- (void)sendSubscription:(NSDictionary *)subscription;
 - (BOOL)isSelfContext:(NSString *)context;
 
 - (void)registerSKDelegate:(id <SignalKPathValueDelegate>)delegate;
