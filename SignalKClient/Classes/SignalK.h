@@ -38,9 +38,12 @@ extern NSString *kSignalkErrorDomain;
 @property BOOL isConnected;
 
 
-@property (nullable,strong,atomic,readonly) NSString *host;
+@property (nullable,strong,atomic) NSString *host;
 @property NSInteger wsPort;
 @property NSInteger restPort;
+@property (nullable,strong,atomic) NSString *restProtocol;
+@property (nullable,strong,atomic) NSString *restEndpoint;
+@property (nullable,strong,atomic) NSString *wsEndpoint;
 @property BOOL ssl;
 @property (strong,atomic) NSString *subscription; //defaults to self
 @property (strong) NSString *userName;

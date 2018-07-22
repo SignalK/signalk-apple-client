@@ -27,9 +27,6 @@ NSString *kSignalkErrorDomain = @"org.signalk";
 >
 
 @property (strong, atomic, nullable) NSURLSession *session;
-@property (nullable,strong,atomic) NSString *restProtocol;
-@property (nullable,strong,atomic) NSString *restEndpoint;
-@property (nullable,strong,atomic) NSString *wsEndpoint;
 @property (nullable,strong,atomic) NSString *jwtToken;
 @property BOOL autoRefresh;
 @property (nullable, strong, atomic) NSDictionary *serverInfo;
