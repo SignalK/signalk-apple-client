@@ -57,7 +57,7 @@ NSString *kSignalkErrorDomain = @"org.signalk";
 
 - (instancetype)initWithHost:(NSString *)host port:(NSInteger)port
 {
-  self = [super init];
+  self = [self init];
   if ( self )
   {
 	_host = host;
@@ -72,11 +72,13 @@ NSString *kSignalkErrorDomain = @"org.signalk";
     self.isConnecting = NO;
     if ( error )
     {
-      [self.delegate signalk:self connectionFailed:error.localizedDescription];
+      if ( [self.delegate respondsToSelector:@selector(signalk:connectionFailed:)] )
+        [self.delegate signalk:self connectionFailed:error.localizedDescription];
     }
     else
     {
-      [self.delegate signalKconnectionSucceded:self];
+      if ( [self.delegate respondsToSelector:@selector(signalKconnectionSucceded:)] )
+        [self.delegate signalKconnectionSucceded:self];
       self.isConnected = YES;
     }
     if ( complertionHandler )
@@ -334,7 +336,7 @@ NSString *kSignalkErrorDomain = @"org.signalk";
   return self.session;
 }
 
-- (NSURL *)getBaseURLWithPath:(nullable NSString *)path
+- (NSURL *)getURLWithPath:(nullable NSString *)path
 {
   NSString *url = [NSString stringWithFormat:@"%@://%@:%ld", self.restProtocol, self.host, (long)self.restPort];
   if ( path )
@@ -346,14 +348,14 @@ NSString *kSignalkErrorDomain = @"org.signalk";
 
 - (void)sendAPI:(NSString *)path withCompletionHandler:(void (^)(NSError *error, id jsonObject))completionHandler
 {
-  NSURL *URL = [self getBaseURLWithPath:[NSString stringWithFormat:@"/signalk/v1/api%@", path]];
+  NSURL *URL = [self getURLWithPath:[NSString stringWithFormat:@"/signalk/v1/api%@", path]];
   [self sendHTTP:URL completionHandler:completionHandler];
 }
 
 
 - (void)sendGET:(NSString *)path withCompletionHandler:(void (^)(NSError *error, id jsonObject))completionHandler
 {
-  NSURL *URL = [self getBaseURLWithPath:path];
+  NSURL *URL = [self getURLWithPath:path];
   [self sendHTTP:URL completionHandler:completionHandler];
 }
 
@@ -383,7 +385,7 @@ NSString *kSignalkErrorDomain = @"org.signalk";
 
 - (void)sendPOST:(NSString *)path postData:(id)postData completionHandler:(void (^)(NSData *data, NSError *error, NSHTTPURLResponse *response))completionHandler
 {
-  NSURL *URL = [self getBaseURLWithPath:path];
+  NSURL *URL = [self getURLWithPath:path];
   
   NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL];
   

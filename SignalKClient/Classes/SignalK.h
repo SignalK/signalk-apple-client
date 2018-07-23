@@ -85,13 +85,15 @@ extern NSString *kSignalkErrorDomain;
 - (void)removeSKDelegate:(id <SignalKPathValueDelegate>)delegate;
 
 //For use by subclasses
+#if !TARGET_OS_WATCH
 - (void)didReceiveDelta:(NSDictionary *)delta;
+- (void)webSocketDidOpen;
+#endif
 - (void)rawSendHTTP:(NSMutableURLRequest *)request
   completionHandler:(void (^)(NSData *data, NSURLResponse *response, NSError *error))completionHandler;
+- (NSURL *)getURLWithPath:(nullable NSString *)path;
 - (void)setAuthorization:(NSMutableURLRequest *)request;
 - (NSURLSession *)getSession;
-- (NSURL *)getBaseURLWithPath:(nullable NSString *)path;
 - (void)stopNetworkActivity;
 - (void)startNetworkActivity;
-- (void)webSocketDidOpen;
 @end

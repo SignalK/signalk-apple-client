@@ -181,7 +181,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-#ifndef TARGET_OS_WATCH
+#if !TARGET_OS_WATCH
   if ( self.signalK )
   {
 	[self.signalK startStreaming];
@@ -191,7 +191,7 @@
 
 - (void)viewDidDisappear:(BOOL)animated
 {
-#ifndef TARGET_OS_WATCH
+#if !TARGET_OS_WATCH
   if ( self.signalK )
   {
 	[self.signalK stopStreaming];
