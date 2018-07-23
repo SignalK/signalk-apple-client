@@ -30,6 +30,9 @@ NSString *kSignalkErrorDomain = @"org.signalk";
 @property BOOL autoRefresh;
 @property (nullable, strong, atomic) NSDictionary *serverInfo;
 @property BOOL trusted;
+@property NSInteger netActivityCount;
+@property (strong, atomic) NSLock *netActivityCountLock;
+
 
 #if !TARGET_OS_WATCH
 @property (strong) SRWebSocket *webSocket;
@@ -41,6 +44,17 @@ NSString *kSignalkErrorDomain = @"org.signalk";
 
 @implementation SignalK
 
+- (instancetype)init
+{
+  self = [super init];
+  if ( self )
+  {
+    self.netActivityCountLock = [NSLock new];
+    self.pathValueDelegates = [NSMutableArray new];
+  }
+  return self;
+}
+
 - (instancetype)initWithHost:(NSString *)host port:(NSInteger)port
 {
   self = [super init];
@@ -48,23 +62,50 @@ NSString *kSignalkErrorDomain = @"org.signalk";
   {
 	_host = host;
 	_restPort = port;
-	
-	self.pathValueDelegates = [NSMutableArray new];
   }
   return self;
 }
 
 - (void)connectWithCompletionHandler:(void (^)(NSError *error))complertionHandler
 {
+  [self _connectWithCompletionHandler:^(NSError * _Nonnull error) {
+    self.isConnecting = NO;
+    if ( error )
+    {
+      [self.delegate signalk:self connectionFailed:error.localizedDescription];
+    }
+    else
+    {
+      [self.delegate signalKconnectionSucceded:self];
+      self.isConnected = YES;
+    }
+    if ( complertionHandler )
+      complertionHandler(error);
+  }];
+}
+
+- (void)_connectWithCompletionHandler:(void (^)(NSError *error))complertionHandler
+{
   self.isConnecting = YES;
+  self.isConnected = NO;
   self.jwtToken = nil;
   
-  self.restProtocol = !self.ssl ? @"http" : @"https";
-  self.restEndpoint = [NSString stringWithFormat:@"%@://%@:%ld/signalk/v1/api/", self.restProtocol, self.host, (long)self.restPort];
+  if ( self.restProtocol == nil )
+  {
+    self.restProtocol = !self.ssl ? @"http" : @"https";
+  }
   
-  NSString *wsProtocol = !self.ssl ? @"ws" : @"wss";
+  if ( self.restEndpoint == nil )
+  {
+    self.restEndpoint = [NSString stringWithFormat:@"%@://%@:%ld/signalk/v1/api/", self.restProtocol, self.host, (long)self.restPort];
+  }
   
-  self.wsEndpoint = [NSString stringWithFormat:@"%@://%@:%ld/signalk/v1/stream", wsProtocol, self.host, (long)self.wsPort];
+  if ( self.wsEndpoint == nil )
+  {
+    NSString *wsProtocol = !self.ssl ? @"ws" : @"wss";
+    
+    self.wsEndpoint = [NSString stringWithFormat:@"%@://%@:%ld/signalk/v1/stream", wsProtocol, self.host, (long)self.wsPort];
+  }
   
   [self getServerInfo:^(NSError *error)
    {
@@ -377,9 +418,27 @@ NSString *kSignalkErrorDomain = @"org.signalk";
   NSURLSessionDataTask *task;
   NSURLSession *session = [self getSession];
   
+  [self.netActivityCountLock lock];
+  if ( self.netActivityCount == 0 )
+  {
+    [self startNetworkActivity];
+  }
+  self.netActivityCount++;
+  [self.netActivityCountLock unlock];
+  
   task = [session dataTaskWithRequest:request
 					completionHandler:^(NSData *data, NSURLResponse *response, NSError *error)
 		  {
+            [self.netActivityCountLock lock];
+            
+            if ( self.netActivityCount == 1 )
+            {
+              [self stopNetworkActivity];
+              //[self stopStreamingActivity];
+            }
+            self.netActivityCount--;
+            [self.netActivityCountLock unlock];
+
 			if ( !error && ((NSHTTPURLResponse *)response).statusCode == 200 )
 			{
 			  if ( completionHandler )
@@ -467,6 +526,30 @@ NSString *kSignalkErrorDomain = @"org.signalk";
   }
 }
 
+- (BOOL)hasNetworkActivity
+{
+  [self.netActivityCountLock lock];
+  BOOL res = self.netActivityCount > 0;
+  [self.netActivityCountLock unlock];
+  return res;
+}
+
+- (void)startNetworkActivity
+{
+  if ( [self.delegate respondsToSelector:@selector(signalKStartNetworkActivity:)] )
+  {
+    [self.delegate signalKStartNetworkActivity:self];
+  }
+}
+
+- (void)stopNetworkActivity
+{
+  if ( [self.delegate respondsToSelector:@selector(signalKStopNetworkActivity:)] )
+  {
+    [self.delegate signalKStopNetworkActivity:self];
+  }
+}
+
 #if !TARGET_OS_WATCH
 - (void)sendSubscription:(NSDictionary *)subscription
 {
@@ -482,15 +565,23 @@ NSString *kSignalkErrorDomain = @"org.signalk";
   
 }
 
+- (void)webSocketDidOpen
+{
+}
+
 - (void)webSocketDidOpen:(SRWebSocket *)webSocket
 {
   self.isConnecting = NO;
-  //[self.delegate signalKconnectionSucceded:self];
+  [self webSocketDidOpen];
 
   if ( [self.delegate respondsToSelector:@selector(signalKWebSocketDidOpen:)] )
   {
 	[self.delegate signalKWebSocketDidOpen:self];
   }
+}
+
+- (void)didReceiveDelta:(NSDictionary *)delta
+{
 }
 
 - (void)webSocket:(SRWebSocket *)webSocket didReceiveMessage:(id)message;
@@ -504,9 +595,10 @@ NSString *kSignalkErrorDomain = @"org.signalk";
   
   if ( jsonObject[@"updates"] != nil )
   {
-	if ( [self.delegate respondsToSelector:@selector(signalK:didReceivedDelta:)] )
+    [self didReceiveDelta:jsonObject];
+	if ( [self.delegate respondsToSelector:@selector(signalK:didReceiveDelta:)] )
 	{
-	  [self.delegate signalK:self didReceivedDelta:jsonObject];
+	  [self.delegate signalK:self didReceiveDelta:jsonObject];
 	}
 	if ( self.pathValueDelegates.count > 0 || [self.delegate respondsToSelector:@selector(signalK:didReceivePath:andValue:forContext:)])
 	{

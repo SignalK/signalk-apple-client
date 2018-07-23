@@ -17,15 +17,22 @@
 extern NSString *kSignalkErrorDomain;
 
 @class SignalK;
+#if !TARGET_OS_WATCH
+@class SRWebSocket;
+#endif
 
 @protocol SignalKDelegate <NSObject>
 @optional
-- (void)signalK:(SignalK *)signalk didReceivedDelta:(NSDictionary *)delta;
+- (void)signalK:(SignalK *)signalk didReceiveDelta:(NSDictionary *)delta;
 - (void)signalK:(SignalK *)signalK didReceivePath:(NSString *)path andValue:value forContext:(NSString *)context;
 - (void)signalK:(SignalK *)signalk untrustedServer:(NSString *)host withCompletionHandler:(nullable void (^)(BOOL trust))completionHandler;
 - (void)signalKWebSocketDidOpen:(SignalK *)signalk;
 - (void)signalK:(SignalK *)signalk webSocketFailed:(NSString *)reason;
-//- (void)signalKconnectionSucceded:(SignalK *)signalk;
+- (void)signalKconnectionSucceded:(SignalK *)signalk;
+- (void)signalk:(SignalK *)signalk connectionFailed:(nonnull NSString *)error;
+- (void)signalKStartNetworkActivity:(SignalK *)signalk;
+- (void)signalKStopNetworkActivity:(SignalK *)signalk;
+
 @end
 
 @protocol SignalKPathValueDelegate <NSObject>
@@ -70,6 +77,7 @@ extern NSString *kSignalkErrorDomain;
 - (void)sendGET:(NSString *)path withCompletionHandler:(void (^)(NSError * _Nullable error, id _Nullable jsonObject))completionHandler;
 - (void)sendAPI:(NSString *)path withCompletionHandler:(void (^)(NSError * _Nullable error, id _Nullable jsonObject))completionHandler;
 - (BOOL)isSelfContext:(NSString *)context;
+- (BOOL)hasNetworkActivity;
 
 - (void)registerSKDelegate:(id <SignalKPathValueDelegate>)delegate;
 - (void)registerSKDelegate:(id <SignalKPathValueDelegate>)delegate forPath:(NSString *)path;
@@ -77,7 +85,13 @@ extern NSString *kSignalkErrorDomain;
 - (void)removeSKDelegate:(id <SignalKPathValueDelegate>)delegate;
 
 //For use by subclasses
+- (void)didReceiveDelta:(NSDictionary *)delta;
+- (void)rawSendHTTP:(NSMutableURLRequest *)request
+  completionHandler:(void (^)(NSData *data, NSURLResponse *response, NSError *error))completionHandler;
 - (void)setAuthorization:(NSMutableURLRequest *)request;
 - (NSURLSession *)getSession;
-
+- (NSURL *)getBaseURLWithPath:(nullable NSString *)path;
+- (void)stopNetworkActivity;
+- (void)startNetworkActivity;
+- (void)webSocketDidOpen;
 @end
