@@ -708,7 +708,7 @@ NSString *kSignalkErrorDomain = @"org.signalk";
 
 - (void)registerSKDelegate:(id <SignalKPathValueDelegate>)delegate forPath:(NSString *)path
 {
-  [self registerSKDelegate:delegate forPath:path andContext:nil];
+  [self registerSKDelegate:delegate forPath:path andContext:@"vessels.self"];
 }
 
 - (void)registerSKDelegate:(id <SignalKPathValueDelegate>)delegate forPath:(NSString *)path andContext:(NSString *)context
@@ -756,8 +756,12 @@ NSString *kSignalkErrorDomain = @"org.signalk";
 		  for ( SKDelegateInfo *info in self.pathValueDelegates )
 		  {
 			if ( (info.path == nil || [path isEqualToString:info.path])
-				&& ( info.context == nil || [context isEqualToString:info.context]) )
-			{
+				&& (
+                    info.context == nil
+                    || ([info.context isEqualToString:@"vessels.self"] && [context isEqualToString:self.selfContext])
+                    || [info.context isEqualToString:context]
+                    ) )
+            {
 			  [info.delegate signalK:self didReceivePath:path andValue:value forContext:context];
 			}
 		  }
