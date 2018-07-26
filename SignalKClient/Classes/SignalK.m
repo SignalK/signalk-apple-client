@@ -68,6 +68,7 @@ NSString *kSignalkErrorDomain = @"org.signalk";
 
 - (void)connectWithCompletionHandler:(void (^)(NSError *error))complertionHandler
 {
+  self.connectionLog = [NSMutableArray new];
   [self _connectWithCompletionHandler:^(NSError * _Nonnull error) {
     self.isConnecting = NO;
     if ( error )
@@ -218,6 +219,7 @@ NSString *kSignalkErrorDomain = @"org.signalk";
 		  NSURL *url = [NSURL URLWithString:self.restEndpoint];
 		  self.restProtocol = url.scheme;
 		  self.restPort = url.port != nil ? url.port.intValue : ([url.scheme isEqualToString:@"https"] ? 443 : 80);
+          self.host = url.host;
 		}
 	  }
 	}
@@ -373,6 +375,18 @@ NSString *kSignalkErrorDomain = @"org.signalk";
 	  id jsonObject = [NSJSONSerialization JSONObjectWithData:data
 													  options:NSJSONReadingAllowFragments|NSJSONReadingMutableContainers
 														error:&parse_error];
+      
+      if ( self.isConnecting )
+      {
+        if  ( parse_error )
+        {
+          [self addToConnectionLog:@"Error parsing json: %@", parse_error.description];
+        }
+        else if ( [jsonObject respondsToSelector:@selector(description)] )
+        {
+          [self addToConnectionLog:@"Received json: %@", [jsonObject description]];
+        }
+      }
 	  
 	  completionHandler(parse_error, jsonObject);
 	}
@@ -431,6 +445,12 @@ NSString *kSignalkErrorDomain = @"org.signalk";
   task = [session dataTaskWithRequest:request
 					completionHandler:^(NSData *data, NSURLResponse *response, NSError *error)
 		  {
+            [self addToConnectionLog:@"Sent %@ %@ %ld", request.HTTPMethod, request.URL.absoluteString, ((NSHTTPURLResponse *)response).statusCode];
+
+            if ( error )
+            {
+              [self addToConnectionLog:@"Error sending request: %@", error.description];
+            }
             [self.netActivityCountLock lock];
             
             if ( self.netActivityCount == 1 )
@@ -628,6 +648,9 @@ NSString *kSignalkErrorDomain = @"org.signalk";
   //NSLog(@"didFailWithError: %@", [error description]);
   NSString *msg;
   NSNumber *code = (NSNumber *)error.userInfo[@"HTTPResponseStatusCode"];
+  
+  [self addToConnectionLog:@"Error connecting to websocket %@", error.description];
+  
   if ( code.integerValue == 401 )
   {
 	msg = @"Unauathorized";
@@ -671,6 +694,8 @@ NSString *kSignalkErrorDomain = @"org.signalk";
   NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
 	  
   [self setAuthorization:request];
+  
+  [self addToConnectionLog:@"Connecting to websockets with %@", url.absoluteString];
   
   self.webSocket = [[SRWebSocket alloc] initWithURLRequest:request protocols:nil allowsUntrustedSSLCertificates:YES];
   self.webSocket.delegate = self;
@@ -771,6 +796,19 @@ NSString *kSignalkErrorDomain = @"org.signalk";
   }
 
 }
+
+- (void)addToConnectionLog:(nonnull NSString *)format, ...
+{
+  if ( self.isConnecting )
+  {
+    va_list args;
+    va_start(args, format);
+    NSString *line = [[NSString alloc] initWithFormat:format arguments:args];
+    va_end(args);
+    [(NSMutableArray *)self.connectionLog addObject:line];
+  }
+}
+
 
 @end
 

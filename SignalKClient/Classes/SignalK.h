@@ -60,6 +60,7 @@ extern NSString *kSignalkErrorDomain;
 @property (nullable,strong,atomic) NSString *uuid;
 @property (nullable,strong,atomic) NSString *selfContext;
 @property (nullable,strong,atomic) NSString *jwtToken;
+@property (strong,atomic) NSArray *connectionLog;
 
 @property (weak) id <SignalKDelegate> delegate;
 
@@ -89,6 +90,7 @@ extern NSString *kSignalkErrorDomain;
 - (void)didReceiveDelta:(NSDictionary *)delta;
 - (void)webSocketDidOpen;
 #endif
+- (void)sendHTTP:(NSURL *)URL completionHandler:(void (^)(NSError *error, id jsonObject))completionHandler;
 - (void)rawSendHTTP:(NSMutableURLRequest *)request
   completionHandler:(void (^)(NSData *data, NSURLResponse *response, NSError *error))completionHandler;
 - (NSURL *)getURLWithPath:(nullable NSString *)path;
@@ -96,4 +98,5 @@ extern NSString *kSignalkErrorDomain;
 - (NSURLSession *)getSession;
 - (void)stopNetworkActivity;
 - (void)startNetworkActivity;
+- (void)addToConnectionLog:(nonnull NSString *)first, ... ;//NS_REQUIRES_NIL_TERMINATION;
 @end
