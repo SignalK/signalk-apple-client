@@ -93,6 +93,8 @@ NSString *kSignalkErrorDomain = @"org.signalk";
   self.isConnected = NO;
   self.jwtToken = nil;
   
+  [self addToConnectionLog:@"Config: Host: %@ Port: %ld REST: %@ %@ WS: %@ SSL: %@", self.host, self.restPort, self.restProtocol, self.restEndpoint, self.wsEndpoint, (self.ssl ? @"YES" : @"NO")];
+  
   if ( self.restProtocol == nil )
   {
     self.restProtocol = !self.ssl ? @"http" : @"https";
