@@ -32,7 +32,7 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apparent Wind Speed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XwG-tn-w3x">
-                                <rect key="frame" x="103.5" y="222" width="168" height="21"/>
+                                <rect key="frame" x="104" y="222" width="168" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -101,6 +101,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not Connected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78O-CC-5if">
+                                <rect key="frame" x="0.0" y="637" width="375" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="b3H-0J-SnM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -118,18 +127,22 @@
                             <constraint firstItem="a6Z-ot-BRX" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leadingMargin" constant="74" id="Wis-fV-qIZ"/>
                             <constraint firstItem="ydV-39-nb5" firstAttribute="top" secondItem="XwG-tn-w3x" secondAttribute="bottom" constant="40" id="XtT-lp-T3U"/>
                             <constraint firstItem="Ydk-fE-aeE" firstAttribute="top" secondItem="JEN-9S-gwM" secondAttribute="bottom" constant="15" id="ajG-ND-JVi"/>
+                            <constraint firstItem="78O-CC-5if" firstAttribute="trailing" secondItem="vfx-qD-oWE" secondAttribute="trailing" id="g4j-xf-Vaz"/>
                             <constraint firstItem="vgz-z0-YMV" firstAttribute="leading" secondItem="a6Z-ot-BRX" secondAttribute="trailing" constant="7" id="gEi-1A-nbT"/>
                             <constraint firstItem="HHp-b0-tsd" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leadingMargin" constant="29" id="hTl-MW-EOF"/>
                             <constraint firstAttribute="trailing" secondItem="ydV-39-nb5" secondAttribute="trailing" id="hvh-BF-2gx"/>
+                            <constraint firstItem="78O-CC-5if" firstAttribute="top" secondItem="vfx-qD-oWE" secondAttribute="bottom" constant="8" symbolic="YES" id="jgZ-YQ-Q6z"/>
                             <constraint firstItem="F7r-X1-PhQ" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="13" id="lmQ-oY-vK2"/>
                             <constraint firstItem="XwG-tn-w3x" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="oq5-m7-F7f"/>
                             <constraint firstItem="jMU-tD-Cgo" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="q8B-oX-nVt"/>
+                            <constraint firstItem="78O-CC-5if" firstAttribute="leading" secondItem="vfx-qD-oWE" secondAttribute="leading" id="v4J-R5-y3L"/>
                             <constraint firstItem="jMU-tD-Cgo" firstAttribute="top" secondItem="ydV-39-nb5" secondAttribute="bottom" constant="58" id="wEl-xM-oJZ"/>
                             <constraint firstItem="HHp-b0-tsd" firstAttribute="top" secondItem="F7r-X1-PhQ" secondAttribute="bottom" constant="24" id="xLK-ad-8sL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Wind" id="78X-gY-idE"/>
                     <connections>
+                        <outlet property="connectionLog" destination="78O-CC-5if" id="Soz-p6-gth"/>
                         <outlet property="host" destination="JEN-9S-gwM" id="ZkY-Kt-HQc"/>
                         <outlet property="isSSL" destination="Occ-pF-Nyt" id="88c-pt-cbl"/>
                         <outlet property="port" destination="Ydk-fE-aeE" id="XlM-oT-ZmN"/>
