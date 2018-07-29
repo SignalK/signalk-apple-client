@@ -32,7 +32,7 @@ extern NSString *kSignalkErrorDomain;
 - (void)signalk:(SignalK *)signalk connectionFailed:(nonnull NSString *)error;
 - (void)signalKStartNetworkActivity:(SignalK *)signalk;
 - (void)signalKStopNetworkActivity:(SignalK *)signalk;
-
+- (void)signalK:(SignalK *)signalk didUpdateConnectionLog:(NSString *)line;
 @end
 
 @protocol SignalKPathValueDelegate <NSObject>

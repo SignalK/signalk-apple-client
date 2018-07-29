@@ -808,6 +808,10 @@ NSString *kSignalkErrorDomain = @"org.signalk";
     NSString *line = [[NSString alloc] initWithFormat:format arguments:args];
     va_end(args);
     [(NSMutableArray *)self.connectionLog addObject:line];
+    if ( [self.delegate respondsToSelector:@selector(signalK:didUpdateConnectionLog:)] )
+    {
+      [self.delegate signalK:self didUpdateConnectionLog:line];
+    }
   }
 }
 
