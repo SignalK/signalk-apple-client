@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *windSpeed;
 @property (weak, nonatomic) IBOutlet SKAngleView *windAngle;
 @property (weak, nonatomic) IBOutlet UISwitch *isSSL;
+@property (weak, nonatomic) IBOutlet UILabel *connectionLog;
 
 @end
 
@@ -177,6 +178,13 @@
 - (void)signalK:(SignalK *)signalk untrustedServer:(NSString *)host withCompletionHandler:(void (^)(BOOL))completionHandler
 {
   completionHandler(YES);
+}
+
+- (void)signalK:(SignalK *)signalk didUpdateConnectionLog:(NSString *)line
+{
+  dispatch_async(dispatch_get_main_queue(),^{
+    self.connectionLog.text = line;
+  });
 }
 
 - (void)viewWillAppear:(BOOL)animated
