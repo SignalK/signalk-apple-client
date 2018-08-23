@@ -25,6 +25,7 @@ extern NSString *kSignalkErrorDomain;
 @optional
 - (void)signalK:(SignalK *)signalk didReceiveDelta:(NSDictionary *)delta;
 - (void)signalK:(SignalK *)signalK didReceivePath:(NSString *)path andValue:value forContext:(NSString *)context;
+- (void)signalK:(SignalK *)signalK didReceivePath:(NSString *)path andValue:value withTimeStamp:(NSDate *)timeStamp forContext:(NSString *)context;
 - (void)signalK:(SignalK *)signalk untrustedServer:(NSString *)host withCompletionHandler:(nullable void (^)(BOOL trust))completionHandler;
 - (void)signalKWebSocketDidOpen:(SignalK *)signalk;
 - (void)signalK:(SignalK *)signalk webSocketFailed:(NSString *)reason;
@@ -36,7 +37,10 @@ extern NSString *kSignalkErrorDomain;
 @end
 
 @protocol SignalKPathValueDelegate <NSObject>
+@optional
 - (void)signalK:(SignalK *)signalK didReceivePath:(NSString *)path andValue:value forContext:(NSString *)context;
+- (void)signalK:(SignalK *)signalK didReceivePath:(NSString *)path andValue:value withTimeStamp:(NSDate *)timeStamp forContext:(NSString *)context;
+- (void)signalK:(SignalK *)signalK didReceiveDelta:(NSDictionary *)delta;
 @end
 
 @interface SignalK : NSObject
@@ -44,6 +48,7 @@ extern NSString *kSignalkErrorDomain;
 @property BOOL isStreaming;
 @property BOOL isConnecting;
 @property BOOL isConnected;
+@property BOOL isStreamingHistory;
 
 
 @property (nullable,strong,atomic) NSString *host;
@@ -73,6 +78,7 @@ extern NSString *kSignalkErrorDomain;
 - (void)startStreaming;
 - (void)stopStreaming;
 - (void)sendSubscription:(NSDictionary *)subscription;
+- (void)startStreamingHistoryFromDate:(NSDate *)fromDate toDate:(NSDate *)toDate rate:(float)rate;
 #endif
 
 - (void)sendGET:(NSString *)path withCompletionHandler:(void (^)(NSError * _Nullable error, id _Nullable jsonObject))completionHandler;
@@ -99,4 +105,6 @@ extern NSString *kSignalkErrorDomain;
 - (void)stopNetworkActivity;
 - (void)startNetworkActivity;
 - (void)addToConnectionLog:(nonnull NSString *)first, ... ;//NS_REQUIRES_NIL_TERMINATION;
+- (void)didReceivePath:(NSString *)path andValue:value withTimeStamp:(NSDate *)timeStamp forContext:(NSString *)context;
+- (void)didReceiveDelta:(NSDictionary *)delta;
 @end

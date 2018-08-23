@@ -27,11 +27,14 @@ NSString *kSignalkErrorDomain = @"org.signalk";
 >
 
 @property (strong, atomic, nullable) NSURLSession *session;
-@property BOOL autoRefresh;
 @property (nullable, strong, atomic) NSDictionary *serverInfo;
 @property BOOL trusted;
 @property NSInteger netActivityCount;
 @property (strong, atomic) NSLock *netActivityCountLock;
+
+@property NSDate *historyStart;
+@property NSDate *historyEnd;
+@property float historyRate;
 
 
 #if !TARGET_OS_WATCH
@@ -574,6 +577,49 @@ NSString *kSignalkErrorDomain = @"org.signalk";
   }
 }
 
+- (NSString *)getISODateTimeString:(NSDate *)date
+{
+  if ( @available(iOS 10.0, *) )
+  {
+    NSISO8601DateFormatter *df;
+    df = [[NSISO8601DateFormatter alloc] init];
+    return [df stringFromDate:date];
+  }
+  else
+  {
+    //NSISO8601DateFormatter is not supported on iOS 9.3
+    NSDateFormatter *oldf = [NSDateFormatter new];
+    oldf.dateFormat = @"yyyy-MM-dd'T'HH:mm:ssZ";
+    return [oldf stringFromDate:date];
+  }
+}
+
+- (NSDate *)getISODateTime:(NSString *)dateTime
+{
+  if ( [dateTime containsString:@"."] )
+  {
+    dateTime = [NSString stringWithFormat:@"%@Z", [dateTime componentsSeparatedByString:@"."][0]];
+  }
+
+  if ( @available(iOS 10.0, *) )
+  {
+    NSISO8601DateFormatter *df;
+    df = [[NSISO8601DateFormatter alloc] init];
+    return [df dateFromString:dateTime];
+  }
+  else
+  {
+    //NSISO8601DateFormatter is not supported on iOS 9.3
+    NSDateFormatter *oldf = [NSDateFormatter new];
+    oldf.dateFormat = @"yyyy-MM-dd'T'HH:mm:ssZ";
+    return [oldf dateFromString:dateTime];
+  }
+}
+
+- (void)didReceivePath:(NSString *)path andValue:value withTimeStamp:(NSDate *)timeStamp forContext:(NSString *)context
+{
+}
+
 #if !TARGET_OS_WATCH
 - (void)sendSubscription:(NSDictionary *)subscription
 {
@@ -584,7 +630,14 @@ NSString *kSignalkErrorDomain = @"org.signalk";
 
 - (NSURL *)getWSURL
 {
-  NSString *urlS = [NSString stringWithFormat:@"%@?stream=delta&subscribe=%@", self.wsEndpoint, self.subscription ? self.subscription : @"self"];
+  NSString *subsciption = self.historyStart ? @"all" : self.subscription ? self.subscription : @"self";
+  NSString *urlS = [NSString stringWithFormat:@"%@?stream=delta&subscribe=%@", self.wsEndpoint, subsciption];
+  
+  if ( self.historyStart )
+  {
+    urlS = [urlS stringByAppendingFormat:@"&startTime=%@&playbackRate=%0.2f", [self getISODateTimeString:self.historyStart], self.historyRate];
+  }
+  
   return [NSURL URLWithString:urlS];
   
 }
@@ -606,6 +659,17 @@ NSString *kSignalkErrorDomain = @"org.signalk";
 
 - (void)didReceiveDelta:(NSDictionary *)delta
 {
+  if ( self.isStreamingHistory && delta[@"updates"] )
+  {
+    for ( NSDictionary *update in delta[@"updates"] )
+    {
+      NSString *timeStamp = update[@"timestamp"];
+      if ( timeStamp && [[self getISODateTime:timeStamp] timeIntervalSinceDate:self.historyEnd] > 0 )
+      {
+        [self stopStreaming];
+      }
+    }
+  }
 }
 
 - (void)webSocket:(SRWebSocket *)webSocket didReceiveMessage:(id)message;
@@ -624,10 +688,7 @@ NSString *kSignalkErrorDomain = @"org.signalk";
 	{
 	  [self.delegate signalK:self didReceiveDelta:jsonObject];
 	}
-	if ( self.pathValueDelegates.count > 0 || [self.delegate respondsToSelector:@selector(signalK:didReceivePath:andValue:forContext:)])
-	{
-	  [self callDelegates:jsonObject];
-	}
+    [self callDelegates:jsonObject];
   }
   else if ( jsonObject[@"self"] != nil )
   {
@@ -706,12 +767,24 @@ NSString *kSignalkErrorDomain = @"org.signalk";
   return;
 }
 
+- (void)startStreamingHistoryFromDate:(NSDate *)fromDate toDate:(NSDate *)toDate rate:(float)rate
+{
+  self.historyStart = fromDate;
+  self.historyEnd = toDate;
+  self.historyRate = rate;
+  self.isStreamingHistory = YES;
+  [self startStreaming];
+}
+
 - (void)stopStreaming
 {
   self.isStreaming = NO;
+  self.isStreamingHistory = NO;
   self.webSocket.delegate = nil;
   [self.webSocket close];
   self.webSocket = nil;
+  self.historyStart = nil;
+  self.historyEnd = nil;
 }
 #endif
 
@@ -760,6 +833,15 @@ NSString *kSignalkErrorDomain = @"org.signalk";
 
 - (void)callDelegates:(NSDictionary *)delta
 {
+  
+  for ( SKDelegateInfo *info in self.pathValueDelegates )
+  {
+    if ( [info.delegate respondsToSelector:@selector(signalK:didReceiveDelta:)] )
+    {
+      [info.delegate signalK:self didReceiveDelta:delta];
+    }
+  }
+  
   NSArray<NSDictionary *> *updates = delta[@"updates"];
   
   if ( updates )
@@ -768,17 +850,32 @@ NSString *kSignalkErrorDomain = @"org.signalk";
 	for ( NSDictionary *update in updates )
 	{
 	  NSArray *values = update[@"values"];
+      NSString *timeStampString = update[@"timestamp"];
+      NSDate *timeStamp;
+      
+      if ( timeStampString )
+      {
+        timeStamp = [self getISODateTime:timeStampString];
+      }
+
 	  if ( values )
 	  {
 		for ( NSDictionary *pathValue in values )
 		{
 		  NSString *path = pathValue[@"path"];
 		  id value = pathValue[@"value"];
+          
+          [self didReceivePath:path andValue:value withTimeStamp:timeStamp forContext:context];
 		  
 		  if ( [self.delegate respondsToSelector:@selector(signalK:didReceivePath:andValue:forContext:)] )
 		  {
 			[self.delegate signalK:self didReceivePath:path andValue:value forContext:context];
 		  }
+          
+          if ( [self.delegate respondsToSelector:@selector(signalK:didReceivePath:andValue:withTimeStamp:forContext:)] )
+          {
+            [self.delegate signalK:self didReceivePath:path andValue:value withTimeStamp:timeStamp forContext:context];
+          }
 		  
 		  for ( SKDelegateInfo *info in self.pathValueDelegates )
 		  {
@@ -789,7 +886,14 @@ NSString *kSignalkErrorDomain = @"org.signalk";
                     || [info.context isEqualToString:context]
                     ) )
             {
-			  [info.delegate signalK:self didReceivePath:path andValue:value forContext:context];
+              if ( [info.delegate respondsToSelector:@selector(signalK:didReceivePath:andValue:forContext:)] )
+              {
+                [info.delegate signalK:self didReceivePath:path andValue:value forContext:context];
+              }
+              if ( [info.delegate respondsToSelector:@selector(signalK:didReceivePath:andValue:withTimeStamp:forContext:)] )
+              {
+                [info.delegate signalK:self didReceivePath:path andValue:value withTimeStamp:timeStamp forContext:context];
+              }
 			}
 		  }
 		}
