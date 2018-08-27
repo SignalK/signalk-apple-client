@@ -91,6 +91,8 @@ extern NSString *kSignalkErrorDomain;
 - (void)registerSKDelegate:(id <SignalKPathValueDelegate>)delegate forPath:(nullable NSString *)path andContext:(NSString *)context;
 - (void)removeSKDelegate:(id <SignalKPathValueDelegate>)delegate;
 
+- (NSDictionary *)getServerInfo; //returns the result from /signalk
+
 //For use by subclasses
 #if !TARGET_OS_WATCH
 - (void)didReceiveDelta:(NSDictionary *)delta;
@@ -106,5 +108,4 @@ extern NSString *kSignalkErrorDomain;
 - (void)startNetworkActivity;
 - (void)addToConnectionLog:(nonnull NSString *)first, ... ;//NS_REQUIRES_NIL_TERMINATION;
 - (void)didReceivePath:(NSString *)path andValue:value withTimeStamp:(NSDate *)timeStamp forContext:(NSString *)context;
-- (void)didReceiveDelta:(NSDictionary *)delta;
 @end

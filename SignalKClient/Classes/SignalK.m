@@ -553,6 +553,11 @@ NSString *kSignalkErrorDomain = @"org.signalk";
   }
 }
 
+- (NSDictionary *)getServerInfo
+{
+  return self.serverInfo;
+}
+
 - (BOOL)hasNetworkActivity
 {
   [self.netActivityCountLock lock];
