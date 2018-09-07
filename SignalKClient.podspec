@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SignalKClient'
-  s.version          = '1.1.0'
+  s.version          = '1.2.0'
   s.summary          = 'Client Library For Accessing Signal K Servers From an iOS Application.'
 
 # This description is used to generate tags and improve search results.
@@ -34,6 +34,9 @@ Client Library For Accessing Signal K Servers From an iOS Application
   s.watchos.deployment_target = '3.0'
 
   s.source_files = 'SignalKClient/Classes/**/*'
+  s.tvos.source_files = 'SignalKClient/PocketSocket/**/*'
+  s.osx.source_files = 'SignalKClient/PocketSocket/**/*'
+  s.ios.source_files = 'SignalKClient/PocketSocket/**/*'
   
   # s.resource_bundles = {
   #   'SignalKClient' => ['SignalKClient/Assets/*.png']

@@ -1,6 +1,6 @@
 {
   "name": "SignalKClient",
-  "version": "0.3.0",
+  "version": "1.1.0",
   "summary": "Client Library For Accessing Signal K Servers From an iOS Application.",
   "description": "Client Library For Accessing Signal K Servers From an iOS Application",
   "homepage": "https://github.com/SignalK/signalk-ios-client",
@@ -13,15 +13,37 @@
   },
   "source": {
     "git": "https://github.com/SignalK/signalk-ios-client.git",
-    "tag": "0.3.0"
+    "tag": "1.1.0"
   },
   "platforms": {
-    "ios": "9.3"
+    "ios": "9.3",
+    "osx": "10.10",
+    "tvos": "10.2",
+    "watchos": "3.0"
   },
   "source_files": "SignalKClient/Classes/**/*",
-  "dependencies": {
-    "SocketRocket": [
-      "~> 0.5.1"
-    ]
+  "tvos": {
+    "source_files": "SignalKClient/PocketSocket/**/*",
+    "dependencies": {
+      "SocketRocket": [
+        "~> 0.5.1"
+      ]
+    }
+  },
+  "osx": {
+    "source_files": "SignalKClient/PocketSocket/**/*",
+    "dependencies": {
+      "SocketRocket": [
+        "~> 0.5.1"
+      ]
+    }
+  },
+  "ios": {
+    "source_files": "SignalKClient/PocketSocket/**/*",
+    "dependencies": {
+      "SocketRocket": [
+        "~> 0.5.1"
+      ]
+    }
   }
 }

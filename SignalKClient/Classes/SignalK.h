@@ -25,7 +25,7 @@ extern NSString *kSignalkErrorDomain;
 @optional
 - (void)signalK:(SignalK *)signalk didReceiveDelta:(NSDictionary *)delta;
 - (void)signalK:(SignalK *)signalK didReceivePath:(NSString *)path andValue:value forContext:(NSString *)context;
-- (void)signalK:(SignalK *)signalK didReceivePath:(NSString *)path andValue:value withTimeStamp:(NSDate *)timeStamp forContext:(NSString *)context;
+- (void)signalK:(SignalK *)signalK didReceivePath:(NSString *)path andValue:value withTimeStamp:(NSString *)timeStamp forContext:(NSString *)context;
 - (void)signalK:(SignalK *)signalk untrustedServer:(NSString *)host withCompletionHandler:(nullable void (^)(BOOL trust))completionHandler;
 - (void)signalKWebSocketDidOpen:(SignalK *)signalk;
 - (void)signalK:(SignalK *)signalk webSocketFailed:(NSString *)reason;
@@ -39,7 +39,7 @@ extern NSString *kSignalkErrorDomain;
 @protocol SignalKPathValueDelegate <NSObject>
 @optional
 - (void)signalK:(SignalK *)signalK didReceivePath:(NSString *)path andValue:value forContext:(NSString *)context;
-- (void)signalK:(SignalK *)signalK didReceivePath:(NSString *)path andValue:value withTimeStamp:(NSDate *)timeStamp forContext:(NSString *)context;
+- (void)signalK:(SignalK *)signalK didReceivePath:(NSString *)path andValue:value withTimeStamp:(NSString *)timeStamp forContext:(NSString *)context;
 - (void)signalK:(SignalK *)signalK didReceiveDelta:(NSDictionary *)delta;
 @end
 
@@ -93,6 +93,9 @@ extern NSString *kSignalkErrorDomain;
 
 - (NSDictionary *)getServerInfo; //returns the result from /signalk
 
++ (NSString *)getISODateTimeString:(NSDate *)date;
++ (NSDate *)getISODateTime:(NSString *)dateTime;
+
 //For use by subclasses
 #if !TARGET_OS_WATCH
 - (void)didReceiveDelta:(NSDictionary *)delta;
@@ -107,5 +110,5 @@ extern NSString *kSignalkErrorDomain;
 - (void)stopNetworkActivity;
 - (void)startNetworkActivity;
 - (void)addToConnectionLog:(nonnull NSString *)first, ... ;//NS_REQUIRES_NIL_TERMINATION;
-- (void)didReceivePath:(NSString *)path andValue:value withTimeStamp:(NSDate *)timeStamp forContext:(NSString *)context;
+- (void)didReceivePath:(NSString *)path andValue:value withTimeStamp:(NSString *)timeStamp forContext:(NSString *)context;
 @end

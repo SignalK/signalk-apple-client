@@ -6,13 +6,21 @@
 //  Copyright © 2018 Scott Bender. All rights reserved.
 //
 
+#define USE_POCKETSOCKET
 #import "SignalK.h"
 #if !TARGET_OS_WATCH
+#ifdef USE_POCKETSOCKET
+#import "PSWebSocket.h"
+#define SOCKET_CLASS PSWebSocket
+#else
 #import "SocketRocket.h"
+#define SOCKET_CLASS SRWebSocket
+#endif
 #endif
 
 NSString *kSignalkErrorDomain = @"org.signalk";
-
+static NSDateFormatter *oldDateFormatter;
+static id isoDateFormatter;
 
 @interface SKDelegateInfo : NSObject
 @property (strong) NSString *path;
@@ -22,7 +30,11 @@ NSString *kSignalkErrorDomain = @"org.signalk";
 
 @interface SignalK () <NSURLSessionDelegate
 #if !TARGET_OS_WATCH
+#ifdef USE_POCKETSOCKET
+,PSWebSocketDelegate
+#else
 ,SRWebSocketDelegate
+#endif
 #endif
 >
 
@@ -38,7 +50,7 @@ NSString *kSignalkErrorDomain = @"org.signalk";
 
 
 #if !TARGET_OS_WATCH
-@property (strong) SRWebSocket *webSocket;
+@property (strong) SOCKET_CLASS *webSocket;
 #endif
 
 @property (strong, atomic) NSMutableArray<SKDelegateInfo *> *pathValueDelegates;
@@ -46,6 +58,22 @@ NSString *kSignalkErrorDomain = @"org.signalk";
 @end
 
 @implementation SignalK
+
++ (void)initialize
+{
+  if ( @available(iOS 10.0, *) )
+  {
+    isoDateFormatter = [[NSISO8601DateFormatter alloc] init];
+  }
+  else
+  {
+    //NSISO8601DateFormatter is not supported on iOS 9.3
+    NSDateFormatter *oldf = [NSDateFormatter new];
+    oldf.dateFormat = @"yyyy-MM-dd'T'HH:mm:ssZ";
+    oldDateFormatter = oldf;
+  }
+
+}
 
 - (instancetype)init
 {
@@ -582,24 +610,19 @@ NSString *kSignalkErrorDomain = @"org.signalk";
   }
 }
 
-- (NSString *)getISODateTimeString:(NSDate *)date
++ (NSString *)getISODateTimeString:(NSDate *)date
 {
   if ( @available(iOS 10.0, *) )
   {
-    NSISO8601DateFormatter *df;
-    df = [[NSISO8601DateFormatter alloc] init];
-    return [df stringFromDate:date];
+    return [isoDateFormatter stringFromDate:date];
   }
   else
   {
-    //NSISO8601DateFormatter is not supported on iOS 9.3
-    NSDateFormatter *oldf = [NSDateFormatter new];
-    oldf.dateFormat = @"yyyy-MM-dd'T'HH:mm:ssZ";
-    return [oldf stringFromDate:date];
+    return [oldDateFormatter stringFromDate:date];
   }
 }
 
-- (NSDate *)getISODateTime:(NSString *)dateTime
++ (NSDate *)getISODateTime:(NSString *)dateTime
 {
   if ( [dateTime containsString:@"."] )
   {
@@ -608,20 +631,15 @@ NSString *kSignalkErrorDomain = @"org.signalk";
 
   if ( @available(iOS 10.0, *) )
   {
-    NSISO8601DateFormatter *df;
-    df = [[NSISO8601DateFormatter alloc] init];
-    return [df dateFromString:dateTime];
+    return [isoDateFormatter dateFromString:dateTime];
   }
   else
   {
-    //NSISO8601DateFormatter is not supported on iOS 9.3
-    NSDateFormatter *oldf = [NSDateFormatter new];
-    oldf.dateFormat = @"yyyy-MM-dd'T'HH:mm:ssZ";
-    return [oldf dateFromString:dateTime];
+    return [oldDateFormatter dateFromString:dateTime];
   }
 }
 
-- (void)didReceivePath:(NSString *)path andValue:value withTimeStamp:(NSDate *)timeStamp forContext:(NSString *)context
+- (void)didReceivePath:(NSString *)path andValue:value withTimeStamp:(NSString *)timeStamp forContext:(NSString *)context
 {
 }
 
@@ -640,7 +658,7 @@ NSString *kSignalkErrorDomain = @"org.signalk";
   
   if ( self.historyStart )
   {
-    urlS = [urlS stringByAppendingFormat:@"&startTime=%@&playbackRate=%0.2f", [self getISODateTimeString:self.historyStart], self.historyRate];
+    urlS = [urlS stringByAppendingFormat:@"&startTime=%@&playbackRate=%0.2f", [[self class] getISODateTimeString:self.historyStart], self.historyRate];
   }
   
   return [NSURL URLWithString:urlS];
@@ -651,7 +669,7 @@ NSString *kSignalkErrorDomain = @"org.signalk";
 {
 }
 
-- (void)webSocketDidOpen:(SRWebSocket *)webSocket
+- (void)webSocketDidOpen:(SOCKET_CLASS *)webSocket
 {
   self.isConnecting = NO;
   [self webSocketDidOpen];
@@ -669,7 +687,7 @@ NSString *kSignalkErrorDomain = @"org.signalk";
     for ( NSDictionary *update in delta[@"updates"] )
     {
       NSString *timeStamp = update[@"timestamp"];
-      if ( timeStamp && [[self getISODateTime:timeStamp] timeIntervalSinceDate:self.historyEnd] > 0 )
+      if ( timeStamp && [[[self class] getISODateTime:timeStamp] timeIntervalSinceDate:self.historyEnd] > 0 )
       {
         [self stopStreaming];
       }
@@ -677,9 +695,15 @@ NSString *kSignalkErrorDomain = @"org.signalk";
   }
 }
 
-- (void)webSocket:(SRWebSocket *)webSocket didReceiveMessage:(id)message;
+- (void)webSocket:(SOCKET_CLASS *)webSocket didReceiveMessage:(id)message;
 {
-  NSData *data = (NSData *)message;
+  NSData *data;
+  
+#ifdef USE_POCKETSOCKET
+  data = [((NSString *)message) dataUsingEncoding:NSUTF8StringEncoding];
+#else
+  data = (NSData *)message;
+#endif
   
   NSError *parse_error = nil;
   NSDictionary *jsonObject = [NSJSONSerialization JSONObjectWithData:data
@@ -711,7 +735,7 @@ NSString *kSignalkErrorDomain = @"org.signalk";
   return NO;
 }
 
-- (void)webSocket:(SRWebSocket *)webSocket didFailWithError:(NSError *)error
+- (void)webSocket:(SOCKET_CLASS *)webSocket didFailWithError:(NSError *)error
 {
   //NSLog(@"didFailWithError: %@", [error description]);
   NSString *msg;
@@ -735,7 +759,7 @@ NSString *kSignalkErrorDomain = @"org.signalk";
   }
 }
 
-- (void)webSocket:(SRWebSocket *)webSocket didCloseWithCode:(NSInteger)code reason:(nullable NSString *)reason wasClean:(BOOL)wasClean
+- (void)webSocket:(SOCKET_CLASS *)webSocket didCloseWithCode:(NSInteger)code reason:(nullable NSString *)reason wasClean:(BOOL)wasClean
 {
   //if ( !wasClean )
   {
@@ -749,6 +773,13 @@ NSString *kSignalkErrorDomain = @"org.signalk";
 	self.webSocket = nil;
   }
 }
+
+#ifdef USE_POCKETSOCKET
+- (BOOL)webSocket:(PSWebSocket *)webSocket evaluateServerTrust:(SecTrustRef)trust
+{
+  return YES;
+}
+#endif
 
 - (void)startStreaming
 {
@@ -765,10 +796,15 @@ NSString *kSignalkErrorDomain = @"org.signalk";
   
   [self addToConnectionLog:@"Connecting to websockets with %@", url.absoluteString];
   
+#ifdef USE_POCKETSOCKET
+  self.webSocket = [PSWebSocket clientSocketWithRequest:request];
+  self.webSocket.delegate = self;
+  [self.webSocket open];
+#else
   self.webSocket = [[SRWebSocket alloc] initWithURLRequest:request protocols:nil allowsUntrustedSSLCertificates:YES];
   self.webSocket.delegate = self;
   [self.webSocket open];
-  
+#endif
   return;
 }
 
@@ -855,14 +891,8 @@ NSString *kSignalkErrorDomain = @"org.signalk";
 	for ( NSDictionary *update in updates )
 	{
 	  NSArray *values = update[@"values"];
-      NSString *timeStampString = update[@"timestamp"];
-      NSDate *timeStamp;
+      NSString *timeStamp = update[@"timestamp"];
       
-      if ( timeStampString )
-      {
-        timeStamp = [self getISODateTime:timeStampString];
-      }
-
 	  if ( values )
 	  {
 		for ( NSDictionary *pathValue in values )

@@ -16,30 +16,37 @@
 		111EF948CB4215163C13705DDEF41372 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 797BCCE70145FF69B2CF1DA079DB1B63 /* Foundation.framework */; };
 		150503B99F77D3D8897EFFC68C09A351 /* EXPMatcherHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 199AD512D2AF0B8E1FF9029C484F349B /* EXPMatcherHelpers.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1603BE51724DD873F3C6510009409242 /* SPTTestSuite.m in Sources */ = {isa = PBXBuildFile; fileRef = C2516F1B6777DFDA1F58BF955E96D9DD /* SPTTestSuite.m */; };
+		180C8CC9D5625145175EDD20185E48C1 /* PSWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD72B93DA97188F12440A0913C43F36 /* PSWebSocket.m */; };
 		1D5D5F0054E8741FD0955B4227D53D55 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 797BCCE70145FF69B2CF1DA079DB1B63 /* Foundation.framework */; };
 		1D676445A1446539D4B722E6EF0C802A /* ExpectaSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A947479B4B48053BC522CB82408446 /* ExpectaSupport.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		20184B97C6659ECE89DA6243F64E5DD5 /* SPTExample.m in Sources */ = {isa = PBXBuildFile; fileRef = FF55328433A131A5AAF8D0DF8AF16107 /* SPTExample.m */; };
 		214F8D721940BD9AA4BAB0E5AE2E8A1C /* EXPBlockDefinedMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = F72AAE8A39D6D1943CFBA001C79AE438 /* EXPBlockDefinedMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2230424AB80C225AF338EBD2A837F5E2 /* SpectaUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = 37ECC5B1FD9E6BAF61BD66AB8D165FF9 /* SpectaUtility.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		23AF8C5FA3FADACAD57C0061D2626FA6 /* SignalK.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AAFE1189BBD6DB911C992A323FE6209 /* SignalK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		23D43ED516DA8EF5C85EC6ED09E1D735 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 797BCCE70145FF69B2CF1DA079DB1B63 /* Foundation.framework */; };
+		2811F2F69D679AE82F7CEA716968AF9F /* SignalKClient-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 47DD2E049CC1CF2B0062D9547D3F51B5 /* SignalKClient-dummy.m */; };
 		285C6F6BE59E632CB219CD98B4EDC1AA /* EXPMatchers+endWith.m in Sources */ = {isa = PBXBuildFile; fileRef = 920337F722F403552B1EC2CA1C25AB86 /* EXPMatchers+endWith.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		2916D75F69E777954F5BF46AE63C52C0 /* EXPMatchers+beSubclassOf.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F74C955AC549077E2FA27AED29A2E13 /* EXPMatchers+beSubclassOf.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		2B92713D774ECE1938047924B727EF59 /* SignalKBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = F52C1C92345FC9FF586B02C3DC16E289 /* SignalKBrowser.m */; };
 		2F3DE1CACE8914524A91604CD75C0323 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13AF6A3FB9FF00D439EFFD6EB20665C6 /* XCTest.framework */; };
 		30D9E40D6A43518B2B9DC9D8C8248B16 /* Pods-SignalKClient_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0719374B727A37FA33E0ABECE401EA0F /* Pods-SignalKClient_Example-dummy.m */; };
 		315B92FF968EA4E7B08C34359BC037F8 /* SPTSharedExampleGroups.m in Sources */ = {isa = PBXBuildFile; fileRef = 23C5BC21D451CF4758335080364E769C /* SPTSharedExampleGroups.m */; };
-		31FEE481AA5AA2B5E695FA9865C13BCE /* SignalKBrowser.h in Headers */ = {isa = PBXBuildFile; fileRef = 3890F4D12DC99B755AB82027356AE748 /* SignalKBrowser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		35892C2B7EC1D75C03823A96F3BA15CF /* PSWebSocketInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = DD30B2DD0888241FE89D9C3FBB008F5B /* PSWebSocketInternal.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		361B58CE2A28E03CA83A73617ED739F2 /* EXPMatchers+raise.m in Sources */ = {isa = PBXBuildFile; fileRef = C777AC6C45B9D162D020691B0B18617C /* EXPMatchers+raise.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		363A7C61E1244D14065668BD1609BB9B /* SPTExampleGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = CA22E8CD58E6A9A550728B7730090FB4 /* SPTExampleGroup.m */; };
+		3687FBED89128862E11DF6912BB98634 /* PSWebSocketServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 393A1779B67B2E0F3108413B6F120F60 /* PSWebSocketServer.m */; };
 		39461DAB3DE2637F4AE2BA94F19DCF2B /* EXPDoubleTuple.h in Headers */ = {isa = PBXBuildFile; fileRef = EEF7D2C4959A0E0FC71611BEBA1F87EF /* EXPDoubleTuple.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4018DC5024FD92633A2D46A8661A0715 /* SPTExampleGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = A482D54867CB5D041A631F72BF2905C4 /* SPTExampleGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		41CC214541946B82A25CE427BB81ABEA /* EXPMatchers+beKindOf.h in Headers */ = {isa = PBXBuildFile; fileRef = B08D8BFF31A9611073BE5D30622D89B9 /* EXPMatchers+beKindOf.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		41EB42D3755992D395492D57DB6A0DAB /* SRWebSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 43D878FB2D79B492CA7CEA89D2E71B6F /* SRWebSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		423D55A035E65841A8D02185A5D83FA7 /* SignalKClient-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 83894CEC881A838CBDCB35F6ED80051D /* SignalKClient-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		425C4DFD1FAB011D70F825631144BC4C /* EXPMatchers+equal.h in Headers */ = {isa = PBXBuildFile; fileRef = B336CC83CFE07323482631742E71D760 /* EXPMatchers+equal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		42FF36561E7DE4B33B2765FBC00E4CF3 /* PSWebSocketNetworkThread.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7A572537742161067D498306BA64A9 /* PSWebSocketNetworkThread.m */; };
+		451E5436A9A8DA55B72496BAECE18344 /* PSWebSocketDeflater.h in Headers */ = {isa = PBXBuildFile; fileRef = DD3DEB35D5C913BF9F8CB43949B34336 /* PSWebSocketDeflater.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		461F40F7FF9BDE508FD9FE728DA49A39 /* SpectaDSL.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A45B73C61CCDB313B9BD0B76F688BAF /* SpectaDSL.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		47D171E32EAE4FB61A9971B9BC00226D /* EXPMatchers+beLessThan.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB9A60CC89D2FFB46F9574C89078CCF /* EXPMatchers+beLessThan.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4861F2FFD5A4306E7B7BD3CD0D8199AC /* EXPMatchers+beCloseTo.h in Headers */ = {isa = PBXBuildFile; fileRef = FB982999806BF207DF40EF062664D1A5 /* EXPMatchers+beCloseTo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4CA4F8F64565882DCFA174872749C0EF /* EXPFloatTuple.h in Headers */ = {isa = PBXBuildFile; fileRef = A38A64358EB2E2D18BE192F25DA1695C /* EXPFloatTuple.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4FD1E9F3E14064C642DD723D93173839 /* PSWebSocketTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D868D6C527565B9578D29C4C0B9763C /* PSWebSocketTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		508B6D0572C0C3B4A3E019B814595D4A /* EXPMatchers+beInTheRangeOf.m in Sources */ = {isa = PBXBuildFile; fileRef = 0254D6A5A9C2F150F3F9B2D8EED2FB26 /* EXPMatchers+beInTheRangeOf.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		51FCC9EDD6B60BF63B5EF7CAC94CCF23 /* EXPMatchers+conformTo.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A890A5EB4F815D708F46C42B534A8D /* EXPMatchers+conformTo.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		57A6282C6AD16FFE26E559399D331EFB /* SocketRocket-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A769A0A72D8BF09FA1908F2A7FBED1B /* SocketRocket-dummy.m */; };
@@ -47,6 +54,7 @@
 		5922E3B61E351E2A21095BD92E4FE8AC /* NSValue+Expecta.h in Headers */ = {isa = PBXBuildFile; fileRef = F863312490A7AA9403E60178814B5F44 /* NSValue+Expecta.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5973287D68C7ADAD8FDA736591EB34B0 /* Pods-SignalKClient_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA945BF4B4F7EE29826386E9BDD2706 /* Pods-SignalKClient_Tests-dummy.m */; };
 		597E5A323FD0306B81C3F7E9C8E5580D /* EXPMatchers+match.h in Headers */ = {isa = PBXBuildFile; fileRef = 7ED80561FF4E056DE4C58D9957B836EA /* EXPMatchers+match.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B46F7D034B0A24D5B480B4ACE669440 /* PSWebSocketDriver.m in Sources */ = {isa = PBXBuildFile; fileRef = 011F334EC885FEB1EC9110B3C18948B6 /* PSWebSocketDriver.m */; };
 		5D0FCD2A15920779EEEDE2C2AAAF2BE6 /* SPTExcludeGlobalBeforeAfterEach.h in Headers */ = {isa = PBXBuildFile; fileRef = DA19131CE66E20B75E3FA71457FA030F /* SPTExcludeGlobalBeforeAfterEach.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5D4700451D6C9DFC6D5FFB86671EA2AC /* EXPDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 76724428CE7122B7737FEA2DFDBC5DFD /* EXPDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5E4F55D319FF771D658CCE335E7CB498 /* EXPFloatTuple.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EE7403FBCD9799B0957B1291D32F156 /* EXPFloatTuple.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -55,30 +63,37 @@
 		62F605BD5C3029E7BFD0B0A50AB9D10C /* SPTSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = EB4351E8B1C6E2C17D8D39DD61CA3F99 /* SPTSpec.m */; };
 		63BC0B5058D3AE9467BFE0B8B957EAF8 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20EA49A239F0334241B32B3BB89FF486 /* CFNetwork.framework */; };
 		64C46AF200F2347115A0DF2799D6E403 /* EXPMatchers+beNil.h in Headers */ = {isa = PBXBuildFile; fileRef = CBEAC81F711C3BC43E347FB010C0E89C /* EXPMatchers+beNil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6508FAE536573854C6174CDAE3C38E39 /* SignalKBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = CB68F4451CDF9438FE1B7D50B051A92C /* SignalKBrowser.m */; };
 		6B3AB6623F837CB2FD51EE863C2B37D8 /* XCTestCase+Specta.h in Headers */ = {isa = PBXBuildFile; fileRef = 10A02D5ABB1F3B40C90AA13ED8ADDB66 /* XCTestCase+Specta.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		778C9F1A1715E05313578E39AB46726E /* EXPMatchers+beInstanceOf.m in Sources */ = {isa = PBXBuildFile; fileRef = A58BED41053600D6D19BDEE532BC4950 /* EXPMatchers+beInstanceOf.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		783E07CA248822C60B76307D67D05C1D /* Specta.h in Headers */ = {isa = PBXBuildFile; fileRef = 144418CD6F21D07C54F814D6BDDB287E /* Specta.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		785E212B97B791ED2284EA95BAE5A5F9 /* PSWebSocketBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 73D6E1A3AC7189321EA016423636AB56 /* PSWebSocketBuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7D09A7227FAC0B372B445DA3D6A0B1CD /* XCTest+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E35D6F1EA64033954537F54FCCDFBF6 /* XCTest+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7D2B0A6EA6AFF34B2E6F2AE6D95D7DCD /* SignalKClient-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDD0D3CB58F990A0DF1756ECC883F9D /* SignalKClient-dummy.m */; };
 		7E6B9C86477E30586654D01142918A7C /* SpectaDSL.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2A0BBCFCC07FB19054D3A75BC55336 /* SpectaDSL.m */; };
 		7E81176499F06E523CE3039B08AB5051 /* EXPMatchers+beGreaterThan.h in Headers */ = {isa = PBXBuildFile; fileRef = F2F51767C4996879C1BB07088763E601 /* EXPMatchers+beGreaterThan.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		80234C5F8246C011A6018D6C5B235A1E /* SPTGlobalBeforeAfterEach.h in Headers */ = {isa = PBXBuildFile; fileRef = 271C0D0F8F9066475FF8F8004F2CB219 /* SPTGlobalBeforeAfterEach.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8220368E5F7EA70947BAD2B6F216C61B /* EXPMatchers+beFalsy.m in Sources */ = {isa = PBXBuildFile; fileRef = 50812274CD5CE09335AA691DB391EFF9 /* EXPMatchers+beFalsy.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		83525FE696431653204BC815E70D67FE /* SignalKBrowser.h in Headers */ = {isa = PBXBuildFile; fileRef = 29B75A4A29A5B3A30295D1C91F77F3D8 /* SignalKBrowser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		83666A05A0140BAA52A055C2229E81BB /* SPTSharedExampleGroups.h in Headers */ = {isa = PBXBuildFile; fileRef = BED29F7FD2C2A7AE4EFE69DEB405FD45 /* SPTSharedExampleGroups.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		870CAAA15357EFF9E1619737DEE56067 /* EXPMatchers+raiseWithReason.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF78308ED46718A1D7E6FC6ADE68631 /* EXPMatchers+raiseWithReason.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		87AE70A44BD8E8676B2A3EDB6E334138 /* EXPMatchers+endWith.h in Headers */ = {isa = PBXBuildFile; fileRef = 68FDDD7296DB368B9701273D452BA8F8 /* EXPMatchers+endWith.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		884418303532408FBB724204970AAF89 /* SocketRocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 675F24B07ABF1530D81BC2ADEF84A00D /* SocketRocket.framework */; };
+		889F6559A107678322F72CB6B508D952 /* PSWebSocketDriver.h in Headers */ = {isa = PBXBuildFile; fileRef = 78299C211A17E2470F7DCC5551647146 /* PSWebSocketDriver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		88B2187829744A9FE33C51D7F4044F3A /* PSWebSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CF502D616C2638FC4949F6E3D020775 /* PSWebSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B0A34DADDB56E70CF4A5177E65AA081 /* ExpectaObject.h in Headers */ = {isa = PBXBuildFile; fileRef = CAB16A474E18E920DE4D81400C752A73 /* ExpectaObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B5DFBF0635BAB4C2DDE832C69433720 /* SocketRocket.h in Headers */ = {isa = PBXBuildFile; fileRef = C8925677ADCE792DF8A81C6CB20B2102 /* SocketRocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B8C4B3E28E6FC6D26037EFC282BE4C5 /* EXPMatchers+beIdenticalTo.h in Headers */ = {isa = PBXBuildFile; fileRef = 9503C742D7C06D8FD1EA8AC10111AFDE /* EXPMatchers+beIdenticalTo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8C14546CF091E0A5B1F0F37F576990B8 /* EXPMatchers+beginWith.h in Headers */ = {isa = PBXBuildFile; fileRef = DAB2F4DB1F524F6788E8ADEF28D986FF /* EXPMatchers+beginWith.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8F990515E868D90C15D2148DD1A22403 /* EXPMatchers+haveCountOf.h in Headers */ = {isa = PBXBuildFile; fileRef = 90ADA10A0957F58E90F2DF4C2143EFA8 /* EXPMatchers+haveCountOf.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		93AADDEA9C3F8EE3E39A05BED270C54F /* PSWebSocketUTF8Decoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA1B52FDBFB3E0E44455FE294CE5C51 /* PSWebSocketUTF8Decoder.m */; };
+		95B1CBF9C1B48CC87DDF5792103F7749 /* PocketSocket-Prefix.pch in Sources */ = {isa = PBXBuildFile; fileRef = 67813F7D8AE6498AA4EDEDB150CB5475 /* PocketSocket-Prefix.pch */; };
 		9660D6F7AEA83C3BAEFB672AA8184424 /* Pods-SignalKClient_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B8BD5AB0BF76433391B5492E9B36DF0 /* Pods-SignalKClient_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		983466DF9950B4785517AF6F9DAC883C /* SignalK.m in Sources */ = {isa = PBXBuildFile; fileRef = 8136679DC7CC59444B473CBC6903F553 /* SignalK.m */; };
 		98571BE17A46245CA1717CF9157A0807 /* EXPMatchers+beTruthy.m in Sources */ = {isa = PBXBuildFile; fileRef = 40BE9151796FEE5F7A62E3B00730609E /* EXPMatchers+beTruthy.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		99E6D51A8A4E3FFB7601D182D995A3BA /* ExpectaObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D5F94D243B60905561171D8733582909 /* ExpectaObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9A0ADF06F5B6BC3A70EDE1285BAF9346 /* EXPMatchers+beCloseTo.m in Sources */ = {isa = PBXBuildFile; fileRef = C8BC98B523F60179B423DAA185A519AA /* EXPMatchers+beCloseTo.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		9B024BAFE178CD9B64C3FD0D109969AF /* VesselService.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D01EE61E1B8C7C4457300BE89E743D1 /* VesselService.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9CAFC7DAE2E661FC92393E5CC55D1D61 /* EXPMatchers.h in Headers */ = {isa = PBXBuildFile; fileRef = CBBCE4D50E34ABD4D875C44CBA22B979 /* EXPMatchers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9DB3985B45BA338DB7CDF39A21BB53A9 /* PSWebSocketDeflater.m in Sources */ = {isa = PBXBuildFile; fileRef = 32F44AE6509580A34334565B2920AD11 /* PSWebSocketDeflater.m */; };
 		9E4463D68D13C127762B1ACB8249B64C /* EXPBlockDefinedMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 530A775CD7E400EA75C68A72D09482F7 /* EXPBlockDefinedMatcher.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9EA076D25036A0F4765FF3FB57CF4A6A /* EXPMatchers+contain.m in Sources */ = {isa = PBXBuildFile; fileRef = B96D0EC17620A04502BA0DB22DDF13B1 /* EXPMatchers+contain.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9F51005FE4BF10FA9906B02DAD609C6E /* EXPMatchers+postNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 803396CDF948D64AC6FE81497651E39A /* EXPMatchers+postNotification.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -93,9 +108,9 @@
 		ABBDD0372C687211E68EDCE0166F3632 /* ExpectaSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FDAD818C601203686E8EA88848C7D12 /* ExpectaSupport.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AC0AB78F3A7629ED1C7F3F82BBB3F471 /* EXPMatchers+beSupersetOf.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DB02F971919A0E583BFC4623BF0656C /* EXPMatchers+beSupersetOf.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AE7BBD46BA00A9AC69249ADA56402162 /* EXPUnsupportedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DD37791B6A031B0F6034ED22E38633E3 /* EXPUnsupportedObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AEBAB8EE460DC3533DE5409F77F0C94F /* PSWebSocketInflater.h in Headers */ = {isa = PBXBuildFile; fileRef = 1466B1E0E33F12CA547108F4F1F7EB55 /* PSWebSocketInflater.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B0FABFDCFC2AE3DCE1632A4DC344EB9E /* Specta-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A493723DE8CD0DE471159815957330A /* Specta-dummy.m */; };
 		B1487AC2DD502CCE46631C123E047D28 /* EXPMatchers+beFalsy.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D01013B36719837047D08AF9CFCDB0B /* EXPMatchers+beFalsy.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B1A3C58BC05D8ACFA2388178F4376F63 /* SignalKClient-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 77A35AB507D9607474FCBD02F73E0A45 /* SignalKClient-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B2428A5D42FA623B89DCB2B797CA6D14 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDF0EEAB19D9906BBD3DF7AB56841CB2 /* Security.framework */; };
 		B3F189747A7A3CEDA9200CB2749AC7D8 /* EXPMatchers+raiseWithReason.h in Headers */ = {isa = PBXBuildFile; fileRef = 51452030DE106DF4862F5752E3C22AA8 /* EXPMatchers+raiseWithReason.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B67A37C8DCA78927304348217D400EE3 /* SPTCompiledExample.m in Sources */ = {isa = PBXBuildFile; fileRef = C5787B12F094950739768A429DE825DA /* SPTCompiledExample.m */; };
@@ -105,21 +120,22 @@
 		BEF8E2519E35DEC324FAA67C3AFA5408 /* SPTCompiledExample.h in Headers */ = {isa = PBXBuildFile; fileRef = B7B11E91808A73360D2D9C30807A02C8 /* SPTCompiledExample.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BFC7D32CFE8200730837306AFF61E5AD /* EXPExpect.m in Sources */ = {isa = PBXBuildFile; fileRef = A33AAD3D96E9BF49D4ABB0FD13274022 /* EXPExpect.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C14CD98EE4DDC0B7689F058D5B79CC47 /* EXPMatchers+beGreaterThanOrEqualTo.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B1441F453410C39111AA7749B8F49B /* EXPMatchers+beGreaterThanOrEqualTo.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C29DCEDBFC3289EDBD85EE20BA92776D /* PSWebSocketNetworkThread.h in Headers */ = {isa = PBXBuildFile; fileRef = 5424AE9BCDD25D6A6A18AD5DCFE24660 /* PSWebSocketNetworkThread.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2A49B41B35E481041BB34DA91031340 /* VesselService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E8347B8E21D93EF577BEE893A07C989 /* VesselService.m */; };
 		C4C558B576E1875435A29365D06C3987 /* SocketRocket-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BEF54CC507F146BE54465056A35BF4A1 /* SocketRocket-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C5927D16F64ECC2B9216A95690E55335 /* SignalK.m in Sources */ = {isa = PBXBuildFile; fileRef = 64EED4DC9F80A03384CA3A3BB768D612 /* SignalK.m */; };
 		C676818DADAC76EE2FDC5533CBF3648A /* EXPMatchers+haveCountOf.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E891D68F59DCD8EAC19850F52CE182 /* EXPMatchers+haveCountOf.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CB99A2D7D003745153A564346DF8ABA8 /* EXPMatchers+beSubclassOf.h in Headers */ = {isa = PBXBuildFile; fileRef = D9374743FFAACBDB8343052C1FDD40B4 /* EXPMatchers+beSubclassOf.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD22121B77F0F8E2B6A58AF6226038C2 /* EXPMatchers+beIdenticalTo.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DE717C4B546196AE450FABE90B8919 /* EXPMatchers+beIdenticalTo.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CD66900813CFE317343F5A4053AE73EC /* EXPMatchers+beNil.m in Sources */ = {isa = PBXBuildFile; fileRef = AD3081294EA610E7B72508CE11D49D4C /* EXPMatchers+beNil.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CE7E4C141657D23213C7FAE616D7FA75 /* EXPMatchers+beLessThanOrEqualTo.m in Sources */ = {isa = PBXBuildFile; fileRef = D89F8450A70900992D1658945BEF008D /* EXPMatchers+beLessThanOrEqualTo.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D090B359F44EEB784FF243E5DBDCA08F /* PSWebSocketServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 247875C380D31DB4962D6D81D2CDE9C6 /* PSWebSocketServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0BF5BF65C04E95A989F030D4FE2695E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 797BCCE70145FF69B2CF1DA079DB1B63 /* Foundation.framework */; };
 		D1768C977F0CD5B420D1A1D2375CDBD4 /* Expecta-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 072448FBDC080B2730B4C81B7C6CE34D /* Expecta-dummy.m */; };
 		D55729E268C8810F8264041344C95EE4 /* SpectaUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = D196EE7602F0A9149DE98F7888338CC2 /* SpectaUtility.m */; };
-		D7F1128D1AB6453F4F9985B102287A95 /* SignalK.h in Headers */ = {isa = PBXBuildFile; fileRef = E99F17169D26422DE90EA07C8592DDD6 /* SignalK.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D8B966F634E66A1A7478281233D8210F /* VesselService.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C718559055C3D19D1D563A47491673 /* VesselService.m */; };
 		DB8F3665E9E382DF52E0DCB4DECE5EAE /* NSObject+Expecta.h in Headers */ = {isa = PBXBuildFile; fileRef = 46C7F3E54000E75806BB6175C8168390 /* NSObject+Expecta.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DC423A980C991970F4D637AC4C47D863 /* EXPMatchers+conformTo.h in Headers */ = {isa = PBXBuildFile; fileRef = 626182C7E2F596EBD7A39C6BE3BF8E42 /* EXPMatchers+conformTo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DD91052185C5F91283A1D2F2296B5CA2 /* Specta-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F74932FCD2E5F389988986A83FA4B4B /* Specta-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DDF3B922525FF8E398C3D75C9633FD0F /* VesselService.h in Headers */ = {isa = PBXBuildFile; fileRef = 8385B476846B46525F5D385A529523BC /* VesselService.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DED9AE33B24B462D4B44FE94383B35F4 /* EXPMatchers+respondTo.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B154D235BDBD2B64778183509F559DC /* EXPMatchers+respondTo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DF883524C3F35145D74166C01BCFCFC3 /* EXPMatchers+beKindOf.m in Sources */ = {isa = PBXBuildFile; fileRef = C570C4F5C62529D2CA4DC27FFE4CCBAA /* EXPMatchers+beKindOf.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E1B74DC9082D9A3F2301446871AE2487 /* Pods-SignalKClient_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 01ECCBF30D66CD953F8F70964951221F /* Pods-SignalKClient_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -128,9 +144,12 @@
 		E61E28B50602F353D95914765667969F /* EXPMatcherHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DC86AFFA72AA9D64D015983CAB5A98B /* EXPMatcherHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E6D59CAA2A6E134A4643254406ED11F2 /* EXPMatchers+equal.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2F4B07B1F1DE9834524444A311C054 /* EXPMatchers+equal.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		ECCB2B2DB8DBBEE18326C0CFD37BE26F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 797BCCE70145FF69B2CF1DA079DB1B63 /* Foundation.framework */; };
+		F2F53C7BDC0F58A0E70B070F1E0CD6D9 /* PSWebSocketUTF8Decoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 538C81B448179DE66717F9FB04B1485B /* PSWebSocketUTF8Decoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F3D8ECD7D0461E324A33C0ECA115DED8 /* SPTCallSite.m in Sources */ = {isa = PBXBuildFile; fileRef = BC06AAA2828F5693870076B0BEADB452 /* SPTCallSite.m */; };
+		F43504E0EA2230CEA3A2EB90BA3BD94B /* PSWebSocketBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 24EA6C1C8CC06E336D69EE2DE0E73315 /* PSWebSocketBuffer.m */; };
 		F74F0174B426B7EAB501A3788E5D381F /* EXPMatchers+beTruthy.h in Headers */ = {isa = PBXBuildFile; fileRef = 810F58E1E80CD16D83BD2EBFB3D90640 /* EXPMatchers+beTruthy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F8BB3457D0787BE628D91DB75C0F725C /* SPTCallSite.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D1B3CBE0A5F6BD53BCFA795F1F5FB4C /* SPTCallSite.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FAA0634B3A337EE75AC9CAFABD8FD7A5 /* PSWebSocketInflater.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC5DB326529877856B9962E296209B1 /* PSWebSocketInflater.m */; };
 		FC223395BCEE46EB920CECD38AFD4402 /* EXPMatchers+beInTheRangeOf.h in Headers */ = {isa = PBXBuildFile; fileRef = 53873CC176EA8028A259635F7A5131E6 /* EXPMatchers+beInTheRangeOf.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FC6474103AA989EBD5368772037BE0BB /* EXPMatchers+beSupersetOf.h in Headers */ = {isa = PBXBuildFile; fileRef = 85DEBA2142427E048B501F0DE896F4F4 /* EXPMatchers+beSupersetOf.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FD39ACDEA6F0B6D6DBB730547CE18BA6 /* EXPExpect.h in Headers */ = {isa = PBXBuildFile; fileRef = A6FD14C7698A3ABC80E8084B2355490C /* EXPExpect.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -185,21 +204,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		011F334EC885FEB1EC9110B3C18948B6 /* PSWebSocketDriver.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PSWebSocketDriver.m; sourceTree = "<group>"; };
 		01ECCBF30D66CD953F8F70964951221F /* Pods-SignalKClient_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SignalKClient_Example-umbrella.h"; sourceTree = "<group>"; };
 		0254D6A5A9C2F150F3F9B2D8EED2FB26 /* EXPMatchers+beInTheRangeOf.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beInTheRangeOf.m"; path = "Expecta/Matchers/EXPMatchers+beInTheRangeOf.m"; sourceTree = "<group>"; };
+		065DB33A29CD666B1F27FAEC442533A2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		0719374B727A37FA33E0ABECE401EA0F /* Pods-SignalKClient_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SignalKClient_Example-dummy.m"; sourceTree = "<group>"; };
 		072448FBDC080B2730B4C81B7C6CE34D /* Expecta-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Expecta-dummy.m"; sourceTree = "<group>"; };
 		0D1B3CBE0A5F6BD53BCFA795F1F5FB4C /* SPTCallSite.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTCallSite.h; path = Specta/Specta/SPTCallSite.h; sourceTree = "<group>"; };
 		0DEEF87AC45FC2D82DFBD82C1F52362D /* Specta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Specta.framework; path = Specta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F8EC57BE72D87B3FF59BDC50A1736B6 /* Expecta-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Expecta-prefix.pch"; sourceTree = "<group>"; };
 		10A02D5ABB1F3B40C90AA13ED8ADDB66 /* XCTestCase+Specta.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "XCTestCase+Specta.h"; path = "Specta/Specta/XCTestCase+Specta.h"; sourceTree = "<group>"; };
-		11EBA1D60524A6D7977A35E6B3FD2D50 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		13AF6A3FB9FF00D439EFFD6EB20665C6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		14037466ED41E86F4D84D083AE0DC113 /* SPTExample.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTExample.h; path = Specta/Specta/SPTExample.h; sourceTree = "<group>"; };
 		14284AE4FAAF124E5E325517645B8E1D /* Pods-SignalKClient_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SignalKClient_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		144418CD6F21D07C54F814D6BDDB287E /* Specta.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Specta.h; path = Specta/Specta/Specta.h; sourceTree = "<group>"; };
-		17F7A9170419F0B8CA91329101BC8786 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		18C8480FDA2414FA02CB774500BA922E /* SignalKClient.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SignalKClient.xcconfig; sourceTree = "<group>"; };
+		1466B1E0E33F12CA547108F4F1F7EB55 /* PSWebSocketInflater.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PSWebSocketInflater.h; sourceTree = "<group>"; };
 		199AD512D2AF0B8E1FF9029C484F349B /* EXPMatcherHelpers.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EXPMatcherHelpers.m; path = Expecta/Matchers/EXPMatcherHelpers.m; sourceTree = "<group>"; };
 		1AFA9C5EC5E03C418DD485A11A0BFE4B /* EXPMatchers+match.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+match.m"; path = "Expecta/Matchers/EXPMatchers+match.m"; sourceTree = "<group>"; };
 		1DF03E29EFBEBCF45B86506E633B3B43 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -209,26 +228,36 @@
 		20EA49A239F0334241B32B3BB89FF486 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
 		213ECA52D2E8E898CCE8CB4DA1A47030 /* Pods-SignalKClient_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SignalKClient_Tests.modulemap"; sourceTree = "<group>"; };
 		23C5BC21D451CF4758335080364E769C /* SPTSharedExampleGroups.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTSharedExampleGroups.m; path = Specta/Specta/SPTSharedExampleGroups.m; sourceTree = "<group>"; };
+		23E6C1F6D7B4F7ACC9F40D1BDA0BB07F /* SignalKClient.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SignalKClient.xcconfig; sourceTree = "<group>"; };
+		247875C380D31DB4962D6D81D2CDE9C6 /* PSWebSocketServer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PSWebSocketServer.h; sourceTree = "<group>"; };
+		24EA6C1C8CC06E336D69EE2DE0E73315 /* PSWebSocketBuffer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PSWebSocketBuffer.m; sourceTree = "<group>"; };
 		271C0D0F8F9066475FF8F8004F2CB219 /* SPTGlobalBeforeAfterEach.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTGlobalBeforeAfterEach.h; path = Specta/Specta/SPTGlobalBeforeAfterEach.h; sourceTree = "<group>"; };
 		27B1441F453410C39111AA7749B8F49B /* EXPMatchers+beGreaterThanOrEqualTo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beGreaterThanOrEqualTo.m"; path = "Expecta/Matchers/EXPMatchers+beGreaterThanOrEqualTo.m"; sourceTree = "<group>"; };
 		29A34BFB288CBB8FEAC09A56D6339AC9 /* Pods_SignalKClient_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SignalKClient_Example.framework; path = "Pods-SignalKClient_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		29B75A4A29A5B3A30295D1C91F77F3D8 /* SignalKBrowser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SignalKBrowser.h; sourceTree = "<group>"; };
 		29D4324CDAFA9B15961E7AE453831772 /* Pods-SignalKClient_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SignalKClient_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		2A493723DE8CD0DE471159815957330A /* Specta-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Specta-dummy.m"; sourceTree = "<group>"; };
 		2B8BD5AB0BF76433391B5492E9B36DF0 /* Pods-SignalKClient_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SignalKClient_Tests-umbrella.h"; sourceTree = "<group>"; };
+		2CA1B52FDBFB3E0E44455FE294CE5C51 /* PSWebSocketUTF8Decoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PSWebSocketUTF8Decoder.m; sourceTree = "<group>"; };
 		2DA945BF4B4F7EE29826386E9BDD2706 /* Pods-SignalKClient_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SignalKClient_Tests-dummy.m"; sourceTree = "<group>"; };
+		32F44AE6509580A34334565B2920AD11 /* PSWebSocketDeflater.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PSWebSocketDeflater.m; sourceTree = "<group>"; };
 		32F6C5AE5F544B6F3D6D8E1C52A2E7A0 /* Pods-SignalKClient_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SignalKClient_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		33ED2D945BF153E94C424E363E1CF8B7 /* SPTTestSuite.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTTestSuite.h; path = Specta/Specta/SPTTestSuite.h; sourceTree = "<group>"; };
 		377245AC9BBA45D7623459402E2012A3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37ECC5B1FD9E6BAF61BD66AB8D165FF9 /* SpectaUtility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SpectaUtility.h; path = Specta/Specta/SpectaUtility.h; sourceTree = "<group>"; };
-		3890F4D12DC99B755AB82027356AE748 /* SignalKBrowser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SignalKBrowser.h; path = SignalKClient/Classes/SignalKBrowser.h; sourceTree = "<group>"; };
+		393A1779B67B2E0F3108413B6F120F60 /* PSWebSocketServer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PSWebSocketServer.m; sourceTree = "<group>"; };
 		3A293C24A0915B7A07B0E83392C96858 /* Pods-SignalKClient_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SignalKClient_Example.release.xcconfig"; sourceTree = "<group>"; };
+		3AAFE1189BBD6DB911C992A323FE6209 /* SignalK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SignalK.h; sourceTree = "<group>"; };
 		3EF68BD84AB7FAFA109C4F64E5F88C94 /* Pods-SignalKClient_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SignalKClient_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		40BE9151796FEE5F7A62E3B00730609E /* EXPMatchers+beTruthy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beTruthy.m"; path = "Expecta/Matchers/EXPMatchers+beTruthy.m"; sourceTree = "<group>"; };
 		43D878FB2D79B492CA7CEA89D2E71B6F /* SRWebSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRWebSocket.h; path = SocketRocket/SRWebSocket.h; sourceTree = "<group>"; };
 		46B395572306097AA93274E8EFFC45A9 /* EXPMatchers+postNotification.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+postNotification.h"; path = "Expecta/Matchers/EXPMatchers+postNotification.h"; sourceTree = "<group>"; };
 		46C7F3E54000E75806BB6175C8168390 /* NSObject+Expecta.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+Expecta.h"; path = "Expecta/NSObject+Expecta.h"; sourceTree = "<group>"; };
+		47DD2E049CC1CF2B0062D9547D3F51B5 /* SignalKClient-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SignalKClient-dummy.m"; sourceTree = "<group>"; };
 		49A947479B4B48053BC522CB82408446 /* ExpectaSupport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ExpectaSupport.m; path = Expecta/ExpectaSupport.m; sourceTree = "<group>"; };
 		4C31D03E6C32C2F9D4239A60AB99314B /* Expecta.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Expecta.xcconfig; sourceTree = "<group>"; };
+		4C5554416B10F242F39DCDDE0ADC904D /* SignalKClient.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SignalKClient.modulemap; sourceTree = "<group>"; };
+		4CF502D616C2638FC4949F6E3D020775 /* PSWebSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PSWebSocket.h; sourceTree = "<group>"; };
 		4DC86AFFA72AA9D64D015983CAB5A98B /* EXPMatcherHelpers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXPMatcherHelpers.h; path = Expecta/Matchers/EXPMatcherHelpers.h; sourceTree = "<group>"; };
 		4F74932FCD2E5F389988986A83FA4B4B /* Specta-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Specta-umbrella.h"; sourceTree = "<group>"; };
 		4FDAD818C601203686E8EA88848C7D12 /* ExpectaSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ExpectaSupport.h; path = Expecta/ExpectaSupport.h; sourceTree = "<group>"; };
@@ -236,6 +265,8 @@
 		51452030DE106DF4862F5752E3C22AA8 /* EXPMatchers+raiseWithReason.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+raiseWithReason.h"; path = "Expecta/Matchers/EXPMatchers+raiseWithReason.h"; sourceTree = "<group>"; };
 		530A775CD7E400EA75C68A72D09482F7 /* EXPBlockDefinedMatcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EXPBlockDefinedMatcher.m; path = Expecta/EXPBlockDefinedMatcher.m; sourceTree = "<group>"; };
 		53873CC176EA8028A259635F7A5131E6 /* EXPMatchers+beInTheRangeOf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beInTheRangeOf.h"; path = "Expecta/Matchers/EXPMatchers+beInTheRangeOf.h"; sourceTree = "<group>"; };
+		538C81B448179DE66717F9FB04B1485B /* PSWebSocketUTF8Decoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PSWebSocketUTF8Decoder.h; sourceTree = "<group>"; };
+		5424AE9BCDD25D6A6A18AD5DCFE24660 /* PSWebSocketNetworkThread.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PSWebSocketNetworkThread.h; sourceTree = "<group>"; };
 		58453B35906A4EE48EAC50C334FEBF83 /* SignalKClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SignalKClient.framework; path = SignalKClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58BB1F1FBA1201DD4ACDDCEDA9AACB75 /* Pods-SignalKClient_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SignalKClient_Example.modulemap"; sourceTree = "<group>"; };
 		5A45B73C61CCDB313B9BD0B76F688BAF /* SpectaDSL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SpectaDSL.h; path = Specta/Specta/SpectaDSL.h; sourceTree = "<group>"; };
@@ -244,19 +275,19 @@
 		5D3F8ACE036A207D41D1A812BFC751AD /* EXPMatchers+raise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+raise.h"; path = "Expecta/Matchers/EXPMatchers+raise.h"; sourceTree = "<group>"; };
 		5E2F4B07B1F1DE9834524444A311C054 /* EXPMatchers+equal.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+equal.m"; path = "Expecta/Matchers/EXPMatchers+equal.m"; sourceTree = "<group>"; };
 		5E35D6F1EA64033954537F54FCCDFBF6 /* XCTest+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "XCTest+Private.h"; path = "Specta/Specta/XCTest+Private.h"; sourceTree = "<group>"; };
+		5E8347B8E21D93EF577BEE893A07C989 /* VesselService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VesselService.m; sourceTree = "<group>"; };
 		626182C7E2F596EBD7A39C6BE3BF8E42 /* EXPMatchers+conformTo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+conformTo.h"; path = "Expecta/Matchers/EXPMatchers+conformTo.h"; sourceTree = "<group>"; };
-		64EED4DC9F80A03384CA3A3BB768D612 /* SignalK.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SignalK.m; path = SignalKClient/Classes/SignalK.m; sourceTree = "<group>"; };
 		65C733155676B887E60AF7B745136CAC /* SpectaTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SpectaTypes.h; path = Specta/Specta/SpectaTypes.h; sourceTree = "<group>"; };
 		66E20DCFB96E7CB64E29B488EA2275A7 /* SPTSpec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTSpec.h; path = Specta/Specta/SPTSpec.h; sourceTree = "<group>"; };
 		675F24B07ABF1530D81BC2ADEF84A00D /* SocketRocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SocketRocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		67813F7D8AE6498AA4EDEDB150CB5475 /* PocketSocket-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PocketSocket-Prefix.pch"; sourceTree = "<group>"; };
 		68FDDD7296DB368B9701273D452BA8F8 /* EXPMatchers+endWith.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+endWith.h"; path = "Expecta/Matchers/EXPMatchers+endWith.h"; sourceTree = "<group>"; };
-		6B903F0E2CA131437EEF643CA1CEE7ED /* SignalKClient.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = SignalKClient.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		6CB9A60CC89D2FFB46F9574C89078CCF /* EXPMatchers+beLessThan.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beLessThan.m"; path = "Expecta/Matchers/EXPMatchers+beLessThan.m"; sourceTree = "<group>"; };
 		6E2AF86A1D9943C734A8370A663AFB51 /* Specta.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Specta.xcconfig; sourceTree = "<group>"; };
 		6F74C955AC549077E2FA27AED29A2E13 /* EXPMatchers+beSubclassOf.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beSubclassOf.m"; path = "Expecta/Matchers/EXPMatchers+beSubclassOf.m"; sourceTree = "<group>"; };
-		72421DD78DDC5B055FF71A8D1DDCA47D /* SignalKClient.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SignalKClient.modulemap; sourceTree = "<group>"; };
+		73D6E1A3AC7189321EA016423636AB56 /* PSWebSocketBuffer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PSWebSocketBuffer.h; sourceTree = "<group>"; };
 		76724428CE7122B7737FEA2DFDBC5DFD /* EXPDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXPDefines.h; path = Expecta/EXPDefines.h; sourceTree = "<group>"; };
-		77A35AB507D9607474FCBD02F73E0A45 /* SignalKClient-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SignalKClient-umbrella.h"; sourceTree = "<group>"; };
+		78299C211A17E2470F7DCC5551647146 /* PSWebSocketDriver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PSWebSocketDriver.h; sourceTree = "<group>"; };
 		7918A2AFC7C43A67D1E0E34F05139BD7 /* Expecta.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Expecta.modulemap; sourceTree = "<group>"; };
 		797BCCE70145FF69B2CF1DA079DB1B63 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		7B154D235BDBD2B64778183509F559DC /* EXPMatchers+respondTo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+respondTo.h"; path = "Expecta/Matchers/EXPMatchers+respondTo.h"; sourceTree = "<group>"; };
@@ -265,6 +296,9 @@
 		7ED80561FF4E056DE4C58D9957B836EA /* EXPMatchers+match.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+match.h"; path = "Expecta/Matchers/EXPMatchers+match.h"; sourceTree = "<group>"; };
 		803396CDF948D64AC6FE81497651E39A /* EXPMatchers+postNotification.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+postNotification.m"; path = "Expecta/Matchers/EXPMatchers+postNotification.m"; sourceTree = "<group>"; };
 		810F58E1E80CD16D83BD2EBFB3D90640 /* EXPMatchers+beTruthy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beTruthy.h"; path = "Expecta/Matchers/EXPMatchers+beTruthy.h"; sourceTree = "<group>"; };
+		8136679DC7CC59444B473CBC6903F553 /* SignalK.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SignalK.m; sourceTree = "<group>"; };
+		8385B476846B46525F5D385A529523BC /* VesselService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VesselService.h; sourceTree = "<group>"; };
+		83894CEC881A838CBDCB35F6ED80051D /* SignalKClient-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SignalKClient-umbrella.h"; sourceTree = "<group>"; };
 		84DE717C4B546196AE450FABE90B8919 /* EXPMatchers+beIdenticalTo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beIdenticalTo.m"; path = "Expecta/Matchers/EXPMatchers+beIdenticalTo.m"; sourceTree = "<group>"; };
 		85DEBA2142427E048B501F0DE896F4F4 /* EXPMatchers+beSupersetOf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beSupersetOf.h"; path = "Expecta/Matchers/EXPMatchers+beSupersetOf.h"; sourceTree = "<group>"; };
 		8A5AD75B1CF594C8DA78688138959660 /* Specta-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Specta-prefix.pch"; sourceTree = "<group>"; };
@@ -277,17 +311,22 @@
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		94E891D68F59DCD8EAC19850F52CE182 /* EXPMatchers+haveCountOf.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+haveCountOf.m"; path = "Expecta/Matchers/EXPMatchers+haveCountOf.m"; sourceTree = "<group>"; };
 		9503C742D7C06D8FD1EA8AC10111AFDE /* EXPMatchers+beIdenticalTo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beIdenticalTo.h"; path = "Expecta/Matchers/EXPMatchers+beIdenticalTo.h"; sourceTree = "<group>"; };
-		9D01EE61E1B8C7C4457300BE89E743D1 /* VesselService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VesselService.h; path = SignalKClient/Classes/VesselService.h; sourceTree = "<group>"; };
+		979E4F626F44A8F36F57D4B5B440A0DF /* SignalKClient.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = SignalKClient.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9D2C9A685FFC816B3729B58AEA63FAAC /* Expecta-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Expecta-umbrella.h"; sourceTree = "<group>"; };
+		9D868D6C527565B9578D29C4C0B9763C /* PSWebSocketTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PSWebSocketTypes.h; sourceTree = "<group>"; };
 		9DB02F971919A0E583BFC4623BF0656C /* EXPMatchers+beSupersetOf.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beSupersetOf.m"; path = "Expecta/Matchers/EXPMatchers+beSupersetOf.m"; sourceTree = "<group>"; };
 		A0DE1104B341B99F3FC9A4275818F257 /* EXPDoubleTuple.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EXPDoubleTuple.m; path = Expecta/EXPDoubleTuple.m; sourceTree = "<group>"; };
 		A33AAD3D96E9BF49D4ABB0FD13274022 /* EXPExpect.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EXPExpect.m; path = Expecta/EXPExpect.m; sourceTree = "<group>"; };
 		A38A64358EB2E2D18BE192F25DA1695C /* EXPFloatTuple.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXPFloatTuple.h; path = Expecta/EXPFloatTuple.h; sourceTree = "<group>"; };
 		A482D54867CB5D041A631F72BF2905C4 /* SPTExampleGroup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTExampleGroup.h; path = Specta/Specta/SPTExampleGroup.h; sourceTree = "<group>"; };
 		A58BED41053600D6D19BDEE532BC4950 /* EXPMatchers+beInstanceOf.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beInstanceOf.m"; path = "Expecta/Matchers/EXPMatchers+beInstanceOf.m"; sourceTree = "<group>"; };
+		A6A1479CFD1F850C60FD8D5117DC52E8 /* SignalKClient-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SignalKClient-prefix.pch"; sourceTree = "<group>"; };
 		A6FD14C7698A3ABC80E8084B2355490C /* EXPExpect.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXPExpect.h; path = Expecta/EXPExpect.h; sourceTree = "<group>"; };
+		AA8B04524FDF4F28D4B8864913697850 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAC5DB326529877856B9962E296209B1 /* PSWebSocketInflater.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PSWebSocketInflater.m; sourceTree = "<group>"; };
 		ACE99C8978D6D52CCAAEC53997240ACE /* EXPMatchers+beLessThan.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beLessThan.h"; path = "Expecta/Matchers/EXPMatchers+beLessThan.h"; sourceTree = "<group>"; };
 		AD3081294EA610E7B72508CE11D49D4C /* EXPMatchers+beNil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beNil.m"; path = "Expecta/Matchers/EXPMatchers+beNil.m"; sourceTree = "<group>"; };
+		AF9B5BDBC654C6A1FCB20AA9F7E0D70A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		B08D8BFF31A9611073BE5D30622D89B9 /* EXPMatchers+beKindOf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beKindOf.h"; path = "Expecta/Matchers/EXPMatchers+beKindOf.h"; sourceTree = "<group>"; };
 		B1026B552073C6611873604A883E52A7 /* Pods-SignalKClient_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SignalKClient_Example-frameworks.sh"; sourceTree = "<group>"; };
 		B1DFBFD592061C109AB5E415A6D0A09F /* EXPMatchers+contain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+contain.h"; path = "Expecta/Matchers/EXPMatchers+contain.h"; sourceTree = "<group>"; };
@@ -303,7 +342,6 @@
 		BEF54CC507F146BE54465056A35BF4A1 /* SocketRocket-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SocketRocket-umbrella.h"; sourceTree = "<group>"; };
 		BF2A0BBCFCC07FB19054D3A75BC55336 /* SpectaDSL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SpectaDSL.m; path = Specta/Specta/SpectaDSL.m; sourceTree = "<group>"; };
 		BFEABFBCD549ACD96CBBD401200574BB /* Pods-SignalKClient_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SignalKClient_Tests-resources.sh"; sourceTree = "<group>"; };
-		C11E48012DC42036425E1E97126BC033 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		C2516F1B6777DFDA1F58BF955E96D9DD /* SPTTestSuite.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTTestSuite.m; path = Specta/Specta/SPTTestSuite.m; sourceTree = "<group>"; };
 		C570C4F5C62529D2CA4DC27FFE4CCBAA /* EXPMatchers+beKindOf.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beKindOf.m"; path = "Expecta/Matchers/EXPMatchers+beKindOf.m"; sourceTree = "<group>"; };
 		C5787B12F094950739768A429DE825DA /* SPTCompiledExample.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTCompiledExample.m; path = Specta/Specta/SPTCompiledExample.m; sourceTree = "<group>"; };
@@ -313,6 +351,8 @@
 		C8BC98B523F60179B423DAA185A519AA /* EXPMatchers+beCloseTo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beCloseTo.m"; path = "Expecta/Matchers/EXPMatchers+beCloseTo.m"; sourceTree = "<group>"; };
 		CA22E8CD58E6A9A550728B7730090FB4 /* SPTExampleGroup.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTExampleGroup.m; path = Specta/Specta/SPTExampleGroup.m; sourceTree = "<group>"; };
 		CAB16A474E18E920DE4D81400C752A73 /* ExpectaObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ExpectaObject.h; path = Expecta/ExpectaObject.h; sourceTree = "<group>"; };
+		CB68F4451CDF9438FE1B7D50B051A92C /* SignalKBrowser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SignalKBrowser.m; sourceTree = "<group>"; };
+		CB7A572537742161067D498306BA64A9 /* PSWebSocketNetworkThread.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PSWebSocketNetworkThread.m; sourceTree = "<group>"; };
 		CB7D14859B12857B32B36A493CC3DC4C /* Pods-SignalKClient_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SignalKClient_Example-resources.sh"; sourceTree = "<group>"; };
 		CBBCE4D50E34ABD4D875C44CBA22B979 /* EXPMatchers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXPMatchers.h; path = Expecta/Matchers/EXPMatchers.h; sourceTree = "<group>"; };
 		CBEAC81F711C3BC43E347FB010C0E89C /* EXPMatchers+beNil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beNil.h"; path = "Expecta/Matchers/EXPMatchers+beNil.h"; sourceTree = "<group>"; };
@@ -321,20 +361,20 @@
 		CF14C338F6D59505400965212008D4B6 /* Expecta.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Expecta.h; path = Expecta/Expecta.h; sourceTree = "<group>"; };
 		D196EE7602F0A9149DE98F7888338CC2 /* SpectaUtility.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SpectaUtility.m; path = Specta/Specta/SpectaUtility.m; sourceTree = "<group>"; };
 		D2A890A5EB4F815D708F46C42B534A8D /* EXPMatchers+conformTo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+conformTo.m"; path = "Expecta/Matchers/EXPMatchers+conformTo.m"; sourceTree = "<group>"; };
-		D3C718559055C3D19D1D563A47491673 /* VesselService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VesselService.m; path = SignalKClient/Classes/VesselService.m; sourceTree = "<group>"; };
 		D5F94D243B60905561171D8733582909 /* ExpectaObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ExpectaObject.m; path = Expecta/ExpectaObject.m; sourceTree = "<group>"; };
 		D89F8450A70900992D1658945BEF008D /* EXPMatchers+beLessThanOrEqualTo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beLessThanOrEqualTo.m"; path = "Expecta/Matchers/EXPMatchers+beLessThanOrEqualTo.m"; sourceTree = "<group>"; };
 		D9374743FFAACBDB8343052C1FDD40B4 /* EXPMatchers+beSubclassOf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beSubclassOf.h"; path = "Expecta/Matchers/EXPMatchers+beSubclassOf.h"; sourceTree = "<group>"; };
 		D9F7DC1FF24F795E381F075508C77FE5 /* Pods-SignalKClient_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SignalKClient_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		DA19131CE66E20B75E3FA71457FA030F /* SPTExcludeGlobalBeforeAfterEach.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTExcludeGlobalBeforeAfterEach.h; path = Specta/Specta/SPTExcludeGlobalBeforeAfterEach.h; sourceTree = "<group>"; };
 		DAB2F4DB1F524F6788E8ADEF28D986FF /* EXPMatchers+beginWith.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beginWith.h"; path = "Expecta/Matchers/EXPMatchers+beginWith.h"; sourceTree = "<group>"; };
+		DD30B2DD0888241FE89D9C3FBB008F5B /* PSWebSocketInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PSWebSocketInternal.h; sourceTree = "<group>"; };
 		DD37791B6A031B0F6034ED22E38633E3 /* EXPUnsupportedObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EXPUnsupportedObject.m; path = Expecta/EXPUnsupportedObject.m; sourceTree = "<group>"; };
+		DD3DEB35D5C913BF9F8CB43949B34336 /* PSWebSocketDeflater.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PSWebSocketDeflater.h; sourceTree = "<group>"; };
 		E43331D7835E0B7D23AC081B0204BEBF /* EXPMatchers+beGreaterThanOrEqualTo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beGreaterThanOrEqualTo.h"; path = "Expecta/Matchers/EXPMatchers+beGreaterThanOrEqualTo.h"; sourceTree = "<group>"; };
 		E4AA41D570CFAC2155878D64148EFD12 /* Pods-SignalKClient_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SignalKClient_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		E585B136FEBA829E0710CD7888F8C73C /* Pods_SignalKClient_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SignalKClient_Tests.framework; path = "Pods-SignalKClient_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E66BF9C4C351D76A66040262EAE7E9E4 /* SocketRocket.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SocketRocket.xcconfig; sourceTree = "<group>"; };
 		E74511088AF97EE60935BC6D7D904A89 /* EXPMatchers+beginWith.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beginWith.m"; path = "Expecta/Matchers/EXPMatchers+beginWith.m"; sourceTree = "<group>"; };
-		E99F17169D26422DE90EA07C8592DDD6 /* SignalK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SignalK.h; path = SignalKClient/Classes/SignalK.h; sourceTree = "<group>"; };
 		E9B91463371E1F1DEC988C8BC91DF463 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB4351E8B1C6E2C17D8D39DD61CA3F99 /* SPTSpec.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTSpec.m; path = Specta/Specta/SPTSpec.m; sourceTree = "<group>"; };
 		EBDE0F62973D49C37B1D512090A35E4F /* NSValue+Expecta.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSValue+Expecta.m"; path = "Expecta/NSValue+Expecta.m"; sourceTree = "<group>"; };
@@ -342,14 +382,12 @@
 		EE51CC29B45DA133AF642FA3418BB322 /* Expecta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Expecta.framework; path = Expecta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEF7D2C4959A0E0FC71611BEBA1F87EF /* EXPDoubleTuple.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXPDoubleTuple.h; path = Expecta/EXPDoubleTuple.h; sourceTree = "<group>"; };
 		EFBE53773AA319050C47561BD0544962 /* EXPMatchers+beGreaterThan.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beGreaterThan.m"; path = "Expecta/Matchers/EXPMatchers+beGreaterThan.m"; sourceTree = "<group>"; };
-		F21F1E46E09F34D9E2D629F75A98FFD0 /* SignalKClient-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SignalKClient-prefix.pch"; sourceTree = "<group>"; };
 		F2F51767C4996879C1BB07088763E601 /* EXPMatchers+beGreaterThan.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beGreaterThan.h"; path = "Expecta/Matchers/EXPMatchers+beGreaterThan.h"; sourceTree = "<group>"; };
-		F52C1C92345FC9FF586B02C3DC16E289 /* SignalKBrowser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SignalKBrowser.m; path = SignalKClient/Classes/SignalKBrowser.m; sourceTree = "<group>"; };
 		F72AAE8A39D6D1943CFBA001C79AE438 /* EXPBlockDefinedMatcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXPBlockDefinedMatcher.h; path = Expecta/EXPBlockDefinedMatcher.h; sourceTree = "<group>"; };
 		F863312490A7AA9403E60178814B5F44 /* NSValue+Expecta.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSValue+Expecta.h"; path = "Expecta/NSValue+Expecta.h"; sourceTree = "<group>"; };
 		FB982999806BF207DF40EF062664D1A5 /* EXPMatchers+beCloseTo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beCloseTo.h"; path = "Expecta/Matchers/EXPMatchers+beCloseTo.h"; sourceTree = "<group>"; };
 		FC7E5B7ED7115A5C753EABA6DC2EAFA2 /* Pods-SignalKClient_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SignalKClient_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		FCDD0D3CB58F990A0DF1756ECC883F9D /* SignalKClient-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SignalKClient-dummy.m"; sourceTree = "<group>"; };
+		FDD72B93DA97188F12440A0913C43F36 /* PSWebSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PSWebSocket.m; sourceTree = "<group>"; };
 		FF55328433A131A5AAF8D0DF8AF16107 /* SPTExample.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTExample.m; path = Specta/Specta/SPTExample.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -410,14 +448,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0193C95CC51EE9500BF9678EA2B1AD59 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				491C789C3368F1856714DEC07DC0816A /* SignalKClient */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
 		19852C54517B040050AC818AD91DDACF /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -430,6 +460,16 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Expecta";
+			sourceTree = "<group>";
+		};
+		33754B0DCD620BC25F97B6338D4966DC /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				AF9B5BDBC654C6A1FCB20AA9F7E0D70A /* LICENSE */,
+				065DB33A29CD666B1F27FAEC442533A2 /* README.md */,
+				979E4F626F44A8F36F57D4B5B440A0DF /* SignalKClient.podspec */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		37390F60858337A4EF2CC61F78E88AE2 /* iOS */ = {
@@ -477,20 +517,12 @@
 			path = Specta;
 			sourceTree = "<group>";
 		};
-		491C789C3368F1856714DEC07DC0816A /* SignalKClient */ = {
+		440023E8FE61605D4D1B151D60866E8C /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E99F17169D26422DE90EA07C8592DDD6 /* SignalK.h */,
-				64EED4DC9F80A03384CA3A3BB768D612 /* SignalK.m */,
-				3890F4D12DC99B755AB82027356AE748 /* SignalKBrowser.h */,
-				F52C1C92345FC9FF586B02C3DC16E289 /* SignalKBrowser.m */,
-				9D01EE61E1B8C7C4457300BE89E743D1 /* VesselService.h */,
-				D3C718559055C3D19D1D563A47491673 /* VesselService.m */,
-				F08D06027AC31F38ECBC9D578191833F /* Pod */,
-				DDB02BD3455EA6337092EEA905093155 /* Support Files */,
+				C10561A423A48C1576F379A9AF1BDD3D /* SignalKClient */,
 			);
-			name = SignalKClient;
-			path = ../..;
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		53B668D6CBCD7B9C3F956436049F612D /* Pods */ = {
@@ -562,16 +594,83 @@
 			path = "../Target Support Files/Specta";
 			sourceTree = "<group>";
 		};
+		75E33A01C449ECFB583683C3173FF537 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3AAFE1189BBD6DB911C992A323FE6209 /* SignalK.h */,
+				8136679DC7CC59444B473CBC6903F553 /* SignalK.m */,
+				29B75A4A29A5B3A30295D1C91F77F3D8 /* SignalKBrowser.h */,
+				CB68F4451CDF9438FE1B7D50B051A92C /* SignalKBrowser.m */,
+				8385B476846B46525F5D385A529523BC /* VesselService.h */,
+				5E8347B8E21D93EF577BEE893A07C989 /* VesselService.m */,
+			);
+			name = Classes;
+			path = SignalKClient/Classes;
+			sourceTree = "<group>";
+		};
+		7B3FC18B5814460F2A93C379F5631CDC /* PocketSocket */ = {
+			isa = PBXGroup;
+			children = (
+				67813F7D8AE6498AA4EDEDB150CB5475 /* PocketSocket-Prefix.pch */,
+				4CF502D616C2638FC4949F6E3D020775 /* PSWebSocket.h */,
+				FDD72B93DA97188F12440A0913C43F36 /* PSWebSocket.m */,
+				73D6E1A3AC7189321EA016423636AB56 /* PSWebSocketBuffer.h */,
+				24EA6C1C8CC06E336D69EE2DE0E73315 /* PSWebSocketBuffer.m */,
+				DD3DEB35D5C913BF9F8CB43949B34336 /* PSWebSocketDeflater.h */,
+				32F44AE6509580A34334565B2920AD11 /* PSWebSocketDeflater.m */,
+				78299C211A17E2470F7DCC5551647146 /* PSWebSocketDriver.h */,
+				011F334EC885FEB1EC9110B3C18948B6 /* PSWebSocketDriver.m */,
+				1466B1E0E33F12CA547108F4F1F7EB55 /* PSWebSocketInflater.h */,
+				AAC5DB326529877856B9962E296209B1 /* PSWebSocketInflater.m */,
+				DD30B2DD0888241FE89D9C3FBB008F5B /* PSWebSocketInternal.h */,
+				5424AE9BCDD25D6A6A18AD5DCFE24660 /* PSWebSocketNetworkThread.h */,
+				CB7A572537742161067D498306BA64A9 /* PSWebSocketNetworkThread.m */,
+				247875C380D31DB4962D6D81D2CDE9C6 /* PSWebSocketServer.h */,
+				393A1779B67B2E0F3108413B6F120F60 /* PSWebSocketServer.m */,
+				9D868D6C527565B9578D29C4C0B9763C /* PSWebSocketTypes.h */,
+				538C81B448179DE66717F9FB04B1485B /* PSWebSocketUTF8Decoder.h */,
+				2CA1B52FDBFB3E0E44455FE294CE5C51 /* PSWebSocketUTF8Decoder.m */,
+			);
+			name = PocketSocket;
+			path = SignalKClient/PocketSocket;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				0193C95CC51EE9500BF9678EA2B1AD59 /* Development Pods */,
+				440023E8FE61605D4D1B151D60866E8C /* Development Pods */,
 				F76E571B98D9047062CC36587B6C3E2C /* Frameworks */,
 				53B668D6CBCD7B9C3F956436049F612D /* Pods */,
 				FFF045A217355C82C4DD5F5EC3F408A5 /* Products */,
 				625BBE85C698B0E48592FF82106C4FE3 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		C10561A423A48C1576F379A9AF1BDD3D /* SignalKClient */ = {
+			isa = PBXGroup;
+			children = (
+				75E33A01C449ECFB583683C3173FF537 /* Classes */,
+				7B3FC18B5814460F2A93C379F5631CDC /* PocketSocket */,
+				33754B0DCD620BC25F97B6338D4966DC /* Pod */,
+				D06925EB575EC5463D44E846CA3BCB43 /* Support Files */,
+			);
+			name = SignalKClient;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		D06925EB575EC5463D44E846CA3BCB43 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AA8B04524FDF4F28D4B8864913697850 /* Info.plist */,
+				4C5554416B10F242F39DCDDE0ADC904D /* SignalKClient.modulemap */,
+				23E6C1F6D7B4F7ACC9F40D1BDA0BB07F /* SignalKClient.xcconfig */,
+				47DD2E049CC1CF2B0062D9547D3F51B5 /* SignalKClient-dummy.m */,
+				A6A1479CFD1F850C60FD8D5117DC52E8 /* SignalKClient-prefix.pch */,
+				83894CEC881A838CBDCB35F6ED80051D /* SignalKClient-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/SignalKClient";
 			sourceTree = "<group>";
 		};
 		D7F89999F22E6429F292A2C3647538A3 /* Support Files */ = {
@@ -586,20 +685,6 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/SocketRocket";
-			sourceTree = "<group>";
-		};
-		DDB02BD3455EA6337092EEA905093155 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				17F7A9170419F0B8CA91329101BC8786 /* Info.plist */,
-				72421DD78DDC5B055FF71A8D1DDCA47D /* SignalKClient.modulemap */,
-				18C8480FDA2414FA02CB774500BA922E /* SignalKClient.xcconfig */,
-				FCDD0D3CB58F990A0DF1756ECC883F9D /* SignalKClient-dummy.m */,
-				F21F1E46E09F34D9E2D629F75A98FFD0 /* SignalKClient-prefix.pch */,
-				77A35AB507D9607474FCBD02F73E0A45 /* SignalKClient-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/SignalKClient";
 			sourceTree = "<group>";
 		};
 		E0A98E3FB8BD6991E9A40C0B75B93BC3 /* Expecta */ = {
@@ -682,16 +767,6 @@
 			);
 			name = Expecta;
 			path = Expecta;
-			sourceTree = "<group>";
-		};
-		F08D06027AC31F38ECBC9D578191833F /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				C11E48012DC42036425E1E97126BC033 /* LICENSE */,
-				11EBA1D60524A6D7977A35E6B3FD2D50 /* README.md */,
-				6B903F0E2CA131437EEF643CA1CEE7ED /* SignalKClient.podspec */,
-			);
-			name = Pod;
 			sourceTree = "<group>";
 		};
 		F4869044A1A13609D5C587D261565444 /* SocketRocket */ = {
@@ -819,14 +894,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DA4CE45BF05ACD87D228188A963954FA /* Headers */ = {
+		A28E5575395DAD5DB5F0732F83C590F4 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7F1128D1AB6453F4F9985B102287A95 /* SignalK.h in Headers */,
-				31FEE481AA5AA2B5E695FA9865C13BCE /* SignalKBrowser.h in Headers */,
-				B1A3C58BC05D8ACFA2388178F4376F63 /* SignalKClient-umbrella.h in Headers */,
-				9B024BAFE178CD9B64C3FD0D109969AF /* VesselService.h in Headers */,
+				88B2187829744A9FE33C51D7F4044F3A /* PSWebSocket.h in Headers */,
+				785E212B97B791ED2284EA95BAE5A5F9 /* PSWebSocketBuffer.h in Headers */,
+				451E5436A9A8DA55B72496BAECE18344 /* PSWebSocketDeflater.h in Headers */,
+				889F6559A107678322F72CB6B508D952 /* PSWebSocketDriver.h in Headers */,
+				AEBAB8EE460DC3533DE5409F77F0C94F /* PSWebSocketInflater.h in Headers */,
+				35892C2B7EC1D75C03823A96F3BA15CF /* PSWebSocketInternal.h in Headers */,
+				C29DCEDBFC3289EDBD85EE20BA92776D /* PSWebSocketNetworkThread.h in Headers */,
+				D090B359F44EEB784FF243E5DBDCA08F /* PSWebSocketServer.h in Headers */,
+				4FD1E9F3E14064C642DD723D93173839 /* PSWebSocketTypes.h in Headers */,
+				F2F53C7BDC0F58A0E70B070F1E0CD6D9 /* PSWebSocketUTF8Decoder.h in Headers */,
+				23AF8C5FA3FADACAD57C0061D2626FA6 /* SignalK.h in Headers */,
+				83525FE696431653204BC815E70D67FE /* SignalKBrowser.h in Headers */,
+				423D55A035E65841A8D02185A5D83FA7 /* SignalKClient-umbrella.h in Headers */,
+				DDF3B922525FF8E398C3D75C9633FD0F /* VesselService.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -879,9 +964,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F15F3DE1884E1277B649EAF3F22AFAA3 /* Build configuration list for PBXNativeTarget "SignalKClient" */;
 			buildPhases = (
-				351EA7378405E00F3C885D1AC11B204B /* Sources */,
+				9F47E58B4DEEE7FB25091EE01D2DD9EA /* Sources */,
 				9F12DD0FD2AEC550FD2FB6FFE7157235 /* Frameworks */,
-				DA4CE45BF05ACD87D228188A963954FA /* Headers */,
+				A28E5575395DAD5DB5F0732F83C590F4 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -981,17 +1066,6 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		351EA7378405E00F3C885D1AC11B204B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C5927D16F64ECC2B9216A95690E55335 /* SignalK.m in Sources */,
-				2B92713D774ECE1938047924B727EF59 /* SignalKBrowser.m in Sources */,
-				7D2B0A6EA6AFF34B2E6F2AE6D95D7DCD /* SignalKClient-dummy.m in Sources */,
-				D8B966F634E66A1A7478281233D8210F /* VesselService.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		39903BF3AA63C50585C5BAC8E7E4D105 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1015,6 +1089,26 @@
 				62F605BD5C3029E7BFD0B0A50AB9D10C /* SPTSpec.m in Sources */,
 				1603BE51724DD873F3C6510009409242 /* SPTTestSuite.m in Sources */,
 				0A0D1E83A15647C61732BCEDFE4FDDF0 /* XCTestCase+Specta.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F47E58B4DEEE7FB25091EE01D2DD9EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95B1CBF9C1B48CC87DDF5792103F7749 /* PocketSocket-Prefix.pch in Sources */,
+				180C8CC9D5625145175EDD20185E48C1 /* PSWebSocket.m in Sources */,
+				F43504E0EA2230CEA3A2EB90BA3BD94B /* PSWebSocketBuffer.m in Sources */,
+				9DB3985B45BA338DB7CDF39A21BB53A9 /* PSWebSocketDeflater.m in Sources */,
+				5B46F7D034B0A24D5B480B4ACE669440 /* PSWebSocketDriver.m in Sources */,
+				FAA0634B3A337EE75AC9CAFABD8FD7A5 /* PSWebSocketInflater.m in Sources */,
+				42FF36561E7DE4B33B2765FBC00E4CF3 /* PSWebSocketNetworkThread.m in Sources */,
+				3687FBED89128862E11DF6912BB98634 /* PSWebSocketServer.m in Sources */,
+				93AADDEA9C3F8EE3E39A05BED270C54F /* PSWebSocketUTF8Decoder.m in Sources */,
+				983466DF9950B4785517AF6F9DAC883C /* SignalK.m in Sources */,
+				6508FAE536573854C6174CDAE3C38E39 /* SignalKBrowser.m in Sources */,
+				2811F2F69D679AE82F7CEA716968AF9F /* SignalKClient-dummy.m in Sources */,
+				C2A49B41B35E481041BB34DA91031340 /* VesselService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1402,7 +1496,7 @@
 		};
 		B92F8BD83A05E67A80CE3E0D1ABAEAE4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 18C8480FDA2414FA02CB774500BA922E /* SignalKClient.xcconfig */;
+			baseConfigurationReference = 23E6C1F6D7B4F7ACC9F40D1BDA0BB07F /* SignalKClient.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1590,7 +1684,7 @@
 		};
 		FB9A468FF16C26759B2BC8A2BF0DC8DE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 18C8480FDA2414FA02CB774500BA922E /* SignalKClient.xcconfig */;
+			baseConfigurationReference = 23E6C1F6D7B4F7ACC9F40D1BDA0BB07F /* SignalKClient.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
