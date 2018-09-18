@@ -105,7 +105,7 @@ static id isoDateFormatter;
     if ( error )
     {
       if ( [self.delegate respondsToSelector:@selector(signalk:connectionFailed:)] )
-        [self.delegate signalk:self connectionFailed:error.localizedDescription];
+        [self.delegate signalk:self connectionFailed:error];
     }
     else
     {
@@ -122,7 +122,7 @@ static id isoDateFormatter;
 {
   self.isConnecting = YES;
   self.isConnected = NO;
-  self.jwtToken = nil;
+  //self.jwtToken = nil;
   
   [self addToConnectionLog:@"Config: Host: %@ Port: %ld REST: %@ %@ WS: %@ SSL: %@", self.host, self.restPort, self.restProtocol, self.restEndpoint, self.wsEndpoint, (self.ssl ? @"YES" : @"NO")];
   
@@ -738,24 +738,25 @@ static id isoDateFormatter;
 - (void)webSocket:(SOCKET_CLASS *)webSocket didFailWithError:(NSError *)error
 {
   //NSLog(@"didFailWithError: %@", [error description]);
-  NSString *msg;
+
   NSNumber *code = (NSNumber *)error.userInfo[@"HTTPResponseStatusCode"];
   
   [self addToConnectionLog:@"Error connecting to websocket %@", error.description];
   
   if ( code.integerValue == 401 )
   {
-	msg = @"Unauathorized";
+    NSDictionary *userInfo = @{ NSLocalizedDescriptionKey: @"Unauthorized" };
+    
+    error = [NSError errorWithDomain:@"org.signalk"
+                                code:SK_ERROR_UNAUTHORIZED
+                            userInfo:userInfo];
   }
-  else
-  {
-	msg = error.localizedDescription;
-  }
+
   self.webSocket = nil;
   self.isStreaming = NO;
   if ( [self.delegate respondsToSelector:@selector(signalK:webSocketFailed:)] )
   {
-	[self.delegate signalK:self webSocketFailed:msg];
+	[self.delegate signalK:self webSocketFailed:error];
   }
 }
 
@@ -768,7 +769,13 @@ static id isoDateFormatter;
 	  reason = @"Unknown";
 	if ( [self.delegate respondsToSelector:@selector(signalK:webSocketFailed:)] )
 	{
-	  [self.delegate signalK:self webSocketFailed:reason];
+      NSDictionary *userInfo = @{ NSLocalizedDescriptionKey: reason };
+      
+      NSError *error = [NSError errorWithDomain:@"org.signalk"
+                                  code:SK_ERROR_BADRESPONSE
+                              userInfo:userInfo];
+
+	  [self.delegate signalK:self webSocketFailed:error];
 	}
 	self.webSocket = nil;
   }
