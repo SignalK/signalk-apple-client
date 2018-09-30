@@ -261,9 +261,21 @@ static id isoDateFormatter;
   }];
 }
 
+- (NSString *)getLoginURL
+{
+  NSDictionary *info = [self getServerInfo];
+  
+  if ( info && info[@"server"] && [info[@"server"][@"id"] isEqualToString:@"signalk-server-node"] && info[@"authenticationRequired"] == nil )
+  {
+    return @"/login";
+  }
+  
+  return @"/signalk/v1/auth/login";
+}
+
 - (void)loginWithCompletionHandler:(void (^)(NSError *error))complertionHandler
 {
-  [self sendPOST:@"/login" postData:@{@"username": self.userName, @"password": self.password} completionHandler:^(NSData *data, NSError *error, NSHTTPURLResponse *response) {
+  [self sendPOST:[self getLoginURL] postData:@{@"username": self.userName, @"password": self.password} completionHandler:^(NSData *data, NSError *error, NSHTTPURLResponse *response) {
 	
 	/*NSString *strData = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
 	 NSLog(@"data: %@", strData);*/

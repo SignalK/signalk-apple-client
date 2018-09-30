@@ -44,7 +44,7 @@ Client Library For Accessing Signal K Servers From an iOS Application
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  s.ios.dependency 'SocketRocket', '~> 0.5.1'
-  s.osx.dependency 'SocketRocket', '~> 0.5.1'
-  s.tvos.dependency 'SocketRocket', '~> 0.5.1'
+#  s.ios.dependency 'SocketRocket', '~> 0.5.1'
+#  s.osx.dependency 'SocketRocket', '~> 0.5.1'
+#  s.tvos.dependency 'SocketRocket', '~> 0.5.1'
 end
