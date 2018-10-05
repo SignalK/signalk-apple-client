@@ -658,7 +658,12 @@ static id isoDateFormatter;
 #if !TARGET_OS_WATCH
 - (void)sendSubscription:(NSDictionary *)subscription
 {
-  id jsonData = [NSJSONSerialization dataWithJSONObject:subscription options:0 error:nil];
+  [self sendMessage:subscription];
+}
+
+- (void)sendMessage:(NSDictionary *)message
+{
+  id jsonData = [NSJSONSerialization dataWithJSONObject:message options:0 error:nil];
   NSString *subString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
   [self.webSocket send:subString];
 }
@@ -724,7 +729,6 @@ static id isoDateFormatter;
   
   if ( jsonObject[@"updates"] != nil )
   {
-    [self didReceiveDelta:jsonObject];
 	if ( [self.delegate respondsToSelector:@selector(signalK:didReceiveDelta:)] )
 	{
 	  [self.delegate signalK:self didReceiveDelta:jsonObject];
@@ -740,6 +744,7 @@ static id isoDateFormatter;
 	  self.uuid = [self.uuid substringFromIndex:8];
 	}
   }
+  [self didReceiveDelta:jsonObject];
 }
 
 - (BOOL)webSocketShouldConvertTextFrameToString:(SRWebSocket *)webSocket;

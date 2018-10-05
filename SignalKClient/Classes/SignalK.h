@@ -78,6 +78,7 @@ extern NSString *kSignalkErrorDomain;
 - (void)startStreaming;
 - (void)stopStreaming;
 - (void)sendSubscription:(NSDictionary *)subscription;
+- (void)sendMessage:(NSDictionary *)message;
 - (void)startStreamingHistoryFromDate:(NSDate *)fromDate toDate:(NSDate *)toDate rate:(float)rate;
 #endif
 
@@ -111,4 +112,5 @@ extern NSString *kSignalkErrorDomain;
 - (void)startNetworkActivity;
 - (void)addToConnectionLog:(nonnull NSString *)first, ... ;//NS_REQUIRES_NIL_TERMINATION;
 - (void)didReceivePath:(NSString *)path andValue:value withTimeStamp:(NSString *)timeStamp forContext:(NSString *)context;
+- (void)getServerInfo:(void (^)(NSError *error))complertionHandler;
 @end
