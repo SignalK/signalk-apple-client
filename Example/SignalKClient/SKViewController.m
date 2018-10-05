@@ -91,7 +91,7 @@
   self.signalK = [[SignalK alloc] initWithHost:self.host.text port:self.port.text.integerValue];
   self.signalK.ssl = self.isSSL.on;
   self.signalK.delegate = self;
-  self.signalK.subscription = @"none"; //see webSocketDidOpen below
+  self.signalK.subscription = @"all"; //see webSocketDidOpen below
   
   //self.signalK.subscription = @"self"; // if you want all data for self (default)
   //self.signalK.subscription = @"all"; // if you want data for other vessels, atons, etc.
@@ -112,9 +112,9 @@
   }];
 }
 
-- (void)signalK:(SignalK *)signalk webSocketFailed:(NSString *)reason
+- (void)signalK:(SignalK *)signalk webSocketFailed:(NSError *)reason
 {
-  [self showMessage:reason withTitle:@"Streaming Error"];
+  [self showMessage:reason.localizedDescription withTitle:@"Streaming Error"];
 }
 
 - (void)signalKWebSocketDidOpen:(SignalK *)signalk
