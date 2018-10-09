@@ -763,6 +763,10 @@ static id isoDateFormatter;
 	{
 	  self.uuid = [self.uuid substringFromIndex:8];
 	}
+    if ( [self.selfContext hasPrefix:@"vessels."] == NO )
+    {
+      self.selfContext = [@"vessels." stringByAppendingString:self.selfContext];
+    }
   }
   [self didReceiveDelta:jsonObject];
 }
