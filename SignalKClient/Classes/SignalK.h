@@ -13,6 +13,7 @@
 #define SK_ERROR_NOTFOUND 104
 #define SK_ERROR_NOSELF 105
 #define SK_ERROR_NO_ENDPOINTS 106
+#define SK_ERROR_BADLOGIN 107
 
 extern NSString *kSignalkErrorDomain;
 

@@ -298,14 +298,34 @@ static id isoDateFormatter;
 													  options:NSJSONReadingAllowFragments|NSJSONReadingMutableContainers
 														error:&parseError];
 	  
+      NSString *message;
+      
 	  if ( parseError == nil && jsonObject != nil )
 	  {
-		NSDictionary *userInfo = @{ NSLocalizedDescriptionKey:jsonObject[@"message"] };
+		message = jsonObject[@"message"];
 		
-		error = [NSError errorWithDomain:kSignalkErrorDomain
-									code:SK_ERROR_UNAUTHORIZED
-								userInfo:userInfo];
 	  }
+      else if ( data.length )
+      {
+        message = [[NSString alloc] initWithData:data encoding:kCFStringEncodingUTF8];
+      }
+      
+      if ( message )
+      {
+        NSDictionary *userInfo = @{ NSLocalizedDescriptionKey:message };
+
+        error = [NSError errorWithDomain:kSignalkErrorDomain
+                                    code:SK_ERROR_BADLOGIN
+                                userInfo:userInfo];
+      }
+      else
+      {
+        NSDictionary *userInfo = @{ NSLocalizedDescriptionKey:@"Invalid Login" };
+        
+        error = [NSError errorWithDomain:kSignalkErrorDomain
+                                    code:SK_ERROR_BADLOGIN
+                                userInfo:userInfo];
+      }
 	}
 	else if ( [error.domain isEqualToString:kSignalkErrorDomain] && error.code == SK_ERROR_NOTFOUND )
 	{
