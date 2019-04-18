@@ -237,7 +237,7 @@ static id isoDateFormatter;
 	  
 	  NSDictionary *endpoints = self.serverInfo[@"endpoints"][@"v1"];
 	  
-	  if ( endpoints )
+	  if ( endpoints && [self.host isEqualToString:@"ikommunicate.cloud"] == NO )
 	  {
 		self.restEndpoint = endpoints[@"signalk-http"];
 		self.wsEndpoint = endpoints[@"signalk-ws"];
