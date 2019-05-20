@@ -118,6 +118,10 @@ static id isoDateFormatter;
   }];
 }
 
+- (void)preConnect
+{
+}
+
 - (void)_connectWithCompletionHandler:(void (^)(NSError *error))complertionHandler
 {
   self.isConnecting = YES;
@@ -136,12 +140,16 @@ static id isoDateFormatter;
     self.restEndpoint = [NSString stringWithFormat:@"%@://%@:%ld/signalk/v1/api/", self.restProtocol, self.host, (long)self.restPort];
   }
   
+  NSString *wsProtocol = !self.ssl ? @"ws" : @"wss";
+
   if ( self.wsEndpoint == nil )
   {
-    NSString *wsProtocol = !self.ssl ? @"ws" : @"wss";
-    
     self.wsEndpoint = [NSString stringWithFormat:@"%@://%@:%ld/signalk/v1/stream", wsProtocol, self.host, (long)self.wsPort];
   }
+  
+  self.wsPlaybackEndpoint = [NSString stringWithFormat:@"%@://%@:%ld/signalk/v1/playback", wsProtocol, self.host, (long)self.wsPort];
+  
+  [self preConnect];
   
   [self getServerInfo:^(NSError *error)
    {
@@ -241,6 +249,8 @@ static id isoDateFormatter;
 	  {
 		self.restEndpoint = endpoints[@"signalk-http"];
 		self.wsEndpoint = endpoints[@"signalk-ws"];
+        self.wsPlaybackEndpoint = [NSString stringWithFormat:@"%@://%@:%ld/signalk/v1/playback", [self.restProtocol isEqualToString:@"https"] ? @"wss" : @"ws" , self.host, (long)self.wsPort];
+
 		
 		/* Pauls iK
 		 _restEndpoint = @"http://86.2.184.153/signalk/v1/api/";
@@ -691,7 +701,7 @@ static id isoDateFormatter;
 - (NSURL *)getWSURL
 {
   NSString *subsciption = self.historyStart ? @"all" : self.subscription ? self.subscription : @"self";
-  NSString *urlS = [NSString stringWithFormat:@"%@?stream=delta&subscribe=%@", self.wsEndpoint, subsciption];
+  NSString *urlS = [NSString stringWithFormat:@"%@?stream=delta&subscribe=%@", self.historyStart ? self.wsPlaybackEndpoint : self.wsEndpoint, subsciption];
   
   if ( self.historyStart )
   {
@@ -887,7 +897,7 @@ static id isoDateFormatter;
 
 - (BOOL)isSelfContext:(NSString *)context
 {
-  return [[@"vessels." stringByAppendingString:self.uuid] isEqualToString:context];
+  return self.uuid != nil && [[@"vessels." stringByAppendingString:self.uuid] isEqualToString:context];
 }
 
 - (void)registerSKDelegate:(id <SignalKPathValueDelegate>)delegate

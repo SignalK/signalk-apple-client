@@ -58,6 +58,7 @@ extern NSString *kSignalkErrorDomain;
 @property (nullable,strong,atomic) NSString *restProtocol;
 @property (nullable,strong,atomic) NSString *restEndpoint;
 @property (nullable,strong,atomic) NSString *wsEndpoint;
+@property (nullable,strong,atomic) NSString *wsPlaybackEndpoint;
 @property BOOL ssl;
 @property (strong,atomic) NSString *subscription; //defaults to self
 @property (strong) NSString *userName;
